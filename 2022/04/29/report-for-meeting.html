@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      20 min read
     
 </span></p>
 
@@ -356,7 +356,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://www.gocoder.one/blog/reinforcement-learning-project-ideas">https://www.gocoder.one/blog/reinforcement-learning-project-ideas</a></p>
+<hr>
 
 </div>
 </div>
@@ -369,6 +369,974 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://www.gocoder.one/blog/reinforcement-learning-project-ideas">https://www.gocoder.one/blog/reinforcement-learning-project-ideas</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># create Taxi environment</span>
+<span class="c1"># The following snippet will import the necessary packages, and create the Taxi environment:</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">'Taxi-v3'</span><span class="p">)</span>
+
+<span class="c1"># create a new instance of taxi, and get the initial state</span>
+<span class="c1"># Note: Yellow = taxi, Blue letter = pickup location, Purple letter = drop-off destination</span>
+<span class="c1"># To get the initial state:</span>
+<span class="n">state</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="c1"># Next, we'll run a for-loop to cycle through the game. At each iteration, our agent will:</span>
+<span class="c1"># 1.Make a random action from the action space (0 - south, 1 - north, 2 - east, 3 - west, 4 - pick-up, 5 - drop-off)</span>
+<span class="c1"># 2.Receive the new state</span>
+<span class="c1"># Here's our random agent script:</span>
+<span class="n">num_steps</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"step: </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2"> out of </span><span class="si">{</span><span class="n">num_steps</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="c1"># sample a random action from the list of available actions</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span>
+
+    <span class="c1"># perform this action on the environment</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+    <span class="c1"># print the new state</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+
+<span class="c1"># end this instance of the taxi environment</span>
+<span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>step: 0 out of 99
++---------+
+|R: | : :G|
+|<span class="ansi-yellow-bg"> </span>: | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 1 out of 99
++---------+
+|R: | : :G|
+| :<span class="ansi-yellow-bg"> </span>| : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 2 out of 99
++---------+
+|R: | : :G|
+| :<span class="ansi-yellow-bg"> </span>| : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 3 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| :<span class="ansi-yellow-bg"> </span>: : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 4 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| :<span class="ansi-yellow-bg"> </span>: : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 5 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 6 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 7 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 8 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 9 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 10 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 11 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 12 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 13 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| :<span class="ansi-yellow-bg"> </span>: : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 14 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 15 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 16 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| |<span class="ansi-yellow-bg"> </span>: | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 17 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| |<span class="ansi-yellow-bg"> </span>: | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 18 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 19 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 20 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 21 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 22 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 23 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 24 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 25 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 26 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 27 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 28 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 29 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| |<span class="ansi-yellow-bg"> </span>: | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 30 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>|<span class="ansi-yellow-bg"> </span>: |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 31 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>|<span class="ansi-yellow-bg"> </span>: |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 32 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| |<span class="ansi-yellow-bg"> </span>: | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 33 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| |<span class="ansi-yellow-bg"> </span>: | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 34 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| |<span class="ansi-yellow-bg"> </span>: | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 35 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 36 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 37 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 38 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 39 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 40 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 41 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 42 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 43 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 44 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 45 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 46 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 47 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 48 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 49 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 50 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 51 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 52 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| :<span class="ansi-yellow-bg"> </span>|<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 53 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : : |
+| | :<span class="ansi-yellow-bg"> </span>| : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 54 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 55 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 56 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 57 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 58 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 59 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 60 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 61 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 62 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 63 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 64 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 65 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : :<span class="ansi-yellow-bg"> </span>: |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 66 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : :<span class="ansi-yellow-bg"> </span>: |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 67 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 68 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| :<span class="ansi-yellow-bg"> </span>: : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 69 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| :<span class="ansi-yellow-bg"> </span>: : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 70 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+|<span class="ansi-yellow-bg"> </span>: : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 71 out of 99
++---------+
+|R: | : :G|
+|<span class="ansi-yellow-bg"> </span>: | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 72 out of 99
++---------+
+|R: | : :G|
+| :<span class="ansi-yellow-bg"> </span>| : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 73 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| :<span class="ansi-yellow-bg"> </span>: : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 74 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : :<span class="ansi-yellow-bg"> </span>: : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 75 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 76 out of 99
++---------+
+|R: |<span class="ansi-yellow-bg"> </span>: :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 77 out of 99
++---------+
+|R: |<span class="ansi-yellow-bg"> </span>: :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 78 out of 99
++---------+
+|R: | :<span class="ansi-yellow-bg"> </span>:G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 79 out of 99
++---------+
+|R: | :<span class="ansi-yellow-bg"> </span>:G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 80 out of 99
++---------+
+|R: | : :<span class="ansi-yellow-bg">G</span>|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 81 out of 99
++---------+
+|R: | :<span class="ansi-yellow-bg"> </span>:G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 82 out of 99
++---------+
+|R: | :<span class="ansi-yellow-bg"> </span>:G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 83 out of 99
++---------+
+|R: | :<span class="ansi-yellow-bg"> </span>:G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 84 out of 99
++---------+
+|R: |<span class="ansi-yellow-bg"> </span>: :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 85 out of 99
++---------+
+|R: |<span class="ansi-yellow-bg"> </span>: :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 86 out of 99
++---------+
+|R: |<span class="ansi-yellow-bg"> </span>: :G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 87 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 88 out of 99
++---------+
+|R: | : :G|
+| : |<span class="ansi-yellow-bg"> </span>: : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (West)
+step: 89 out of 99
++---------+
+|R: | : :G|
+| : | :<span class="ansi-yellow-bg"> </span>: |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 90 out of 99
++---------+
+|R: | : :G|
+| : | :<span class="ansi-yellow-bg"> </span>: |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Dropoff)
+step: 91 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : :<span class="ansi-yellow-bg"> </span>: |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 92 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : :<span class="ansi-yellow-bg"> </span>: |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (Pickup)
+step: 93 out of 99
++---------+
+|R: | : :G|
+| : | :<span class="ansi-yellow-bg"> </span>: |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 94 out of 99
++---------+
+|R: | :<span class="ansi-yellow-bg"> </span>:G|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 95 out of 99
++---------+
+|R: | : :<span class="ansi-yellow-bg">G</span>|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (East)
+step: 96 out of 99
++---------+
+|R: | : :<span class="ansi-yellow-bg">G</span>|
+| : | : : |
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+step: 97 out of 99
++---------+
+|R: | : :G|
+| : | : :<span class="ansi-yellow-bg"> </span>|
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 98 out of 99
++---------+
+|R: | : :G|
+| : | : : |
+| : : : :<span class="ansi-yellow-bg"> </span>|
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (South)
+step: 99 out of 99
++---------+
+|R: | : :G|
+| : | : :<span class="ansi-yellow-bg"> </span>|
+| : : : : |
+| | : | : |
+|<span class="ansi-blue-intense-fg ansi-bold">Y</span>| : |<span class="ansi-magenta-fg">B</span>: |
++---------+
+  (North)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
