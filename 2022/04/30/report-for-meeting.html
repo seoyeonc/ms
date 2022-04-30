@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      4 min read
     
 </span></p>
 
@@ -517,6 +517,38 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ref : <a href="https://medium.com/watcha/gnn-%EC%86%8C%EA%B0%9C-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EB%85%BC%EB%AC%B8%EA%B9%8C%EC%A7%80-96567b783479">https://medium.com/watcha/gnn-%EC%86%8C%EA%B0%9C-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EB%85%BC%EB%AC%B8%EA%B9%8C%EC%A7%80-96567b783479</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(2020년 4월 글)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>GNN과 추천시스템의 연결</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>OTT_GNN 활용</p>
 <ul>
 <li>Link Prediction<ul>
@@ -529,22 +561,6 @@ window.onload = wrap_img;
 </ul>
 </li>
 </ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>ref : <a href="https://medium.com/watcha/gnn-%EC%86%8C%EA%B0%9C-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EB%85%BC%EB%AC%B8%EA%B9%8C%EC%A7%80-96567b783479">https://medium.com/watcha/gnn-%EC%86%8C%EA%B0%9C-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EB%85%BC%EB%AC%B8%EA%B9%8C%EC%A7%80-96567b783479</a></p>
 
 </div>
 </div>
@@ -693,121 +709,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
-
-
-<span class="n">INPUT_FILE</span><span class="o">=</span><span class="s1">'data/dog.jpg'</span>
-<span class="n">OUTPUT_FILE</span><span class="o">=</span><span class="s1">'predicted.jpg'</span>
-<span class="n">LABELS_FILE</span><span class="o">=</span><span class="s1">'data/coco.names'</span>
-<span class="n">CONFIG_FILE</span><span class="o">=</span><span class="s1">'cfg/yolov3.cfg'</span>
-<span class="n">WEIGHTS_FILE</span><span class="o">=</span><span class="s1">'yolov3.weights'</span>
-<span class="n">CONFIDENCE_THRESHOLD</span><span class="o">=</span><span class="mf">0.3</span>
-
-<span class="n">LABELS</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">LABELS_FILE</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">COLORS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">LABELS</span><span class="p">),</span> <span class="mi">3</span><span class="p">),</span>
-	<span class="n">dtype</span><span class="o">=</span><span class="s2">"uint8"</span><span class="p">)</span>
-
-
-<span class="n">net</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">dnn</span><span class="o">.</span><span class="n">readNetFromDarknet</span><span class="p">(</span><span class="n">CONFIG_FILE</span><span class="p">,</span> <span class="n">WEIGHTS_FILE</span><span class="p">)</span>
-
-<span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">INPUT_FILE</span><span class="p">)</span>
-<span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="c1"># determine only the *output* layer names that we need from YOLO</span>
-<span class="n">ln</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">getLayerNames</span><span class="p">()</span>
-<span class="n">ln</span> <span class="o">=</span> <span class="p">[</span><span class="n">ln</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">getUnconnectedOutLayers</span><span class="p">()]</span>
-
-
-<span class="n">blob</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">dnn</span><span class="o">.</span><span class="n">blobFromImage</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">,</span> <span class="p">(</span><span class="mi">416</span><span class="p">,</span> <span class="mi">416</span><span class="p">),</span>
-	<span class="n">swapRB</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">crop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">net</span><span class="o">.</span><span class="n">setInput</span><span class="p">(</span><span class="n">blob</span><span class="p">)</span>
-<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-<span class="n">layerOutputs</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span>
-<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"[INFO] YOLO took </span><span class="si">{:.6f}</span><span class="s2"> seconds"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span>
-
-
-<span class="c1"># initialize our lists of detected bounding boxes, confidences, and</span>
-<span class="c1"># class IDs, respectively</span>
-<span class="n">boxes</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">confidences</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">classIDs</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># loop over each of the layer outputs</span>
-<span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">layerOutputs</span><span class="p">:</span>
-	<span class="c1"># loop over each of the detections</span>
-	<span class="k">for</span> <span class="n">detection</span> <span class="ow">in</span> <span class="n">output</span><span class="p">:</span>
-		<span class="c1"># extract the class ID and confidence (i.e., probability) of</span>
-		<span class="c1"># the current object detection</span>
-		<span class="n">scores</span> <span class="o">=</span> <span class="n">detection</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
-		<span class="n">classID</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-		<span class="n">confidence</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="n">classID</span><span class="p">]</span>
-
-		<span class="c1"># filter out weak predictions by ensuring the detected</span>
-		<span class="c1"># probability is greater than the minimum probability</span>
-		<span class="k">if</span> <span class="n">confidence</span> <span class="o">&gt;</span> <span class="n">CONFIDENCE_THRESHOLD</span><span class="p">:</span>
-			<span class="c1"># scale the bounding box coordinates back relative to the</span>
-			<span class="c1"># size of the image, keeping in mind that YOLO actually</span>
-			<span class="c1"># returns the center (x, y)-coordinates of the bounding</span>
-			<span class="c1"># box followed by the boxes' width and height</span>
-			<span class="n">box</span> <span class="o">=</span> <span class="n">detection</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">W</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">H</span><span class="p">])</span>
-			<span class="p">(</span><span class="n">centerX</span><span class="p">,</span> <span class="n">centerY</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"int"</span><span class="p">)</span>
-
-			<span class="c1"># use the center (x, y)-coordinates to derive the top and</span>
-			<span class="c1"># and left corner of the bounding box</span>
-			<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">centerX</span> <span class="o">-</span> <span class="p">(</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-			<span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">centerY</span> <span class="o">-</span> <span class="p">(</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-
-			<span class="c1"># update our list of bounding box coordinates, confidences,</span>
-			<span class="c1"># and class IDs</span>
-			<span class="n">boxes</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">width</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">)])</span>
-			<span class="n">confidences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">confidence</span><span class="p">))</span>
-			<span class="n">classIDs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">classID</span><span class="p">)</span>
-
-<span class="c1"># apply non-maxima suppression to suppress weak, overlapping bounding</span>
-<span class="c1"># boxes</span>
-<span class="n">idxs</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">dnn</span><span class="o">.</span><span class="n">NMSBoxes</span><span class="p">(</span><span class="n">boxes</span><span class="p">,</span> <span class="n">confidences</span><span class="p">,</span> <span class="n">CONFIDENCE_THRESHOLD</span><span class="p">,</span>
-	<span class="n">CONFIDENCE_THRESHOLD</span><span class="p">)</span>
-
-<span class="c1"># ensure at least one detection exists</span>
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">idxs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-	<span class="c1"># loop over the indexes we are keeping</span>
-	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">idxs</span><span class="o">.</span><span class="n">flatten</span><span class="p">():</span>
-		<span class="c1"># extract the bounding box coordinates</span>
-		<span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
-		<span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">boxes</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
-
-		<span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">COLORS</span><span class="p">[</span><span class="n">classIDs</span><span class="p">[</span><span class="n">i</span><span class="p">]]]</span>
-
-		<span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span> <span class="n">color</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-		<span class="n">text</span> <span class="o">=</span> <span class="s2">"</span><span class="si">{}</span><span class="s2">: </span><span class="si">{:.4f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">LABELS</span><span class="p">[</span><span class="n">classIDs</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">confidences</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-		<span class="n">cv2</span><span class="o">.</span><span class="n">putText</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">5</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">FONT_HERSHEY_SIMPLEX</span><span class="p">,</span>
-			<span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># show the output image</span>
-<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s2">"example.png"</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
