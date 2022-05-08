@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      19 min read
     
 </span></p>
 
@@ -2262,10 +2262,19 @@ x &amp; |x|&gt;5 \\
 <span class="n">c</span> <span class="o">&lt;-</span> <span class="m">0</span>
 <span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">){</span>
     <span class="n">a</span> <span class="o">&lt;-</span> <span class="m">10</span> <span class="o">-</span> <span class="m">0.5</span> <span class="o">*</span> <span class="n">i</span>
-    <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">b</span> <span class="o">+</span> <span class="m">1</span>
     <span class="n">c</span> <span class="o">&lt;-</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">c</span><span class="o">&gt;=</span><span class="m">35</span><span class="p">){</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"생존"</span><span class="p">)</span>
+
+        <span class="n">break</span>
     <span class="p">}</span>
+    <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">b</span> <span class="o">+</span> <span class="m">1</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">){</span>
+            <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="m">35</span><span class="p">){</span>
+           <span class="n">b</span> <span class="o">&lt;-</span> <span class="m">35</span> <span class="o">-</span> <span class="n">c</span>
+           <span class="p">}</span>
+                          <span class="p">}}</span>
 </pre></div>
 
     </div>
@@ -2278,16 +2287,7 @@ x &amp; |x|&gt;5 \\
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1] 1.01
-[1] 2.01
-[1] 3.01
-[1] 4.01
-[1] 5.01
-[1] 6.01
-[1] 7.01
-[1] 8.01
-[1] 9.01
-[1] 10.01
+<pre>[1] "생존"
 </pre>
 </div>
 </div>
@@ -2298,6 +2298,372 @@ x &amp; |x|&gt;5 \\
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">1회</th>
+<th style="text-align:center">2회</th>
+<th style="text-align:center">3회</th>
+<th style="text-align:center">4회</th>
+<th style="text-align:center">5회</th>
+<th style="text-align:center">6회</th>
+<th style="text-align:center">7회</th>
+<th style="text-align:center">8회</th>
+<th style="text-align:center">9회</th>
+<th style="text-align:center">10회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">술래의 외침시간</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9.5</td>
+<td style="text-align:center">9.0</td>
+<td style="text-align:center">8.5</td>
+<td style="text-align:center">8.0</td>
+<td style="text-align:center">7.5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">6.5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 이동폭</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">1.01</td>
+<td style="text-align:center">2.01</td>
+<td style="text-align:center">3.01</td>
+<td style="text-align:center">4.01</td>
+<td style="text-align:center">5.01</td>
+<td style="text-align:center">6.01</td>
+<td style="text-align:center">6.5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1.44</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 총 이동거리</td>
+<td style="text-align:center">0.01</td>
+<td style="text-align:center">1.02</td>
+<td style="text-align:center">3.02</td>
+<td style="text-align:center">6.03</td>
+<td style="text-align:center">10.04</td>
+<td style="text-align:center">15.05</td>
+<td style="text-align:center">21.06</td>
+<td style="text-align:center">27.56</td>
+<td style="text-align:center">33.56</td>
+<td style="text-align:center">35</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">b</span> <span class="o">&lt;-</span> <span class="m">67</span><span class="o">/</span><span class="m">100</span>
+<span class="n">c</span> <span class="o">&lt;-</span> <span class="m">0</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">){</span>
+    <span class="n">a</span> <span class="o">&lt;-</span> <span class="m">10</span> <span class="o">-</span> <span class="m">0.5</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">c</span> <span class="o">&lt;-</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">c</span><span class="o">&gt;=</span><span class="m">35</span><span class="p">){</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"생존"</span><span class="p">)</span>
+        <span class="n">break</span>
+    <span class="p">}</span>
+    <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">b</span> <span class="o">+</span> <span class="m">1</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">){</span>
+            <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="m">35</span><span class="p">){</span>
+           <span class="n">b</span> <span class="o">&lt;-</span> <span class="m">35</span> <span class="o">-</span> <span class="n">c</span>
+           <span class="p">}</span>
+                          <span class="p">}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] "생존"
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">1회</th>
+<th style="text-align:center">2회</th>
+<th style="text-align:center">3회</th>
+<th style="text-align:center">4회</th>
+<th style="text-align:center">5회</th>
+<th style="text-align:center">6회</th>
+<th style="text-align:center">7회</th>
+<th style="text-align:center">8회</th>
+<th style="text-align:center">9회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">술래의 외침시간</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9.5</td>
+<td style="text-align:center">9.0</td>
+<td style="text-align:center">8.5</td>
+<td style="text-align:center">8.0</td>
+<td style="text-align:center">7.5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">6.5</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 이동폭</td>
+<td style="text-align:center">0.67</td>
+<td style="text-align:center">1.67</td>
+<td style="text-align:center">2.67</td>
+<td style="text-align:center">3.67</td>
+<td style="text-align:center">4.67</td>
+<td style="text-align:center">5.67</td>
+<td style="text-align:center">6.67</td>
+<td style="text-align:center">6.5</td>
+<td style="text-align:center">2.81</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 총 이동거리</td>
+<td style="text-align:center">0.67</td>
+<td style="text-align:center">2.34</td>
+<td style="text-align:center">5.01</td>
+<td style="text-align:center">8.68</td>
+<td style="text-align:center">13.35</td>
+<td style="text-align:center">19.02</td>
+<td style="text-align:center">25.69</td>
+<td style="text-align:center">32.19</td>
+<td style="text-align:center">35</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">b</span> <span class="o">&lt;-</span> <span class="m">218</span><span class="o">/</span><span class="m">100</span>
+<span class="n">c</span> <span class="o">&lt;-</span> <span class="m">0</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">){</span>
+    <span class="n">a</span> <span class="o">&lt;-</span> <span class="m">10</span> <span class="o">-</span> <span class="m">0.5</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">c</span> <span class="o">&lt;-</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">c</span><span class="o">&gt;=</span><span class="m">35</span><span class="p">){</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"생존"</span><span class="p">)</span>
+        <span class="n">break</span>
+    <span class="p">}</span>
+    <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">b</span> <span class="o">+</span> <span class="m">1</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">){</span>
+            <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="m">35</span><span class="p">){</span>
+           <span class="n">b</span> <span class="o">&lt;-</span> <span class="m">35</span> <span class="o">-</span> <span class="n">c</span>
+           <span class="p">}</span>
+                          <span class="p">}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] "생존"
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">1회</th>
+<th style="text-align:center">2회</th>
+<th style="text-align:center">3회</th>
+<th style="text-align:center">4회</th>
+<th style="text-align:center">5회</th>
+<th style="text-align:center">6회</th>
+<th style="text-align:center">7회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">술래의 외침시간</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9.5</td>
+<td style="text-align:center">9.0</td>
+<td style="text-align:center">8.5</td>
+<td style="text-align:center">8.0</td>
+<td style="text-align:center">7.5</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 이동폭</td>
+<td style="text-align:center">2.18</td>
+<td style="text-align:center">3.18</td>
+<td style="text-align:center">4.18</td>
+<td style="text-align:center">5.18</td>
+<td style="text-align:center">6.18</td>
+<td style="text-align:center">7.18</td>
+<td style="text-align:center">6.92</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 총 이동거리</td>
+<td style="text-align:center">2.18</td>
+<td style="text-align:center">5.36</td>
+<td style="text-align:center">9.54</td>
+<td style="text-align:center">14.72</td>
+<td style="text-align:center">20.90</td>
+<td style="text-align:center">28.08</td>
+<td style="text-align:center">35</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">b</span> <span class="o">&lt;-</span> <span class="m">456</span><span class="o">/</span><span class="m">100</span>
+<span class="n">c</span> <span class="o">&lt;-</span> <span class="m">0</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">){</span>
+    <span class="n">a</span> <span class="o">&lt;-</span> <span class="m">10</span> <span class="o">-</span> <span class="m">0.5</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">c</span> <span class="o">&lt;-</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">c</span><span class="o">&gt;=</span><span class="m">35</span><span class="p">){</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"생존"</span><span class="p">)</span>
+        <span class="n">break</span>
+    <span class="p">}</span>
+    <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">b</span> <span class="o">+</span> <span class="m">1</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">){</span>
+            <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="m">35</span><span class="p">){</span>
+           <span class="n">b</span> <span class="o">&lt;-</span> <span class="m">35</span> <span class="o">-</span> <span class="n">c</span>
+           <span class="p">}</span>
+                          <span class="p">}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] "생존"
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">1회</th>
+<th style="text-align:center">2회</th>
+<th style="text-align:center">3회</th>
+<th style="text-align:center">4회</th>
+<th style="text-align:center">5회</th>
+<th style="text-align:center">6회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">술래의 외침시간</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">9.5</td>
+<td style="text-align:center">9.0</td>
+<td style="text-align:center">8.5</td>
+<td style="text-align:center">8.0</td>
+<td style="text-align:center">7.5</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 이동폭</td>
+<td style="text-align:center">4.56</td>
+<td style="text-align:center">5.56</td>
+<td style="text-align:center">6.56</td>
+<td style="text-align:center">7.56</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2.76</td>
+</tr>
+<tr>
+<td style="text-align:center">참가자의 총 이동거리</td>
+<td style="text-align:center">4.56</td>
+<td style="text-align:center">10.12</td>
+<td style="text-align:center">16.68</td>
+<td style="text-align:center">24.24</td>
+<td style="text-align:center">32.24</td>
+<td style="text-align:center">35</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2350,6 +2716,52 @@ x &amp; |x|&gt;5 \\
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">b</span> <span class="o">&lt;-</span> <span class="m">456</span><span class="o">/</span><span class="m">100</span>
+<span class="n">c</span> <span class="o">&lt;-</span> <span class="m">0</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">){</span>
+    <span class="n">a</span> <span class="o">&lt;-</span> <span class="m">10</span> <span class="o">-</span> <span class="m">0.5</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">c</span> <span class="o">&lt;-</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">c</span><span class="o">&gt;=</span><span class="m">35</span><span class="p">){</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"생존"</span><span class="p">)</span>
+        <span class="n">break</span>
+    <span class="p">}</span>
+    <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">b</span> <span class="o">+</span> <span class="m">1</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;=</span><span class="n">b</span><span class="p">){</span>
+            <span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span>
+        <span class="nf">if</span><span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="m">35</span><span class="p">){</span>
+           <span class="n">b</span> <span class="o">&lt;-</span> <span class="m">35</span> <span class="o">-</span> <span class="n">c</span>
+           <span class="p">}</span>
+                          <span class="p">}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1] "생존"
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">

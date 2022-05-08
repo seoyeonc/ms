@@ -4,22 +4,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>강화학습 공부 | Seoyeon</title>
+<title>강화학습(RL), YOLO(image segment) 공부 | Seoyeon</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="강화학습 공부" />
+<meta property="og:title" content="강화학습(RL), YOLO(image segment) 공부" />
 <meta name="author" content="최서연" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://seoyeonc.github.io/ms/2022/04/30/RL-study.html" />
-<meta property="og:url" content="https://seoyeonc.github.io/ms/2022/04/30/RL-study.html" />
+<link rel="canonical" href="https://seoyeonc.github.io/ms/2022/05/08/RL-YOLO-study.html" />
+<meta property="og:url" content="https://seoyeonc.github.io/ms/2022/05/08/RL-YOLO-study.html" />
 <meta property="og:site_name" content="Seoyeon" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-04-30T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-05-08T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="강화학습 공부" />
+<meta property="twitter:title" content="강화학습(RL), YOLO(image segment) 공부" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"최서연"},"dateModified":"2022-04-30T00:00:00-05:00","datePublished":"2022-04-30T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"강화학습 공부","mainEntityOfPage":{"@type":"WebPage","@id":"https://seoyeonc.github.io/ms/2022/04/30/RL-study.html"},"url":"https://seoyeonc.github.io/ms/2022/04/30/RL-study.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"최서연"},"dateModified":"2022-05-08T00:00:00-05:00","datePublished":"2022-05-08T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"강화학습(RL), YOLO(image segment) 공부","mainEntityOfPage":{"@type":"WebPage","@id":"https://seoyeonc.github.io/ms/2022/05/08/RL-YOLO-study.html"},"url":"https://seoyeonc.github.io/ms/2022/05/08/RL-YOLO-study.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ms/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://seoyeonc.github.io/ms/feed.xml" title="Seoyeon" /><link rel="shortcut icon" type="image/x-icon" href="/ms/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -90,15 +90,15 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">강화학습 공부</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-04-30T00:00:00-05:00" itemprop="datePublished">
-        Apr 30, 2022
+    <h1 class="post-title p-name" itemprop="name headline">강화학습(RL), YOLO(image segment) 공부</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-05-08T00:00:00-05:00" itemprop="datePublished">
+        May 8, 2022
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">최서연</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      8 min read
     
 </span></p>
 
@@ -109,24 +109,24 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-justify-center">
           <div class="px-2">
 
-    <a href="https://github.com/seoyeonc/ms/tree/master/_notebooks/2022-04-30-RL-study.ipynb" role="button" target="_blank">
+    <a href="https://github.com/seoyeonc/ms/tree/master/_notebooks/2022-05-08-RL-YOLO-study.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/ms/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/seoyeonc/ms/master?filepath=_notebooks%2F2022-04-30-RL-study.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/seoyeonc/ms/master?filepath=_notebooks%2F2022-05-08-RL-YOLO-study.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/ms/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/seoyeonc/ms/blob/master/_notebooks/2022-04-30-RL-study.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/seoyeonc/ms/blob/master/_notebooks/2022-05-08-RL-YOLO-study.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/ms/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
           <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fseoyeonc%2Fms%2Fblob%2Fmaster%2F_notebooks%2F2022-04-30-RL-study.ipynb" target="_blank">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fseoyeonc%2Fms%2Fblob%2Fmaster%2F_notebooks%2F2022-05-08-RL-YOLO-study.ipynb" target="_blank">
       <img class="notebook-badge-image" src="/ms/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
   </a>
 </div>
@@ -136,235 +136,22 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h4"><a href="#지도학습(Supervised-learning)-vs-비지도학습(Unsupervised-learning)-vs-강화학습(Reinforcement-learning)">지도학습(Supervised learning) vs 비지도학습(Unsupervised learning) vs 강화학습(Reinforcement learning) </a></li>
-<li class="toc-entry toc-h3"><a href="#-">  </a></li>
 </ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2022-04-30-RL-study.ipynb
+# file to edit: _notebooks/2022-05-08-RL-YOLO-study.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
-<span class="k">def</span> <span class="nf">gv</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="s1">'digraph G{ rankdir="LR"'</span><span class="o">+</span><span class="n">s</span> <span class="o">+</span> <span class="s1">'; }'</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="지도학습(Supervised-learning)-vs-비지도학습(Unsupervised-learning)-vs-강화학습(Reinforcement-learning)">
-<a class="anchor" href="#%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5(Supervised-learning)-vs-%EB%B9%84%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5(Unsupervised-learning)-vs-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5(Reinforcement-learning)" aria-hidden="true"><span class="octicon octicon-link"></span></a>지도학습(Supervised learning) vs 비지도학습(Unsupervised learning) vs 강화학습(Reinforcement learning)<a class="anchor-link" href="#%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5(Supervised-learning)-vs-%EB%B9%84%EC%A7%80%EB%8F%84%ED%95%99%EC%8A%B5(Unsupervised-learning)-vs-%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5(Reinforcement-learning)"> </a>
-</h4>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p></p>
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gv</span><span class="p">(</span><span class="s1">''' </span>
-<span class="s1">    "Machine learning" -&gt; "Supervised learning"[label="(x,y),loss fn"]</span>
-<span class="s1">    "Machine learning" -&gt; "Unsupervised learning"[label="(x)"]</span>
-<span class="s1">    "Machine learning" -&gt; "Reinforcement learning"[label="loss fn"]</span>
-<span class="s1">    "Supervised learning" -&gt; "Classification"[label=""]</span>
-<span class="s1">    "Supervised learning" -&gt; "Regression"[label=""]</span>
-<span class="s1">    "Unsupervised learning" -&gt; "Clustering"[label=""]</span>
-<span class="s1">    "Unsupervised learning" -&gt; "Principal Component Analysis"[label=""]</span>
-<span class="s1">'''</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-    </details>
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_svg output_subarea output_execute_result">
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
- "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
-<!-- Generated by graphviz version 2.50.0 (20211209.0339)
- -->
-<!-- Title: G Pages: 1 -->
-<svg width="887pt" height="206pt" viewbox="0.00 0.00 886.74 206.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 202)">
-<title>G</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-202 882.74,-202 882.74,4 -4,4"></polygon>
-<!-- Machine learning -->
-<g id="node1" class="node">
-<title>Machine learning</title>
-<ellipse fill="none" stroke="black" cx="91.64" cy="-72" rx="91.78" ry="18"></ellipse>
-<text text-anchor="middle" x="91.64" y="-68.3" font-family="Times,serif" font-size="14.00">Machine learning</text>
-</g>
-<!-- Supervised learning -->
-<g id="node2" class="node">
-<title>Supervised learning</title>
-<ellipse fill="none" stroke="black" cx="422.52" cy="-126" rx="104.78" ry="18"></ellipse>
-<text text-anchor="middle" x="422.52" y="-122.3" font-family="Times,serif" font-size="14.00">Supervised learning</text>
-</g>
-<!-- Machine learning&#45;&gt;Supervised learning -->
-<g id="edge1" class="edge">
-<title>Machine learning-&gt;Supervised learning</title>
-<path fill="none" stroke="black" d="M160.13,-83.97C173.75,-86.34 187.97,-88.78 201.28,-91 245.02,-98.3 293.71,-106.07 334.17,-112.44"></path>
-<polygon fill="black" stroke="black" points="333.85,-115.93 344.27,-114.02 334.93,-109.01 333.85,-115.93"></polygon>
-<text text-anchor="middle" x="242.78" y="-106.8" font-family="Times,serif" font-size="14.00">(x,y),loss fn</text>
-</g>
-<!-- Unsupervised learning -->
-<g id="node3" class="node">
-<title>Unsupervised learning</title>
-<ellipse fill="none" stroke="black" cx="422.52" cy="-72" rx="116.18" ry="18"></ellipse>
-<text text-anchor="middle" x="422.52" y="-68.3" font-family="Times,serif" font-size="14.00">Unsupervised learning</text>
-</g>
-<!-- Machine learning&#45;&gt;Unsupervised learning -->
-<g id="edge2" class="edge">
-<title>Machine learning-&gt;Unsupervised learning</title>
-<path fill="none" stroke="black" d="M183.38,-72C218.05,-72 258.23,-72 295.61,-72"></path>
-<polygon fill="black" stroke="black" points="296.06,-75.5 306.06,-72 296.06,-68.5 296.06,-75.5"></polygon>
-<text text-anchor="middle" x="242.78" y="-75.8" font-family="Times,serif" font-size="14.00">(x)</text>
-</g>
-<!-- Reinforcement learning -->
-<g id="node4" class="node">
-<title>Reinforcement learning</title>
-<ellipse fill="none" stroke="black" cx="422.52" cy="-18" rx="120.48" ry="18"></ellipse>
-<text text-anchor="middle" x="422.52" y="-14.3" font-family="Times,serif" font-size="14.00">Reinforcement learning</text>
-</g>
-<!-- Machine learning&#45;&gt;Reinforcement learning -->
-<g id="edge3" class="edge">
-<title>Machine learning-&gt;Reinforcement learning</title>
-<path fill="none" stroke="black" d="M160.13,-60.03C173.75,-57.66 187.97,-55.22 201.28,-53 242.91,-46.05 289.02,-38.68 328.25,-32.49"></path>
-<polygon fill="black" stroke="black" points="329,-35.92 338.33,-30.91 327.91,-29.01 329,-35.92"></polygon>
-<text text-anchor="middle" x="242.78" y="-56.8" font-family="Times,serif" font-size="14.00">loss fn</text>
-</g>
-<!-- Classification -->
-<g id="node5" class="node">
-<title>Classification</title>
-<ellipse fill="none" stroke="black" cx="729.25" cy="-180" rx="72.59" ry="18"></ellipse>
-<text text-anchor="middle" x="729.25" y="-176.3" font-family="Times,serif" font-size="14.00">Classification</text>
-</g>
-<!-- Supervised learning&#45;&gt;Classification -->
-<g id="edge4" class="edge">
-<title>Supervised learning-&gt;Classification</title>
-<path fill="none" stroke="black" d="M496.13,-138.87C545.59,-147.63 610.69,-159.17 659.35,-167.79"></path>
-<polygon fill="black" stroke="black" points="659.01,-171.29 669.47,-169.58 660.24,-164.39 659.01,-171.29"></polygon>
-</g>
-<!-- Regression -->
-<g id="node6" class="node">
-<title>Regression</title>
-<ellipse fill="none" stroke="black" cx="729.25" cy="-126" rx="62.29" ry="18"></ellipse>
-<text text-anchor="middle" x="729.25" y="-122.3" font-family="Times,serif" font-size="14.00">Regression</text>
-</g>
-<!-- Supervised learning&#45;&gt;Regression -->
-<g id="edge5" class="edge">
-<title>Supervised learning-&gt;Regression</title>
-<path fill="none" stroke="black" d="M527.54,-126C569.96,-126 617.95,-126 656.37,-126"></path>
-<polygon fill="black" stroke="black" points="656.43,-129.5 666.43,-126 656.43,-122.5 656.43,-129.5"></polygon>
-</g>
-<!-- Clustering -->
-<g id="node7" class="node">
-<title>Clustering</title>
-<ellipse fill="none" stroke="black" cx="729.25" cy="-72" rx="59.59" ry="18"></ellipse>
-<text text-anchor="middle" x="729.25" y="-68.3" font-family="Times,serif" font-size="14.00">Clustering</text>
-</g>
-<!-- Unsupervised learning&#45;&gt;Clustering -->
-<g id="edge6" class="edge">
-<title>Unsupervised learning-&gt;Clustering</title>
-<path fill="none" stroke="black" d="M539.16,-72C579.62,-72 623.75,-72 659.19,-72"></path>
-<polygon fill="black" stroke="black" points="659.42,-75.5 669.42,-72 659.42,-68.5 659.42,-75.5"></polygon>
-</g>
-<!-- Principal Component Analysis -->
-<g id="node8" class="node">
-<title>Principal Component Analysis</title>
-<ellipse fill="none" stroke="black" cx="729.25" cy="-18" rx="149.47" ry="18"></ellipse>
-<text text-anchor="middle" x="729.25" y="-14.3" font-family="Times,serif" font-size="14.00">Principal Component Analysis</text>
-</g>
-<!-- Unsupervised learning&#45;&gt;Principal Component Analysis -->
-<g id="edge7" class="edge">
-<title>Unsupervised learning-&gt;Principal Component Analysis</title>
-<path fill="none" stroke="black" d="M499.63,-58.51C540.52,-51.27 591.28,-42.27 634.57,-34.6"></path>
-<polygon fill="black" stroke="black" points="635.31,-38.02 644.54,-32.83 634.09,-31.13 635.31,-38.02"></polygon>
-</g>
-</g>
-</svg>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<p>YOLO, RL의 경우 짜여진 코드를 가지고 이해 혹은 학습하는 게 나을수도..</p>
 <ul>
-<li>in Supervised Learning, the goal is to <strong>generate formula</strong> based on input and output values. <ul>
-<li>입출력값으로 수식을 만드려는 지도학습</li>
+<li>즉 코드가 검색하면 나오는 것들일 경우?</li>
 </ul>
-</li>
-<li>In Unsupervised Learning, we find an <strong>association</strong> between input values and <strong>group</strong> them. <ul>
-<li>입력값으로 그룹화하거나 그 사이 관계를 찾으려는 비지도학습</li>
-</ul>
-</li>
-<li>In Reinforcement Learning an agent learn through delayed feedback by <strong>interacting with the environment</strong>.<ul>
-<li>환경과 상호작용으로 보상을 통해 배워가려는 강화학습</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-">
-<a class="anchor" href="#-" aria-hidden="true"><span class="octicon octicon-link"></span></a> <a class="anchor-link" href="#-"> </a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://www.gocoder.one/blog/reinforcement-learning-project-ideas">https://www.gocoder.one/blog/reinforcement-learning-project-ideas</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr>
 
 </div>
 </div>
@@ -974,7 +761,7 @@ score: 9
 
 
 
-  </div><a class="u-url" href="/ms/2022/04/30/RL-study.html" hidden></a>
+  </div><a class="u-url" href="/ms/2022/05/08/RL-YOLO-study.html" hidden></a>
 </article>
 
       </div>
