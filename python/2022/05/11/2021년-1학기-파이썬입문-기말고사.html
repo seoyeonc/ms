@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -157,7 +157,114 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>가위바위보 예제 함수 구현해보기</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'c'</span><span class="p">:[</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'sissors'</span><span class="p">]})</span>
+<span class="n">player2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'c'</span><span class="p">:[</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'sissors'</span><span class="p">]})</span>
+
+<span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span> <span class="nf">double2</span><span class="p">(</span><span class="n">player</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span> <span class="nf">choice</span><span class="p">(</span><span class="n">double</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">double</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span> <span class="nf">choice2</span><span class="p">(</span><span class="n">double</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">double</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span> <span class="nf">winner</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">value2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">value2</span> <span class="p">:</span> <span class="n">p1</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mf">0.5</span> 
+    <span class="k">elif</span> <span class="p">(</span><span class="s1">'rock'</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">'paper'</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value2</span><span class="p">:</span>     <span class="n">p1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mi">1</span> 
+    <span class="k">elif</span> <span class="p">(</span><span class="s1">'rock'</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">'sissors'</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value2</span><span class="p">:</span> <span class="n">p1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mi">0</span> 
+    <span class="k">elif</span> <span class="p">(</span><span class="s1">'sissors'</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">'rock'</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value2</span><span class="p">:</span> <span class="n">p1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mi">1</span> 
+    <span class="k">elif</span> <span class="p">(</span><span class="s1">'sissors'</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">'paper'</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value2</span><span class="p">:</span> <span class="n">p1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="s1">'paper'</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">'rock'</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value2</span><span class="p">:</span> <span class="n">p1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mi">0</span> 
+    <span class="k">elif</span> <span class="p">(</span><span class="s1">'paper'</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">'sissors'</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value2</span><span class="p">:</span> <span class="n">p1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">p2</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">p1</span><span class="p">,</span><span class="n">p2</span>
+
+<span class="n">winner</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="n">player1</span><span class="p">))</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">choice2</span><span class="p">(</span><span class="n">double2</span><span class="p">(</span><span class="n">player2</span><span class="p">))</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">UnboundLocalError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">/tmp/ipykernel_510666/1362001620.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     28</span>     <span class="ansi-green-fg">return</span> p1<span class="ansi-blue-fg">,</span>p2
+<span class="ansi-green-intense-fg ansi-bold">     29</span> 
+<span class="ansi-green-fg">---&gt; 30</span><span class="ansi-red-fg"> </span>winner<span class="ansi-blue-fg">(</span>choice<span class="ansi-blue-fg">(</span>double<span class="ansi-blue-fg">(</span>player1<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>values<span class="ansi-blue-fg">.</span>tolist<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>choice2<span class="ansi-blue-fg">(</span>double2<span class="ansi-blue-fg">(</span>player2<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>values<span class="ansi-blue-fg">.</span>tolist<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/tmp/ipykernel_510666/1362001620.py</span> in <span class="ansi-cyan-fg">winner</span><span class="ansi-blue-fg">(value, value2)</span>
+<span class="ansi-green-intense-fg ansi-bold">     26</span>     <span class="ansi-green-fg">elif</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'paper'</span> <span class="ansi-green-fg">in</span> value<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'rock'</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">in</span> value2<span class="ansi-blue-fg">:</span> p1<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">;</span>p2<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-intense-fg ansi-bold">     27</span>     <span class="ansi-green-fg">elif</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'paper'</span> <span class="ansi-green-fg">in</span> value<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> <span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'sissors'</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">in</span> value2<span class="ansi-blue-fg">:</span> p1<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">;</span>p2<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span>
+<span class="ansi-green-fg">---&gt; 28</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> p1<span class="ansi-blue-fg">,</span>p2
+<span class="ansi-green-intense-fg ansi-bold">     29</span> 
+<span class="ansi-green-intense-fg ansi-bold">     30</span> winner<span class="ansi-blue-fg">(</span>choice<span class="ansi-blue-fg">(</span>double<span class="ansi-blue-fg">(</span>player1<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>values<span class="ansi-blue-fg">.</span>tolist<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>choice2<span class="ansi-blue-fg">(</span>double2<span class="ansi-blue-fg">(</span>player2<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>values<span class="ansi-blue-fg">.</span>tolist<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">UnboundLocalError</span>: local variable 'p1' referenced before assignment</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -166,6 +273,14 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>빅데 21년 거 14주차에클래스 있음ㅎ</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -287,10 +402,10 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">RL</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">lms</span><span class="o">.</span><span class="n">jbnu</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">kr</span><span class="o">/</span><span class="n">board</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">jsp</span><span class="err">?</span><span class="n">board</span><span class="o">=</span><span class="n">notice</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">62</span><span class="p">))</span><span class="o">&gt;=</span><span class="mi">5</span> <span class="p">:</span> <span class="n">total</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">total</span><span class="o">/</span><span class="n">n</span>
+    <span class="k">return</span> <span class="n">total</span><span class="o">/</span><span class="n">nhttps</span><span class="p">:</span><span class="o">//</span><span class="n">lms</span><span class="o">.</span><span class="n">jbnu</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">kr</span><span class="o">/</span><span class="n">board</span><span class="o">/</span><span class="n">view</span><span class="o">.</span><span class="n">jsp</span><span class="err">?</span><span class="n">board</span><span class="o">=</span><span class="n">notice</span><span class="o">&amp;</span><span class="nb">id</span><span class="o">=</span><span class="mi">68941</span>
 </pre></div>
 
     </div>
