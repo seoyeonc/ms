@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -174,6 +174,9 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>가위바위보 예제 함수 구현해보기</p>
+<ul>
+<li>복원추출 가능?</li>
+</ul>
 
 </div>
 </div>
@@ -203,8 +206,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'sissors'</span><span class="p">]</span>
-<span class="n">player2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'sissors'</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">player1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'scissors'</span><span class="p">]</span>
+<span class="n">player2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'scissors'</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -221,7 +224,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'sissors'</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'rock'</span><span class="p">,</span> <span class="s1">'paper'</span><span class="p">,</span> <span class="s1">'scissors'</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -236,7 +239,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array(['rock', 'paper'], dtype='&lt;U7')</pre>
+<pre>array(['paper', 'rock'], dtype='&lt;U8')</pre>
 </div>
 
 </div>
@@ -269,7 +272,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array(['paper', 'rock'], dtype='&lt;U7')</pre>
+<pre>array(['rock', 'scissors'], dtype='&lt;U8')</pre>
 </div>
 
 </div>
@@ -325,7 +328,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array(['rock'], dtype='&lt;U7')</pre>
+<pre>array(['paper'], dtype='&lt;U8')</pre>
 </div>
 
 </div>
@@ -378,12 +381,12 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">winner</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">v1</span> <span class="o">==</span> <span class="n">v2</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'same'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'sissors'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'winner'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'scissors'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'winner'</span><span class="p">)</span>
     <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'rock'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'winner'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'sissors'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'paper'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'winner'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'paper'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'loser'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'sissors'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'rock'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'loser'</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'sissors'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'loser'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'scissors'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'paper'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'winner'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'paper'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'loser'</span><span class="p">)</span> 
+    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'scissors'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'rock'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'loser'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v2</span> <span class="o">==</span> <span class="s1">'scissors'</span> <span class="p">:</span><span class="nb">print</span><span class="p">(</span><span class="s1">'loser'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -431,7 +434,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winner</span><span class="p">(</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'sissors'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winner</span><span class="p">(</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'scissors'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -462,7 +465,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winner</span><span class="p">(</span><span class="s1">'sissors'</span><span class="p">,</span><span class="s1">'rock'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winner</span><span class="p">(</span><span class="s1">'scissors'</span><span class="p">,</span><span class="s1">'rock'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -476,6 +479,37 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>loser
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winner</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="n">player1</span><span class="p">)),</span><span class="n">choice</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="n">player2</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>winner
 </pre>
 </div>
 </div>
@@ -537,9 +571,145 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>loser
+<pre>same
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>시도1</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RSP</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'n'</span><span class="p">:[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="p">})</span>
+    
+    <span class="k">def</span> <span class="nf">number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">double</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">double</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab</span><span class="p">[</span><span class="s1">'r'</span><span class="p">]</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">double</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">choice</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tab</span>
+    
+    <span class="k">def</span> <span class="nf">winner</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="n">v2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">v1</span> <span class="o">==</span> <span class="n">v2</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'same'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="p">:</span> 
+            <span class="k">if</span> <span class="p">(</span><span class="n">v2</span> <span class="o">==</span> <span class="s1">'scissors'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'player1 is winner'</span><span class="p">)</span> 
+            <span class="k">else</span><span class="p">:</span> 
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'player1 is loser'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">v2</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'player1 is winner'</span><span class="p">)</span> 
+            <span class="k">else</span><span class="p">:</span>  
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'player1 is loser'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="s1">'scissors'</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span>  <span class="p">(</span><span class="n">v2</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'player1 is winner'</span><span class="p">)</span>
+            <span class="k">else</span> <span class="p">:</span> 
+                <span class="nb">print</span><span class="p">(</span><span class="s1">'player1 is loser'</span><span class="p">)</span>
+            
+<span class="n">try1</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">(</span><span class="n">player1</span><span class="p">)</span>
+<span class="n">try2</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">(</span><span class="n">player2</span><span class="p">)</span>
+
+<span class="c1">#print(try1.double()['r'][1])</span>
+<span class="c1">#print(try2.double())</span>
+<span class="n">RSP</span><span class="o">.</span><span class="n">winner</span><span class="p">(</span><span class="n">try1</span><span class="o">.</span><span class="n">double</span><span class="p">()[</span><span class="s1">'r'</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">try2</span><span class="o">.</span><span class="n">double</span><span class="p">()[</span><span class="s1">'r'</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>player1 is winner
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>시도2</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">double</span><span class="p">(</span><span class="n">player1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array(['scissors'], dtype='&lt;U8')</pre>
+</div>
+
 </div>
 
 </div>
@@ -555,7 +725,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">winner</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="n">player1</span><span class="p">)),</span><span class="n">choice</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="n">player2</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">double</span><span class="p">(</span><span class="n">player1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -567,10 +737,12 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>same
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array(['paper'], dtype='&lt;U8')</pre>
 </div>
+
 </div>
 
 </div>
@@ -587,28 +759,42 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RSP</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">setdata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n1</span> <span class="o">=</span> <span class="n">n1</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n2</span> <span class="o">=</span> <span class="n">n2</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n3</span> <span class="o">=</span> <span class="n">n3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'n'</span><span class="p">:[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">=</span> <span class="mi">0</span>
     
     <span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">n1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">n2</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">n3</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">result</span>
-
-    <span class="k">def</span> <span class="nf">choice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">result2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">n2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">result2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">double</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">double</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">choice</span>
     
-<span class="n">try1</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">()</span>
-<span class="n">try2</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">()</span>
-<span class="n">try1</span><span class="o">.</span><span class="n">setdata</span><span class="p">(</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'paper'</span><span class="p">,</span><span class="s1">'sissors'</span><span class="p">)</span>
-<span class="n">try2</span><span class="o">.</span><span class="n">setdata</span><span class="p">(</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'paper'</span><span class="p">,</span><span class="s1">'sissors'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">double</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">double</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">n2</span> <span class="p">:</span>  <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="p">:</span> 
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n2</span> <span class="o">==</span> <span class="s1">'scissors'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span> 
+                <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n2</span> <span class="o">==</span> <span class="s1">'rock'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>  
+                <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">choice</span> <span class="o">==</span> <span class="s1">'scissors'</span><span class="p">)</span> <span class="p">:</span>
+            <span class="k">if</span>  <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n2</span> <span class="o">==</span> <span class="s1">'paper'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span> <span class="p">:</span> 
+                <span class="bp">self</span><span class="o">.</span><span class="n">prob</span> <span class="o">+=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">prob</span>
+            
+<span class="n">try1</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span><span class="n">double</span><span class="p">(</span><span class="n">player2</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">try1</span><span class="o">.</span><span class="n">double</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">try1</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">try1</span><span class="o">.</span><span class="n">double</span><span class="p">()))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">try1</span><span class="o">.</span><span class="n">double</span><span class="p">())</span>
-<span class="c1">#print(try1.choice(double(player2)))</span>
 </pre></div>
 
     </div>
@@ -621,10 +807,51 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['paper' 'sissors']
+<pre>1
 </pre>
 </div>
 </div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">try1</span> <span class="o">=</span> <span class="n">RSP</span><span class="p">(</span><span class="n">player1</span><span class="p">,</span><span class="n">double</span><span class="p">(</span><span class="n">player2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">try1</span><span class="o">.</span><span class="n">double</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
 
 <div class="output_area">
 
@@ -632,91 +859,81 @@ window.onload = wrap_img;
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_548423/2937804144.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     19</span> 
-<span class="ansi-green-intense-fg ansi-bold">     20</span> print<span class="ansi-blue-fg">(</span>try1<span class="ansi-blue-fg">.</span>double<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 21</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>try1<span class="ansi-blue-fg">.</span>choice<span class="ansi-blue-fg">(</span>try1<span class="ansi-blue-fg">.</span>double<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> print<span class="ansi-blue-fg">(</span>try1<span class="ansi-blue-fg">.</span>double<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     23</span> <span class="ansi-red-fg">#print(try1.choice(double(player2)))</span>
-
-<span class="ansi-red-fg">TypeError</span>: choice() takes 1 positional argument but 2 were given</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'paper'</span><span class="p">,</span><span class="s1">'sissors'</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array(['paper', 'paper'], dtype='&lt;U7')</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">try1</span><span class="o">.</span><span class="n">double</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_548423/2989647966.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">/tmp/ipykernel_552063/174960897.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>try1<span class="ansi-blue-fg">.</span>double<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">/tmp/ipykernel_548423/3901489354.py</span> in <span class="ansi-cyan-fg">double</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">def</span> double<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span>         resullt <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>choice<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>n1<span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">      8</span> 
-<span class="ansi-green-intense-fg ansi-bold">      9</span>     <span class="ansi-green-fg">def</span> choice<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'result' is not defined</pre>
+<span class="ansi-red-fg">TypeError</span>: 'numpy.ndarray' object is not callable</pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>시도3</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://davidamos.dev/revisiting-rock-paper-scissors-in-python/">https://davidamos.dev/revisiting-rock-paper-scissors-in-python/</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loses_to</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"rock"</span><span class="p">:</span> <span class="s2">"scissors"</span><span class="p">,</span>
+    <span class="s2">"paper"</span><span class="p">:</span> <span class="s2">"rock"</span><span class="p">,</span>
+    <span class="s2">"scissors"</span><span class="p">:</span> <span class="s2">"paper"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loses_to</span><span class="p">[</span><span class="s1">'rock'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>'scissors'</pre>
+</div>
+
 </div>
 
 </div>
@@ -732,7 +949,31 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">try1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="n">player1_choice</span><span class="p">,</span> <span class="n">player2_choice</span><span class="p">):</span>
+    <span class="c1">#                 vv--- replace == with in</span>
+    <span class="k">if</span> <span class="n">player2_choice</span> <span class="ow">in</span> <span class="n">loses_to</span><span class="p">[</span><span class="n">player1_choice</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">player1_choice</span><span class="si">}</span><span class="s2"> wins"</span>
+    <span class="c1">#                 vv--- replace == with in</span>
+    <span class="k">if</span> <span class="n">player1_choice</span> <span class="ow">in</span> <span class="n">loses_to</span><span class="p">[</span><span class="n">player2_choice</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">player2_choice</span><span class="si">}</span><span class="s2"> wins"</span>
+    <span class="k">return</span> <span class="s2">"tie"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">timeit</span> play("rock", "paper")
 </pre></div>
 
     </div>
@@ -744,12 +985,10 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.RSP at 0x7f5590caddf0&gt;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>138 ns ± 1.44 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre>
 </div>
-
 </div>
 
 </div>
