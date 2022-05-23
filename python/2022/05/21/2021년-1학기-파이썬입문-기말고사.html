@@ -1299,22 +1299,25 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SRP</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">vs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x2</span> <span class="o">=</span> <span class="n">x2</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vs</span> <span class="o">=</span> <span class="n">vs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n2</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'plr'</span><span class="p">:[</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'scissors'</span><span class="p">,</span><span class="s1">'paer'</span><span class="p">],</span><span class="s1">'loser'</span><span class="p">:[</span><span class="s1">'scissors'</span><span class="p">,</span><span class="s1">'paper'</span><span class="p">,</span><span class="s1">'rock'</span><span class="p">],</span><span class="s1">'winner'</span><span class="p">:[</span><span class="s1">'paper'</span><span class="p">,</span><span class="s1">'rock'</span><span class="p">,</span><span class="s1">'scissors'</span><span class="p">]})</span>
     
     <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">snd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fst</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">trd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'try0'</span><span class="p">:[</span><span class="kc">None</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">vs</span><span class="p">,</span><span class="s1">'result'</span><span class="p">]})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">snd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fst</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">n1</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">n2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'try0'</span><span class="p">:[</span><span class="kc">None</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">x2</span><span class="p">,</span><span class="s1">'result'</span><span class="p">]})</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
         
     <span class="k">def</span> <span class="nf">v</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trd</span><span class="p">[</span><span class="s1">'try0'</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">snd</span><span class="p">)</span><span class="o">*</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x2</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">snd</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">trd</span><span class="p">[</span><span class="s1">'try</span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">fst</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">snd</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">result</span>
         <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trd</span><span class="p">)</span>
+        <span class="c1">#print(self.tab[self.tab['winner']==self.x2])</span>
 </pre></div>
 
     </div>
@@ -1362,10 +1365,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>       try0           try1
-0      None  [paper, rock]
-1  scissors           rock
-2    result              0
+<pre>       try0              try1
+0      None  [scissors, rock]
+1  scissors        [scissors]
+2    result            [True]
 </pre>
 </div>
 </div>
@@ -1397,80 +1400,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>       try0               try2
-0      None  [scissors, paper]
-1  scissors           scissors
-2    result                  1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
-<span class="n">a</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>       try0                  try3
-0      None  [scissors, scissors]
-1  scissors              scissors
-2    result                     1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">f</span><span class="p">()</span>
-<span class="n">a</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>       try0           try4
-0      None  [paper, rock]
-1  scissors          paper
-2    result              0
+<pre>       try0              try2
+0      None  [rock, scissors]
+1  scissors        [scissors]
+2    result            [True]
 </pre>
 </div>
 </div>
