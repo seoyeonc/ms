@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -1754,7 +1754,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>보
+<pre>바위
 </pre>
 </div>
 </div>
@@ -1786,7 +1786,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>낼 수 있는 패: ['가위', '바위', '보']
-기록: ['보']
+기록: ['바위']
 </pre>
 </div>
 </div>
@@ -1844,7 +1844,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>"낼 수 있는 패: ['가위', '바위', '보']\n기록: ['보']"</pre>
+<pre>"낼 수 있는 패: ['가위', '바위', '보']\n기록: ['바위']"</pre>
 </div>
 
 </div>
@@ -1877,7 +1877,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>"낼 수 있는 패: ['가위', '바위', '보']\n기록: ['보']"</pre>
+<pre>"낼 수 있는 패: ['가위', '바위', '보']\n기록: ['바위']"</pre>
 </div>
 
 </div>
@@ -2571,8 +2571,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[1 2]
- [3 4]]
+<pre>[1, 2, 3]
 </pre>
 </div>
 </div>
@@ -2986,6 +2985,43 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[   0    1    2 ...   97   98   99]
+ [ 100  101  102 ...  197  198  199]
+ [ 200  201  202 ...  297  298  299]
+ ...
+ [9700 9701 9702 ... 9797 9798 9799]
+ [9800 9801 9802 ... 9897 9898 9899]
+ [9900 9901 9902 ... 9997 9998 9999]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span>
 </pre></div>
 
@@ -3016,6 +3052,14 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>-</code> 참고로 <code>a.__repr__()</code>은 <code>repr(a)</code>와 같다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>representation</p>
 
 </div>
 </div>
@@ -3066,6 +3110,14 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>-</code> 요즘에는 IDE의 발전에 따라서 <code>오브젝트이름+엔터</code>칠떄 나오는 출력의 형태도 다양해지고 있음</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>통합 개발 환경(Integrated Development Environment, IDE)이란 공통된 개발자 툴을 하나의 그래픽 사용자 인터페이스(Graphical User Interface, GUI)로 결합하는 애플리케이션을 구축하기 위한 소프트웨어입니다</p>
 
 </div>
 </div>
@@ -3386,6 +3438,39 @@ Type "help", "copyright", "credits" or "license" for more information.
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">{</span><span class="s1">'_repr_html_'</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'_repr_html_'}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -3657,7 +3742,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
-<code>__str__()</code>은 건드린적이 없는데? $\to$ 건드린적은 없는데 기능이 바껴있음 </li>
+<code>__str__()</code>은 건드린적이 없는데? $\to$ 건드린적은 없는데 기능이 바뀌어있음 </li>
 </ul>
 
 </div>
@@ -3688,7 +3773,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <pre><span class="ansi-red-fg">Signature:</span>      a<span class="ansi-blue-fg">.</span>__str__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Call signature:</span> a<span class="ansi-blue-fg">.</span>__str__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Type:</span>           method-wrapper
-<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__str__' of RPC object at 0x7fef9f7465c0&gt;
+<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__str__' of RPC object at 0x7fe091e34df0&gt;
 <span class="ansi-red-fg">Docstring:</span>      Return str(self).
 </pre>
 </div>
@@ -3728,7 +3813,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <span class="ansi-red-fg">Source:</span>   
     <span class="ansi-green-fg">def</span> __repr__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">"낼 수 있는 패: {}\n기록: {}"</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>candidate<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>actions<span class="ansi-blue-fg">)</span>
-<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_288989/831267894.py
+<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_577026/1255092133.py
 <span class="ansi-red-fg">Type:</span>      method
 </pre>
 </div>
@@ -3854,7 +3939,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;__main__.RPC at 0x7fef9f747b80&gt;</pre>
+<pre>&lt;__main__.RPC at 0x7fe091deaeb0&gt;</pre>
 </div>
 
 </div>
@@ -3920,7 +4005,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef9f747b80&gt;'</pre>
+<pre>'&lt;__main__.RPC object at 0x7fe091deaeb0&gt;'</pre>
 </div>
 
 </div>
@@ -3958,7 +4043,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <span class="ansi-red-fg">Source:</span>   
     <span class="ansi-green-fg">def</span> __str__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
         <span class="ansi-green-fg">return</span> <span class="ansi-blue-fg">"낼 수 있는 패: {}\n기록: {}"</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>candidate<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">.</span>actions<span class="ansi-blue-fg">)</span>
-<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_288989/183356077.py
+<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_577026/2068707480.py
 <span class="ansi-red-fg">Type:</span>      method
 </pre>
 </div>
@@ -3996,7 +4081,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <pre><span class="ansi-red-fg">Signature:</span>      a<span class="ansi-blue-fg">.</span>__repr__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Call signature:</span> a<span class="ansi-blue-fg">.</span>__repr__<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-red-fg">Type:</span>           method-wrapper
-<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__repr__' of RPC object at 0x7fef9f747b80&gt;
+<span class="ansi-red-fg">String form:</span>    &lt;method-wrapper '__repr__' of RPC object at 0x7fe091deaeb0&gt;
 <span class="ansi-red-fg">Docstring:</span>      Return repr(self).
 </pre>
 </div>
@@ -4204,7 +4289,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef9f75a890&gt;'</pre>
+<pre>'&lt;__main__.RPC object at 0x7fe091dea4f0&gt;'</pre>
 </div>
 
 </div>
@@ -4237,7 +4322,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;__main__.RPC object at 0x7fef9f75a890&gt;'</pre>
+<pre>'&lt;__main__.RPC object at 0x7fe091dea4f0&gt;'</pre>
 </div>
 
 </div>
@@ -4306,10 +4391,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>가위
+보
+보
 가위
-보
-보
-바위
+가위
 </pre>
 </div>
 </div>
@@ -4343,7 +4428,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 <div class="output_html rendered_html output_subarea output_execute_result">
 
         낼 수 있는 패: ['가위', '바위', '보'] <br> 
-        기록: ['가위', '가위', '보', '보', '바위']
+        기록: ['가위', '보', '보', '가위', '가위']
         
 </div>
 
@@ -4392,6 +4477,127 @@ Type "help", "copyright", "credits" or "license" for more information.
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RPC</span><span class="p">:</span> 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">candidate</span><span class="o">=</span><span class="p">[</span><span class="s1">'가위'</span><span class="p">,</span><span class="s1">'바위'</span><span class="p">,</span><span class="s1">'보'</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">candidate</span> <span class="o">=</span> <span class="n">candidate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">actions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span> 
+    <span class="k">def</span> <span class="nf">choose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">candidate</span><span class="p">))</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">html_str</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">        학번: 202150754 &lt;br/&gt;</span>
+<span class="s2">        낼 수 있는 패: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt; </span>
+<span class="s2">        기록: </span><span class="si">{}</span><span class="s2"></span>
+<span class="s2">        """</span>
+        <span class="k">return</span> <span class="n">html_str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">candidate</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">actions</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">RPC</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">choose</span><span class="p">()</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>바위
+보
+바위
+바위
+보
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        학번: 202150754 <br>
+        낼 수 있는 패: ['가위', '바위', '보'] <br> 
+        기록: ['바위', '보', '바위', '바위', '보']
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
