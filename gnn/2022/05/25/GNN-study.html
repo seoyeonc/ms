@@ -2100,7 +2100,7 @@ Test data shape: (1362, 1435)
 <li>활성화함수(<code>tf.nn.gelu</code>) (<a href="https://www.tensorflow.org/api_docs/python/tf/nn/gelu">https://www.tensorflow.org/api_docs/python/tf/nn/gelu</a>) (Gaussian Error Linear Unit (GELU) activation function.)<ul>
 <li>tf.nn.gelu(features, approximate=False, name=None)</li>
 <li>Gaussian error linear unit (GELU) computes $x * P(X &lt;= x)$, where $P(X) \sim N(0, 1)$. The (GELU) nonlinearity weights inputs by their value, rather than gates inputs by their sign as in ReLU.<ul>
-<li>GELU 가우시안 에러 선형 단위(?), Relu 함수는 부호에 따라 입력함수를 처리해주었다면, Gelu 함수는 값에 따라 입력함수를 처리한다. x $\times$ (x의 확률이 표준정규분포를 따를때 x 보다 작을 확률(?))</li>
+<li>GELU 가우시안 에러 선형 단위(?), Relu 함수는 부호에 따라 입력함수를 처리해주었다면, Gelu 함수는 값에 따라 입력함수를 처리한다. x $\times$ (x의 확률이 표준정규분포를 따를때 표준정규분포표에서 x 보다 작을 확률)</li>
 </ul>
 </li>
 </ul>
@@ -2899,7 +2899,7 @@ Instance 7:
 <p>The graph data is represented by the graph_info tuple, which consists of the following three elements:</p>
 <ol>
 <li>node_features: This is a [num_nodes, num_features] NumPy array that includes the node features. In this dataset, the nodes are the papers, and the node_features are the word-presence binary vectors of each paper.<ul>
-<li>노드 특징을 포함하는 넘파이 배열이다.노드는 papers이고, node_features는 각 paper사이의 단어 존재 이진 벡터이다.(?)</li>
+<li>노드 특징을 포함하는 넘파이 배열이다.노드는 papers이고, node_features는 각 논문 사이의 단어 존재 이진 벡터이다.(?)</li>
 </ul>
 </li>
 <li>edges: This is [num_edges, num_edges] NumPy array representing a sparse adjacency matrix of the links between the nodes. In this example, the links are the citations between the papers.<ul>
