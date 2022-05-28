@@ -3965,6 +3965,52 @@ $$\tanh z = \frac{\sinh z}{\cosh z} = \frac{e^z - e^{-z}}{e^z + e^{-z}} = \frac{
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">create_ffn</span><span class="p">(</span><span class="n">hidden_units</span><span class="p">,</span> <span class="n">dropout_rate</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"postprocess"</span><span class="p">)(</span><span class="n">node_features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;tf.Tensor: shape=(2708, 32), dtype=float32, numpy=
+array([[-0.0438415 ,  0.05822259,  0.01784638, ...,  0.01314815,
+        -0.00288184, -0.00842262],
+       [ 0.02056418,  0.04523989, -0.05037253, ...,  0.0137684 ,
+         0.05119981, -0.0328092 ],
+       [ 0.02786589, -0.02156354,  0.01393338, ...,  0.01485734,
+         0.0336243 ,  0.01253645],
+       ...,
+       [-0.00390293,  0.02580145, -0.05101755, ...,  0.07115817,
+         0.03063959, -0.04158287],
+       [-0.02493567, -0.00982335, -0.05645709, ...,  0.08836337,
+         0.0315274 , -0.00958259],
+       [-0.03271731, -0.02948607, -0.03748903, ..., -0.01709204,
+        -0.02062779,  0.01670217]], dtype=float32)&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
