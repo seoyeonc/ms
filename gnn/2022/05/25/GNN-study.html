@@ -2924,6 +2924,83 @@ ________________________________________________________________________________
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_train</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 855, 1335, 1324, ..., 2011,   98,  461])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_train</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>462     2
+169     2
+2516    1
+2691    2
+1529    4
+       ..
+2616    0
+302     5
+1190    2
+1855    0
+1462    2
+Name: subject, Length: 1339, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">run_experiment</span><span class="p">(</span><span class="n">baseline_model</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 </pre></div>
 
@@ -3462,6 +3539,17 @@ Instance 7:
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>sparse adjacency matrix</strong></p>
+<ul>
+<li>노드 수보다 엣지 수가 적은 matrix</li>
+</ul>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -4238,6 +4326,14 @@ _________________________________________________________________
 <ul>
 <li>모델 학습을 위해 cross-entropy loss 이용. 하지만 생성된 node embedding에 대해 또다른 자체 supervised loss term을 추가할 수 있다. 여기서 멀리 있는 노드들은 서로다른 표현을 가지는동안 그래프에 이웃한 노드들은 유사한 표현을 가지고 있다.</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>임베딩하는 함수가 representation이라고 보면 될듯</p>
 
 </div>
 </div>
