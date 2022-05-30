@@ -1,0 +1,2889 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>(13주차) 5월30일 | Seoyeon</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="(13주차) 5월30일" />
+<meta name="author" content="최규빈" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="클래스 공부 6단계" />
+<meta property="og:description" content="클래스 공부 6단계" />
+<link rel="canonical" href="https://seoyeonc.github.io/ms/2022/05/30/python_class5.html" />
+<meta property="og:url" content="https://seoyeonc.github.io/ms/2022/05/30/python_class5.html" />
+<meta property="og:site_name" content="Seoyeon" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="(13주차) 5월30일" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"최규빈"},"dateModified":"2022-05-30T00:00:00-05:00","datePublished":"2022-05-30T00:00:00-05:00","description":"클래스 공부 6단계","headline":"(13주차) 5월30일","mainEntityOfPage":{"@type":"WebPage","@id":"https://seoyeonc.github.io/ms/2022/05/30/python_class5.html"},"url":"https://seoyeonc.github.io/ms/2022/05/30/python_class5.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ms/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://seoyeonc.github.io/ms/feed.xml" title="Seoyeon" /><link rel="shortcut icon" type="image/x-icon" href="/ms/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ms/">Seoyeon</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ms/about/">About Me</a><a class="page-link" href="/ms/search/">Search</a><a class="page-link" href="/ms/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">(13주차) 5월30일</h1><p class="page-description">클래스 공부 6단계</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-05-30T00:00:00-05:00" itemprop="datePublished">
+        May 30, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">최규빈</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/seoyeonc/ms/tree/master/_notebooks/2022-05-30-python_class5.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/ms/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/seoyeonc/ms/master?filepath=_notebooks%2F2022-05-30-python_class5.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ms/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/seoyeonc/ms/blob/master/_notebooks/2022-05-30-python_class5.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ms/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fseoyeonc%2Fms%2Fblob%2Fmaster%2F_notebooks%2F2022-05-30-python_class5.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/ms/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#강의영상">강의영상 </a></li>
+<li class="toc-entry toc-h2"><a href="#클래스공부-6단계">클래스공부 6단계 </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#인사관리-예제">인사관리 예제 </a></li>
+<li class="toc-entry toc-h3"><a href="#리스트의-상속">리스트의 상속 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Appendix:-사용자정의-자료형의-유용함">Appendix: 사용자정의 자료형의 유용함 </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-05-30-python_class5.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="강의영상">
+<a class="anchor" href="#%EA%B0%95%EC%9D%98%EC%98%81%EC%83%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>강의영상<a class="anchor-link" href="#%EA%B0%95%EC%9D%98%EC%98%81%EC%83%81"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+</p>
+<center class="youtube-iframe-wrapper">
+    <iframe width="730" height="315" src="https://www.youtube.com/embed/playlist?list=PLQqh36zP38-xw_UHDXp5ZpYywkCxpN4SE" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> (1/4) 인사관리 예제 (1)</p>
+<p><code>-</code> (2/4) 인사관리 예제 (2)</p>
+<p><code>-</code> (3/4) 리스트의 상속</p>
+<p><code>-</code> (4/4) 사용자정의 자료형의 유용함</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="클래스공부-6단계">
+<a class="anchor" href="#%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B3%B5%EB%B6%80-6%EB%8B%A8%EA%B3%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>클래스공부 6단계<a class="anchor-link" href="#%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B3%B5%EB%B6%80-6%EB%8B%A8%EA%B3%84"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 상속</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="인사관리-예제">
+<a class="anchor" href="#%EC%9D%B8%EC%82%AC%EA%B4%80%EB%A6%AC-%EC%98%88%EC%A0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>인사관리 예제<a class="anchor-link" href="#%EC%9D%B8%EC%82%AC%EA%B4%80%EB%A6%AC-%EC%98%88%EC%A0%9C"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 아래와 같은 클래스를 만들자.</p>
+<ul>
+<li>이름, 직급, 연봉에 대한 정보가 있다.</li>
+<li>연봉을 올려주는 메소드가 존재함. </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Employee</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">=</span> <span class="n">pay</span> 
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">html_str</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">        이름: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt;</span>
+<span class="s2">        직급: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt;</span>
+<span class="s2">        연봉: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt;</span>
+<span class="s2">        """</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">pay</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">html_str</span>
+    <span class="k">def</span> <span class="nf">giveraise</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pct</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">pct</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 확인</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'iu'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">hynn</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hynn'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">hd</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hodong'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'mgr'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: iu <br>
+        직급: staff <br>
+        연봉: 5000 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">iu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: iu <br>
+        직급: staff <br>
+        연봉: 5500.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hynn</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">hynn</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hynn <br>
+        직급: staff <br>
+        연봉: 4800.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 회사의 모든 직원의 연봉을 10%씩 올려보자.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'iu'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">hynn</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hynn'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">hd</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hodong'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'mgr'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="n">iu</span><span class="p">,</span> <span class="n">hynn</span><span class="p">,</span> <span class="n">hd</span><span class="p">]:</span>
+    <span class="n">i</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: iu <br>
+        직급: staff <br>
+        연봉: 5500.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hynn</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hynn <br>
+        직급: staff <br>
+        연봉: 4400.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hodong <br>
+        직급: mgr <br>
+        연봉: 8800.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 매니저직급은 일반직원들의 상승분에서 5%의 보너스가 추가되어 상승한다고 가정하고 모든 직원의 연봉을 10%씩 올리는 코드를 구현해보자.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(구현1)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'iu'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">hynn</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hynn'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">hd</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hodong'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'mgr'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="n">iu</span><span class="p">,</span><span class="n">hynn</span><span class="p">,</span><span class="n">hd</span><span class="p">]:</span> 
+    <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">position</span> <span class="o">==</span> <span class="s1">'mgr'</span><span class="p">:</span>
+        <span class="n">i</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="n">i</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: iu <br>
+        직급: staff <br>
+        연봉: 5500.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hynn</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hynn <br>
+        직급: staff <br>
+        연봉: 4400.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hodong <br>
+        직급: mgr <br>
+        연봉: 9200.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(구현2) 새로운 클래스를 만들자</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Manager</span><span class="p">:</span> 
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">=</span> <span class="n">pay</span> 
+    <span class="k">def</span> <span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">html_str</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">        이름: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt;</span>
+<span class="s2">        직급: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt;</span>
+<span class="s2">        연봉: </span><span class="si">{}</span><span class="s2"> &lt;br/&gt;</span>
+<span class="s2">        """</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">position</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">pay</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">html_str</span>
+    <span class="k">def</span> <span class="nf">giveraise</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pct</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">pct</span><span class="o">+</span><span class="mf">0.05</span><span class="p">)</span>     
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'iu'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">hynn</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hynn'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">hd</span><span class="o">=</span><span class="n">Manager</span><span class="p">(</span><span class="s1">'hodong'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'mgr'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="n">iu</span><span class="p">,</span><span class="n">hynn</span><span class="p">,</span><span class="n">hd</span><span class="p">]:</span> 
+    <span class="n">i</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: iu <br>
+        직급: staff <br>
+        연봉: 5500.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hynn</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hynn <br>
+        직급: staff <br>
+        연봉: 4400.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hodong <br>
+        직급: mgr <br>
+        연봉: 9200.000000000002 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(구현3) 상속이용!</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Manager</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">giveraise</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">pct</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pay</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">pct</span><span class="o">+</span><span class="mf">0.05</span><span class="p">)</span>     
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'iu'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">hynn</span><span class="o">=</span><span class="n">Employee</span><span class="p">(</span><span class="s1">'hynn'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'staff'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">hd</span><span class="o">=</span><span class="n">Manager</span><span class="p">(</span><span class="s1">'hodong'</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="s1">'mgr'</span><span class="p">,</span><span class="n">pay</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="n">iu</span><span class="p">,</span><span class="n">hynn</span><span class="p">,</span><span class="n">hd</span><span class="p">]:</span>
+    <span class="n">i</span><span class="o">.</span><span class="n">giveraise</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">iu</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: iu <br>
+        직급: staff <br>
+        연봉: 5500.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hynn</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hynn <br>
+        직급: staff <br>
+        연봉: 4400.0 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        이름: hodong <br>
+        직급: mgr <br>
+        연봉: 9200.000000000002 <br>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 요약: 이미 만들어진 클래스에서 대부분의 기능은 그대로 쓰지만 일부기능만 변경 혹은 추가하고 싶다면 클래스를 상속하면 된다!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="리스트의-상속">
+<a class="anchor" href="#%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%9D%98-%EC%83%81%EC%86%8D" aria-hidden="true"><span class="octicon octicon-link"></span></a>리스트의 상속<a class="anchor-link" href="#%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%9D%98-%EC%83%81%EC%86%8D"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>ref: <a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;barcode=9791165213190">http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;barcode=9791165213190</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> list와 비슷한데 멤버들의 빈도가 계산되는 메소드를 포함하는 새로운 나만의 list를 만들고 싶다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'d'</span><span class="p">]</span>
+<span class="n">lst</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['a', 'b', 'a', 'c', 'b', 'a', 'd']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 아래와 같은 딕셔너리를 만들고 싶다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'a'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span> 
+<span class="n">freq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'a': 3, 'b': 2, 'c': 1, 'd': 1}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<code>lst.frequency()</code>를 입력하면 위의 기능이 수행되도록 변형된 list를 쓰고 싶다. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 구현</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(시도1) 반쯤 성공?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['a', 'b', 'a', 'c', 'b', 'a', 'd']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'a'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span> 
+<span class="n">freq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'a': 0, 'b': 0, 'c': 0, 'd': 0}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="n">freq</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">freq</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'a': 3, 'b': 2, 'c': 1, 'd': 1}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(시도2) 실패</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['a', 'b', 'a', 'c', 'b', 'a', 'd']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">freq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="n">freq</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">freq</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [137]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> item <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> lst:
+<span class="ansi-green-fg">----&gt; 2</span>     freq[item] <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">freq</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">item</span><span class="ansi-yellow-bg">]</span> <span style="color: rgb(98,98,98)">+</span> <span style="color: rgb(98,98,98)">1</span>
+
+<span class="ansi-red-fg">KeyError</span>: 'a'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>에러이유? <code>freq['a']</code>를 호출할 수 없다 -&gt; freq.get('a',0) 이용</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span><span class="p">[</span><span class="s1">'a'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [138]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">freq</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">'</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">a</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">'</span><span class="ansi-yellow-bg">]</span>
+
+<span class="ansi-red-fg">KeyError</span>: 'a'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>freq.get<span class="o">?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea ">
+<pre><span class="ansi-red-fg">Signature:</span> freq<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">,</span> default<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">/</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Docstring:</span> Return the value for key if key is in the dictionary, else default.
+<span class="ansi-red-fg">Type:</span>      builtin_function_or_method
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>key에 대응하는 값이 있으면 그 값을 리턴하고 없으면 default를 리턴 </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span> <span class="c1"># freq['a']에 해당하는 자료가 없어도 에러가 나지 않음 </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># freq['a']에 해당하는 자료가 없어도 에러가 나지 않음 + freq['a']에 해당하는 자료가 없으면 0을 리턴</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(시도3)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['a', 'b', 'a', 'c', 'b', 'a', 'd']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">freq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="n">freq</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'a': 3, 'b': 2, 'c': 1, 'd': 1}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 이것을 내가 정의하는 새로운 list의 메소드로 넣고 싶다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">L</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span> 
+    <span class="k">def</span> <span class="nf">frequency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="n">freq</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">=</span> <span class="n">freq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="k">return</span> <span class="n">freq</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="n">L</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="c1"># 원래 list에 있는 repr 기능을 상속받아서 이루어지는 결과</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 1, 1, 2, 2, 3]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_lst</span> <span class="o">=</span> <span class="n">L</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">lst</span> <span class="o">+</span> <span class="n">_lst</span> <span class="c1"># L자료형끼리의 덧셈</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 1, 1, 2, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span> <span class="c1"># L자료형과 list자료형의 덧셈도 가능</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 1, 1, 2, 2, 3, 4, 5, 6]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>L자료형의 덧셈은 list의 덧셈과 완전히 같음 </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># append함수도 그대로 쓸 수 있음</span>
+<span class="n">lst</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 1, 1, 2, 2, 3, 10]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 기존리스트에서 추가로 frequency() 메소드가 존재함.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lst</span><span class="o">.</span><span class="n">frequency</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{1: 3, 2: 2, 3: 1, 10: 1}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Appendix:-사용자정의-자료형의-유용함">
+<a class="anchor" href="#Appendix:-%EC%82%AC%EC%9A%A9%EC%9E%90%EC%A0%95%EC%9D%98-%EC%9E%90%EB%A3%8C%ED%98%95%EC%9D%98-%EC%9C%A0%EC%9A%A9%ED%95%A8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Appendix: 사용자정의 자료형의 유용함<a class="anchor-link" href="#Appendix:-%EC%82%AC%EC%9A%A9%EC%9E%90%EC%A0%95%EC%9D%98-%EC%9E%90%EB%A3%8C%ED%98%95%EC%9D%98-%EC%9C%A0%EC%9A%A9%ED%95%A8"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 사용자정의 자료형이 어떤 경우에는 유용할 수 있다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 예제1</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2016'</span><span class="p">,</span><span class="s1">'2017'</span><span class="p">,</span><span class="s1">'2017'</span><span class="p">,</span><span class="s1">'2017'</span><span class="p">,</span><span class="mi">2017</span><span class="p">,</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2019</span><span class="p">,</span><span class="mi">2019</span><span class="p">]</span> 
+<span class="n">value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'year'</span><span class="p">:</span><span class="n">year</span><span class="p">,</span><span class="s1">'value'</span><span class="p">:</span><span class="n">value</span><span class="p">})</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016</td>
+      <td>-0.053328</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2017</td>
+      <td>-1.453440</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2017</td>
+      <td>0.951534</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2017</td>
+      <td>-0.479833</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2017</td>
+      <td>-0.891801</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2018</td>
+      <td>-0.841571</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2018</td>
+      <td>-0.945223</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2019</td>
+      <td>0.990534</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2019</td>
+      <td>0.433971</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [157]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">plt</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">df</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">year</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg">df</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">value</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/pyplot.py:3019</span>, in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-fg">(scalex, scaley, data, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3017</span> <span style="color: rgb(175,0,255)">@_copy_docstring_and_deprecators</span>(Axes<span style="color: rgb(98,98,98)">.</span>plot)
+<span class="ansi-green-intense-fg ansi-bold">   3018</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">plot</span>(<span style="color: rgb(98,98,98)">*</span>args, scalex<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, scaley<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>, data<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">None</span>, <span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span>kwargs):
+<span class="ansi-green-fg">-&gt; 3019</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">gca</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-intense-fg ansi-bold">   3020</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">scalex</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">scalex</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">scaley</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">scaley</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   3021</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">{</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">"</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">data</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">"</span><span class="ansi-yellow-bg">:</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">}</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">if</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">is</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(175,0,255)">not</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">else</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">{</span><span class="ansi-yellow-bg">}</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/axes/_axes.py:1605</span>, in <span class="ansi-cyan-fg">Axes.plot</span><span class="ansi-blue-fg">(self, scalex, scaley, data, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1363</span> <span style="color: rgb(175,0,0)">"""</span>
+<span class="ansi-green-intense-fg ansi-bold">   1364</span> <span style="color: rgb(175,0,0)">Plot y versus x as lines and/or markers.</span>
+<span class="ansi-green-intense-fg ansi-bold">   1365</span> 
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1602</span> <span style="color: rgb(175,0,0)">(``'green'``) or hex strings (``'#008000'``).</span>
+<span class="ansi-green-intense-fg ansi-bold">   1603</span> <span style="color: rgb(175,0,0)">"""</span>
+<span class="ansi-green-intense-fg ansi-bold">   1604</span> kwargs <span style="color: rgb(98,98,98)">=</span> cbook<span style="color: rgb(98,98,98)">.</span>normalize_kwargs(kwargs, mlines<span style="color: rgb(98,98,98)">.</span>Line2D)
+<span class="ansi-green-fg">-&gt; 1605</span> lines <span style="color: rgb(98,98,98)">=</span> [<span style="color: rgb(98,98,98)">*</span><span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_get_lines(<span style="color: rgb(98,98,98)">*</span>args, data<span style="color: rgb(98,98,98)">=</span>data, <span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span>kwargs)]
+<span class="ansi-green-intense-fg ansi-bold">   1606</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> line <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> lines:
+<span class="ansi-green-intense-fg ansi-bold">   1607</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>add_line(line)
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/axes/_base.py:315</span>, in <span class="ansi-cyan-fg">_process_plot_var_args.__call__</span><span class="ansi-blue-fg">(self, data, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    313</span>     this <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> args[<span style="color: rgb(98,98,98)">0</span>],
+<span class="ansi-green-intense-fg ansi-bold">    314</span>     args <span style="color: rgb(98,98,98)">=</span> args[<span style="color: rgb(98,98,98)">1</span>:]
+<span class="ansi-green-fg">--&gt; 315</span> <span class="ansi-bold" style="color: rgb(0,135,0)">yield from</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_plot_args</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">this</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/axes/_base.py:496</span>, in <span class="ansi-cyan-fg">_process_plot_var_args._plot_args</span><span class="ansi-blue-fg">(self, tup, kwargs, return_kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    493</span>     x, y <span style="color: rgb(98,98,98)">=</span> index_of(xy[<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">1</span>])
+<span class="ansi-green-intense-fg ansi-bold">    495</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>axes<span style="color: rgb(98,98,98)">.</span>xaxis <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">--&gt; 496</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">axes</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">xaxis</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">update_units</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">x</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    497</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>axes<span style="color: rgb(98,98,98)">.</span>yaxis <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-intense-fg ansi-bold">    498</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>axes<span style="color: rgb(98,98,98)">.</span>yaxis<span style="color: rgb(98,98,98)">.</span>update_units(y)
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/axis.py:1448</span>, in <span class="ansi-cyan-fg">Axis.update_units</span><span class="ansi-blue-fg">(self, data)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1446</span> neednew <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>converter <span style="color: rgb(98,98,98)">!=</span> converter
+<span class="ansi-green-intense-fg ansi-bold">   1447</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>converter <span style="color: rgb(98,98,98)">=</span> converter
+<span class="ansi-green-fg">-&gt; 1448</span> default <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">converter</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">default_units</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1449</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> default <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>units <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-intense-fg ansi-bold">   1450</span>     <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>set_units(default)
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/category.py:109</span>, in <span class="ansi-cyan-fg">StrCategoryConverter.default_units</span><span class="ansi-blue-fg">(data, axis)</span>
+<span class="ansi-green-intense-fg ansi-bold">    107</span> <span style="color: rgb(95,135,135)"># the conversion call stack is default_units -&gt; axis_info -&gt; convert</span>
+<span class="ansi-green-intense-fg ansi-bold">    108</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> axis<span style="color: rgb(98,98,98)">.</span>units <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">--&gt; 109</span>     axis<span style="color: rgb(98,98,98)">.</span>set_units(<span class="ansi-yellow-bg">UnitData</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">)</span>)
+<span class="ansi-green-intense-fg ansi-bold">    110</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
+<span class="ansi-green-intense-fg ansi-bold">    111</span>     axis<span style="color: rgb(98,98,98)">.</span>units<span style="color: rgb(98,98,98)">.</span>update(data)
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/category.py:185</span>, in <span class="ansi-cyan-fg">UnitData.__init__</span><span class="ansi-blue-fg">(self, data)</span>
+<span class="ansi-green-intense-fg ansi-bold">    183</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_counter <span style="color: rgb(98,98,98)">=</span> itertools<span style="color: rgb(98,98,98)">.</span>count()
+<span class="ansi-green-intense-fg ansi-bold">    184</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> data <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">--&gt; 185</span>     <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">update</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/category.py:220</span>, in <span class="ansi-cyan-fg">UnitData.update</span><span class="ansi-blue-fg">(self, data)</span>
+<span class="ansi-green-intense-fg ansi-bold">    217</span> convertible <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">True</span>
+<span class="ansi-green-intense-fg ansi-bold">    218</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> val <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> OrderedDict<span style="color: rgb(98,98,98)">.</span>fromkeys(data):
+<span class="ansi-green-intense-fg ansi-bold">    219</span>     <span style="color: rgb(95,135,135)"># OrderedDict just iterates over unique values in data.</span>
+<span class="ansi-green-fg">--&gt; 220</span>     <span class="ansi-yellow-bg">_api</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">check_isinstance</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">str</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">bytes</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">value</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">val</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    221</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> convertible:
+<span class="ansi-green-intense-fg ansi-bold">    222</span>         <span style="color: rgb(95,135,135)"># this will only be called so long as convertible is True.</span>
+<span class="ansi-green-intense-fg ansi-bold">    223</span>         convertible <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">self</span><span style="color: rgb(98,98,98)">.</span>_str_is_convertible(val)
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/matplotlib/_api/__init__.py:92</span>, in <span class="ansi-cyan-fg">check_isinstance</span><span class="ansi-blue-fg">(_types, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     90</span>     names<span style="color: rgb(98,98,98)">.</span>remove(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">None</span><span style="color: rgb(175,0,0)">"</span>)
+<span class="ansi-green-intense-fg ansi-bold">     91</span>     names<span style="color: rgb(98,98,98)">.</span>append(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">None</span><span style="color: rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg">---&gt; 92</span> <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">TypeError</span>(
+<span class="ansi-green-intense-fg ansi-bold">     93</span>     <span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{!r}</span><span style="color: rgb(175,0,0)"> must be an instance of </span><span class="ansi-bold" style="color: rgb(175,95,135)">{}</span><span style="color: rgb(175,0,0)">, not a </span><span class="ansi-bold" style="color: rgb(175,95,135)">{}</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(98,98,98)">.</span>format(
+<span class="ansi-green-intense-fg ansi-bold">     94</span>         k,
+<span class="ansi-green-intense-fg ansi-bold">     95</span>         <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">, </span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(98,98,98)">.</span>join(names[:<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">1</span>]) <span style="color: rgb(98,98,98)">+</span> <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)"> or </span><span style="color: rgb(175,0,0)">"</span> <span style="color: rgb(98,98,98)">+</span> names[<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">1</span>]
+<span class="ansi-green-intense-fg ansi-bold">     96</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">len</span>(names) <span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(98,98,98)">1</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span> names[<span style="color: rgb(98,98,98)">0</span>],
+<span class="ansi-green-intense-fg ansi-bold">     97</span>         type_name(<span style="color: rgb(0,135,0)">type</span>(v))))
+
+<span class="ansi-red-fg">TypeError</span>: 'value' must be an instance of str or bytes, not a int</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>에러의 이유: df.year에 str, int가 동시에 있음</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array(['2016', '2017', '2017', '2017', 2017, 2018, 2018, 2019, 2019],
+      dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>자료형을 바꿔주면 해결할 수 있다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="c1">#np.array(df.year).astype(np.float64)</span>
+<span class="c1">#df.year.astype(np.float64)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2016., 2017., 2017., 2017., 2017., 2018., 2018., 2019., 2019.])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">),</span><span class="n">df</span><span class="o">.</span><span class="n">value</span><span class="p">,</span><span class="s1">'.'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f68c5381ee0&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> 예제2</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'2016'</span><span class="p">,</span><span class="s1">'2017'</span><span class="p">,</span><span class="s1">'2017'</span><span class="p">,</span><span class="s1">'2017년'</span><span class="p">,</span><span class="s1">'2017년'</span><span class="p">,</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2018</span><span class="p">,</span><span class="mi">2019</span><span class="p">,</span><span class="mi">2019</span><span class="p">]</span> 
+<span class="n">value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'year'</span><span class="p">:</span><span class="n">year</span><span class="p">,</span><span class="s1">'value'</span><span class="p">:</span><span class="n">value</span><span class="p">})</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016</td>
+      <td>-0.502215</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2017</td>
+      <td>-0.646435</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2017</td>
+      <td>-0.991310</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2017년</td>
+      <td>-1.202340</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2017년</td>
+      <td>0.325500</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2018</td>
+      <td>0.539920</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2018</td>
+      <td>-1.565858</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2019</td>
+      <td>-0.286726</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2019</td>
+      <td>-1.780535</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="c1"># 타입을 일괄적으로 바꾸기 어렵다. </span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+Input <span class="ansi-green-fg">In [176]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">array</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">df</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">year</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">float64</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/envs/py39/lib/python3.9/site-packages/pandas/core/series.py:872</span>, in <span class="ansi-cyan-fg">Series.__array__</span><span class="ansi-blue-fg">(self, dtype)</span>
+<span class="ansi-green-intense-fg ansi-bold">    825</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span> <span style="color: rgb(0,0,255)">__array__</span>(<span style="color: rgb(0,135,0)">self</span>, dtype: npt<span style="color: rgb(98,98,98)">.</span>DTypeLike <span style="color: rgb(98,98,98)">|</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span> <span style="color: rgb(98,98,98)">=</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>) <span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">&gt;</span> np<span style="color: rgb(98,98,98)">.</span>ndarray:
+<span class="ansi-green-intense-fg ansi-bold">    826</span>     <span style="color: rgb(175,0,0)">"""</span>
+<span class="ansi-green-intense-fg ansi-bold">    827</span> <span style="color: rgb(175,0,0)">    Return the values as a NumPy array.</span>
+<span class="ansi-green-intense-fg ansi-bold">    828</span> 
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    870</span> <span style="color: rgb(175,0,0)">          dtype='datetime64[ns]')</span>
+<span class="ansi-green-intense-fg ansi-bold">    871</span> <span style="color: rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg">--&gt; 872</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">asarray</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_values</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-red-fg">ValueError</span>: could not convert string to float: '2017년'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">frequency</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{'2016': 1, '2017': 2, '2017년': 2, 2018: 2, 2019: 2}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>'2016'와 같은 형태, '2017년'와 같은 형태, 숫자형이 혼합 -&gt; 맞춤형 변환이 필요함</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">'2017년'</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"년"</span><span class="p">,</span><span class="s2">""</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>'2017'</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['2016', '2017', '2017', '2017년', '2017년', 2018, 2018, 2019, 2019]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">):</span> <span class="c1">## 사실 데이터의 구조를 모르면 이런 함수를 짤 수 없음 --&gt; 자료의 구조를 확인해준다는 의미에서 freq가 있다면 편리하다. </span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="s2">"년"</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"년"</span><span class="p">,</span><span class="s2">""</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="n">a</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[2016, 2017, 2017, 2017, 2017, 2018, 2018, 2019, 2019]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016</td>
+      <td>-0.502215</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2017</td>
+      <td>-0.646435</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2017</td>
+      <td>-0.991310</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2017</td>
+      <td>-1.202340</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2017</td>
+      <td>0.325500</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2018</td>
+      <td>0.539920</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2018</td>
+      <td>-1.565858</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2019</td>
+      <td>-0.286726</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2019</td>
+      <td>-1.780535</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f68c33c6550&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="seoyeonc/ms"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/ms/2022/05/30/python_class5.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ms/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ms/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ms/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/seoyeonc" target="_blank" title="seoyeonc"><svg class="svg-icon grey"><use xlink:href="/ms/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
