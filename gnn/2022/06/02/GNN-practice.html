@@ -214,6 +214,25 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">papers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">,[</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'X1'</span><span class="p">,</span><span class="s1">'X2'</span><span class="p">,</span><span class="s1">'X3'</span><span class="p">]),</span>
+           <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">,[</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'X4'</span><span class="p">,</span><span class="s1">'X5'</span><span class="p">,</span><span class="s1">'X6'</span><span class="p">]),</span>
+          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="s1">'Deep learning'</span><span class="p">]</span><span class="o">*</span><span class="mi">500</span><span class="p">,[</span><span class="s1">'Reinforcement learning'</span><span class="p">]</span><span class="o">*</span><span class="mi">500</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span><span class="s1">'paper_id'</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">'subject'</span><span class="p">})</span>
+<span class="n">papers</span><span class="p">[</span><span class="s1">'paper_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">papers</span><span class="p">[</span><span class="s1">'paper_id'</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="c1">#시도1: 2500 행 모두 target/source 상관없이 1~1000 임의 부여</span>
+<span class="n">citations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span>
+                                   <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">1</span><span class="p">))]])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'target'</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">'source'</span><span class="p">})</span>
+<span class="c1">#시도2: 나머지 1250 행 reinforcement learning 행 500~1000를 target, source에 임의 부여</span>
+<span class="n">citations</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">501</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">501</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">))])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span>
+                          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">501</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">501</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">))])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">2</span><span class="p">))],</span><span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'target'</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">'source'</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -441,7 +460,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>y가 3이면 0, 7 이면 1로</p>
+<p>y가 3이면 0</p>
+<p>y가 7이면 1로</p>
 
 </div>
 </div>
@@ -453,7 +473,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">add_list</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 
     </div>
@@ -470,7 +490,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">add_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -487,9 +507,42 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">papers</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">784</span><span class="p">)),</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span><span class="s1">'paper_id'</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">'subject'</span><span class="p">})</span>
-<span class="n">papers</span><span class="p">[</span><span class="s1">'paper_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">papers</span><span class="p">[</span><span class="s1">'paper_id'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">papers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">add_list</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">784</span><span class="p">)),</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"paper_id"</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"X_</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">785</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">"subject"</span><span class="p">]</span>
+<span class="n">papers</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">column_names</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">papers</span>
 </pre></div>
 
     </div>
@@ -522,32 +575,32 @@ window.onload = wrap_img;
     <tr style="text-align: right;">
       <th></th>
       <th>paper_id</th>
-      <th>subject</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
+      <th>X_1</th>
+      <th>X_2</th>
+      <th>X_3</th>
+      <th>X_4</th>
+      <th>X_5</th>
+      <th>X_6</th>
+      <th>X_7</th>
+      <th>X_8</th>
+      <th>X_9</th>
       <th>...</th>
-      <th>775</th>
-      <th>776</th>
-      <th>777</th>
-      <th>778</th>
-      <th>779</th>
-      <th>780</th>
-      <th>781</th>
-      <th>782</th>
-      <th>783</th>
+      <th>X_776</th>
+      <th>X_777</th>
+      <th>X_778</th>
+      <th>X_779</th>
+      <th>X_780</th>
+      <th>X_781</th>
+      <th>X_782</th>
+      <th>X_783</th>
+      <th>X_784</th>
       <th>subject</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1</td>
+      <td>0</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -571,6 +624,30 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>2</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -594,32 +671,8 @@ window.onload = wrap_img;
       <td>0</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0</td>
-    </tr>
-    <tr>
       <th>3</th>
-      <td>4</td>
+      <td>3</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -643,7 +696,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
+      <td>4</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -691,7 +744,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>12391</th>
-      <td>12392</td>
+      <td>12391</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -715,7 +768,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>12392</th>
-      <td>12393</td>
+      <td>12392</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -739,7 +792,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>12393</th>
-      <td>12394</td>
+      <td>12393</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -763,7 +816,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>12394</th>
-      <td>12395</td>
+      <td>12394</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -787,7 +840,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <th>12395</th>
-      <td>12396</td>
+      <td>12395</td>
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -823,25 +876,24 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="mf">0.3</span>
-<span class="n">papers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">,[</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'X1'</span><span class="p">,</span><span class="s1">'X2'</span><span class="p">,</span><span class="s1">'X3'</span><span class="p">]),</span>
-           <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">,[</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">1500</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'X4'</span><span class="p">,</span><span class="s1">'X5'</span><span class="p">,</span><span class="s1">'X6'</span><span class="p">]),</span>
-          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="s1">'Deep learning'</span><span class="p">]</span><span class="o">*</span><span class="mi">500</span><span class="p">,[</span><span class="s1">'Reinforcement learning'</span><span class="p">]</span><span class="o">*</span><span class="mi">500</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span><span class="s1">'paper_id'</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">'subject'</span><span class="p">})</span>
-<span class="n">papers</span><span class="p">[</span><span class="s1">'paper_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">papers</span><span class="p">[</span><span class="s1">'paper_id'</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
-<span class="c1">#시도1: 2500 행 모두 target/source 상관없이 1~1000 임의 부여</span>
-<span class="n">citations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">citations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">1</span><span class="p">))],</span>
                                    <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">1</span><span class="p">))]])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2500</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'target'</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">'source'</span><span class="p">})</span>
-<span class="c1">#시도2: 나머지 1250 행 reinforcement learning 행 500~1000를 target, source에 임의 부여</span>
-<span class="n">citations</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">501</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">501</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">))])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span>
-                          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">501</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">501</span><span class="p">,</span><span class="mi">1001</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">1</span><span class="p">))])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1250</span><span class="p">,</span><span class="mi">2</span><span class="p">))],</span><span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'target'</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s1">'source'</span><span class="p">})</span>
 </pre></div>
 
+    </div>
 </div>
 </div>
+
 </div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
