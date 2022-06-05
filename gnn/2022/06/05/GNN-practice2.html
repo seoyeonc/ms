@@ -193,8 +193,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>2022-06-05 09:42:53.733163: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
-2022-06-05 09:42:53.733187: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+<pre>2022-06-05 20:16:05.306023: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-06-05 20:16:05.306066: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
 </pre>
 </div>
 </div>
@@ -222,6 +222,23 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">cv2</span> <span class="kn">import</span> <span class="n">imread</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -332,6 +349,39 @@ Found 24 images belonging to 2 classes.
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">imread</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s2">"/yes/"</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s2">"/yes/"</span><span class="p">)[</span><span class="mi">4</span><span class="p">])</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(338, 264, 3)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yes_path</span> <span class="o">=</span> <span class="n">path</span><span class="o">+</span><span class="s2">"/yes/"</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s2">"/yes/"</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span>
 <span class="n">tumour</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">yes_path</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">tumour</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
@@ -349,7 +399,7 @@ Found 24 images belonging to 2 classes.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f6a80058a00&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f57187c68b0&gt;</pre>
 </div>
 
 </div>
@@ -394,7 +444,7 @@ Found 24 images belonging to 2 classes.
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.image.AxesImage at 0x7f6ad008bb50&gt;</pre>
+<pre>&lt;matplotlib.image.AxesImage at 0x7f571867f580&gt;</pre>
 </div>
 
 </div>
