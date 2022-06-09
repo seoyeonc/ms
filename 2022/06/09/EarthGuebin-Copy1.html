@@ -759,7 +759,8 @@ Name: Date, dtype: object</pre>
         <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">density_mapbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> 
                         <span class="n">lat</span><span class="o">=</span><span class="s1">'Latitude'</span><span class="p">,</span> 
                         <span class="n">lon</span><span class="o">=</span><span class="s1">'Longitude'</span><span class="p">,</span> 
-                        <span class="n">z</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">,</span> 
+                        <span class="n">z</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">,</span>
+                        <span class="c1">#animation_frame="Year",animation_group="Year",</span>
                         <span class="n">radius</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
                         <span class="n">center</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">37</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">160</span><span class="p">),</span> 
                         <span class="n">zoom</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
@@ -861,7 +862,7 @@ Name: Date, dtype: object</pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 533/533 [00:00&lt;00:00, 1508.36it/s]
+<pre>100%|██████████| 533/533 [00:00&lt;00:00, 1514.27it/s]
 </pre>
 </div>
 </div>
@@ -1625,9 +1626,6 @@ Name: Date, dtype: object</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>-</code> 예상: 특정 진도 이상이면서 residual 1보다 큰 곳이 의미있는 지점일 것이다.</p>
-<ul>
-<li>지진이 일어나지 않는 구간에서 지진이 일어났는데, 그것도 높은 진도로 일어났다는 뜻으로</li>
-</ul>
 
 </div>
 </div>
@@ -1660,10 +1658,7 @@ Name: Date, dtype: object</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>-</code> 2010년</p>
 <ul>
-<li>아이티지진(7.0)(지정한 MagThresh 기준은 초과이므로 6.9정도 넣고 돌림)<ul>
-<li>진앙지가 한 곳뿐이라서 residual 계산이 안 되어 표시가 되지 않는 것으로 추측...</li>
-</ul>
-</li>
+<li>아이티지진(7.0)(지정한 MagThresh 기준은 초과이므로 6.9정도 넣고 돌림)</li>
 <li>칠레 마줄레주해역 지진(8.8)</li>
 </ul>
 
@@ -1692,15 +1687,94 @@ Name: Date, dtype: object</pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://levelup.gitconnected.com/plotting-usgs-earthquake-data-with-folium-8f11ddc21950">https://levelup.gitconnected.com/plotting-usgs-earthquake-data-with-folium-8f11ddc21950</a></p>
-<p>folium, plotly?</p>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">'https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json'</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">GeoJson</span><span class="p">(</span>
+    <span class="n">url</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">'geojson'</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;folium.features.GeoJson at 0x7f7c00562f70&gt;</pre>
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
