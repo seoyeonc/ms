@@ -1,0 +1,188 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+2000-01-10T22:04:20.360Z,42.494,131.727,541,3.5,mb,,,,0.38,us,usp0009m0n,2014-11-07T01:09:19.070Z,"49 km SE of Slavyanka, Russia",earthquake,,13.9,,1,reviewed,us,us
+2000-02-13T02:57:08.720Z,42.853,131.572,513.6,6,mwc,,,,0.8,us,usp0009nd9,2022-04-29T18:31:46.650Z,"15 km E of Slavyanka, Russia",earthquake,,,,,reviewed,us,hrv
+2000-05-04T02:02:06.130Z,33.771,132.303,58.6,4.3,mb,,,,0.73,us,usp0009sbc,2014-11-07T01:10:02.827Z,"27 km SE of Yanai, Japan",earthquake,,12,,1,reviewed,us,us
+2000-09-07T05:51:38.430Z,33.532,132.35,45.6,3.9,mb,10,,,1.29,us,usp0009zu7,2014-11-07T01:11:03.229Z,"18 km W of ?zu, Japan",earthquake,,,,1,reviewed,us,us
+2000-09-08T14:18:20.900Z,41.763,130.872,582.3,4.9,mb,161,,,0.9,us,usp0009zwv,2014-11-07T01:11:03.503Z,"73 km SE of Rajin, North Korea",earthquake,,3.8,,62,reviewed,us,us
+2000-11-30T18:46:41.540Z,33.619,132.111,69.7,4.5,mb,23,,,0.79,us,usp000a59k,2014-11-07T01:11:35.791Z,"38 km S of Yanai, Japan",earthquake,,7,,4,reviewed,us,us
+2000-12-09T09:51:02.180Z,36.427,129.892,33,3.8,mb,12,,,1.25,us,usp000a5ru,2014-11-07T01:11:41.907Z,"60 km NE of Heunghae, South Korea",earthquake,,,,2,reviewed,us,us
+2001-01-09T04:37:48.610Z,33.569,132.124,48.9,4.9,mb,93,,,0.99,us,usp000a7bt,2014-11-07T01:11:53.360Z,"40 km W of ?zu, Japan",earthquake,,,,38,reviewed,us,us
+2001-03-24T06:27:53.580Z,34.083,132.526,50,6.8,mwc,596,,,0.85,us,usp000abyg,2022-04-29T19:10:08.722Z,"16 km SSW of Kure, Japan",earthquake,,,,,reviewed,us,hrv
+2001-03-24T13:37:33.380Z,33.997,132.601,61.9,3.8,mb,19,,,1.21,us,usp000abyx,2014-11-07T01:12:24.885Z,"16 km W of H?j?, Japan",earthquake,,,,5,reviewed,us,us
+2001-03-25T10:19:10.320Z,34.01,132.583,48.4,4.4,mb,36,,,1.04,us,usp000ac0e,2014-11-07T01:12:25.026Z,"18 km WNW of H?j?, Japan",earthquake,,,,10,reviewed,us,us
+2001-03-25T17:15:59.120Z,33.907,132.587,49.2,4.1,mb,20,,,0.88,us,usp000ac14,2014-11-07T01:12:25.429Z,"17 km NW of Masaki-ch?, Japan",earthquake,,16.7,,8,reviewed,us,us
+2001-03-25T20:40:51.440Z,34.017,132.542,42.9,5.2,mwc,214,,,0.76,us,usp000ac1b,2022-04-29T19:15:10.183Z,"22 km WNW of H?j?, Japan",earthquake,,,,,reviewed,us,hrv
+2001-04-03T12:14:41.630Z,33.712,131.918,64,4.6,mb,41,,,1.24,us,usp000acg8,2014-11-07T01:12:31.104Z,"27 km S of Hikari, Japan",earthquake,,,,14,reviewed,us,us
+2001-07-15T19:38:42.430Z,42.789,131.117,562.8,3.8,mb,44,,,0.96,us,usp000ajkt,2014-11-07T01:13:17.259Z,"17 km N of Zarubino, Russia",earthquake,,8.5,,19,reviewed,us,us
+2001-11-24T11:50:41.100Z,43.217,131.045,547.2,3.9,mb,22,,,1.07,us,usp000atdh,2014-11-07T01:14:17.927Z,"36 km W of Barabash, Russia",earthquake,,36.7,,6,reviewed,us,us
+2002-03-17T00:26:40.110Z,38.063,124.586,33,3.9,mb,11,,,1.14,us,usp000b0fd,2014-11-07T01:15:10.179Z,"49 km WSW of Changy?n, North Korea",earthquake,,,,3,reviewed,us,us
+2002-03-25T13:58:16.510Z,33.724,132.528,52.9,4.6,mb,57,,,1.11,us,usp000b10x,2014-11-07T01:15:14.011Z,"16 km W of Iyo, Japan",earthquake,,8.8,,20,reviewed,us,us
+2002-04-05T16:57:04.680Z,33.39,132.446,52.6,4.5,mb,49,,,1.25,us,usp000b1t2,2014-11-07T01:15:21.595Z,"15 km SW of ?zu, Japan",earthquake,,8.8,,24,reviewed,us,us
+2002-04-16T22:52:38.190Z,40.705,128.67,10,4.6,mb,12,,,0.37,us,usp000b2hz,2014-11-07T01:15:25.762Z,"42 km N of Iw?n-?p, North Korea",earthquake,,,,2,reviewed,us,us
+2002-08-25T11:47:14.100Z,43.054,131.305,539.3,3.3,mb,14,,,0.76,us,usp000bakx,2014-11-07T01:16:20.296Z,"22 km NNW of Slavyanka, Russia",earthquake,,12.6,,1,reviewed,us,us
+2002-08-26T18:19:15.840Z,41.405,132.048,548.7,4.2,mb,36,,,0.83,us,usp000bapa,2014-11-07T01:16:20.598Z,"157 km SSE of Zarubino, Russia",earthquake,,5.3,,8,reviewed,us,us
+2002-09-25T05:45:07.090Z,33.672,131.822,77.6,4.8,mb,21,,,1.01,us,usp000bd2q,2014-11-07T01:16:34.539Z,"33 km SSW of Hikari, Japan",earthquake,,,,4,reviewed,us,us
+2002-10-13T10:06:30.470Z,33.325,132.258,43.5,4.8,mb,99,,,1.06,us,usp000beeu,2014-11-07T01:16:45.060Z,"30 km WNW of Uwajima, Japan",earthquake,,,,35,reviewed,us,us
+2002-11-15T14:08:34.560Z,42.932,130.791,567.7,4.2,mb,48,,,1.08,us,usp000bhqr,2014-11-07T01:17:08.206Z,"24 km N of Kraskino, Russia",earthquake,,7.1,,20,reviewed,us,us
+2002-12-24T21:38:15.540Z,40.869,131.888,542.7,4.5,mb,32,,,0.93,us,usp000bmbs,2014-11-07T01:17:25.595Z,"196 km ESE of Hoemul-li, North Korea",earthquake,,6.6,,6,reviewed,us,us
+2003-01-26T07:34:40.530Z,38.944,131.169,530.3,4.2,mb,27,,,1.02,us,usp000bp6x,2014-11-07T01:17:38.271Z,"238 km NE of Tonghae, South Korea",earthquake,,6.7,,5,reviewed,us,us
+2003-03-22T20:38:40.460Z,35.056,124.411,10,4.8,mb,66,55.2,,1.09,us,usp000bt9a,2014-11-07T01:18:07.546Z,"157 km W of Sinan, South Korea",earthquake,,,,45,reviewed,us,us
+2003-03-25T19:08:41.760Z,33.211,132.308,40.3,3.8,mb,15,117.4,,0.91,us,usp000btgh,2014-11-07T01:18:08.187Z,"23 km W of Uwajima, Japan",earthquake,,10.6,,3,reviewed,us,us
+2003-03-30T11:10:55.980Z,37.573,123.821,10,4.7,mb,49,72.6,,1.48,us,usp000btwh,2014-11-07T01:18:10.399Z,"130 km ENE of Yatou, China",earthquake,,,,24,reviewed,us,us
+2003-04-01T16:38:34.350Z,34.927,132.815,33,3.8,mb,14,110,,1.21,us,usp000bu3q,2014-11-07T01:18:13.781Z,"14 km NNW of Miyoshi, Japan",earthquake,,,,1,reviewed,us,us
+2003-05-30T18:58:22.640Z,33.364,131.764,76,4.4,mb,43,113.5,,1.03,us,usp000byk2,2014-11-07T01:18:44.793Z,"14 km NNE of Tsurusaki, Japan",earthquake,,6.2,,17,reviewed,us,us
+2003-08-13T09:19:46.320Z,33.666,131.631,159.8,4.4,mb,13,127.7,,0.63,us,usp000c4rj,2014-11-07T01:19:30.509Z,"21 km NE of Bungo-Takada-shi, Japan",earthquake,,20.5,,1,reviewed,us,us
+2003-08-31T23:08:00.260Z,43.393,132.267,481.1,6.2,mwb,776,25.5,,0.69,us,usp000c6dn,2022-05-02T16:42:14.811Z,"6 km E of Knevichi, Russia",earthquake,,,,,reviewed,us,us
+2004-04-20T13:26:33.170Z,33.534,132.204,49.8,4.4,mb,31,120.5,,1.49,us,usp000cszm,2014-11-07T01:22:03.589Z,"32 km W of ?zu, Japan",earthquake,,,,5,reviewed,us,us
+2004-05-29T10:14:28.440Z,36.634,129.928,29.2,5.3,mwb,279,73.6,,0.79,us,usp000cwh7,2020-09-18T19:56:50.506Z,"78 km NE of Heunghae, South Korea",earthquake,,7.2,,,reviewed,us,us
+2004-07-17T10:41:25.750Z,33.822,131.969,73.8,3.6,mb,11,117,,0.78,us,usp000d0ay,2014-11-07T01:22:55.096Z,"14 km S of Hikari, Japan",earthquake,,8.4,,1,reviewed,us,us
+2004-08-15T15:36:56.840Z,43.391,131.015,538.5,4.6,mb,198,76,,0.76,us,usp000d277,2014-11-07T01:23:12.990Z,"44 km WNW of Barabash, Russia",earthquake,,,,74,reviewed,us,us
+2004-09-21T01:13:17.150Z,34.18,132.792,41.7,4.2,mwr,15,117.8,,1.46,us,usp000d4rj,2014-11-07T01:23:31.873Z,"20 km SSW of Takehara, Japan",earthquake,,,,,reviewed,us,nied
+2004-12-16T18:59:14.600Z,41.804,127.979,10,4,mb,19,139.9,,1.27,us,usp000dauv,2014-11-07T01:24:18.257Z,"47 km NNW of Hyesan, North Korea",earthquake,,,,8,reviewed,us,us
+2005-03-07T18:45:46.410Z,34.264,132.43,20,4,mb,8,134.3,,0.85,us,usp000dhrt,2014-11-07T01:25:12.283Z,"10 km ESE of Miyajima, Japan",earthquake,,,,1,reviewed,us,us
+2005-03-20T01:53:41.830Z,33.807,130.131,10,6.6,mwc,401,22.9,,1.3,us,usp000djku,2022-05-02T17:50:45.712Z,"28 km NNW of Maebaru-ch??, Japan",earthquake,,,,,reviewed,us,hrv
+2005-03-20T05:32:24.660Z,33.735,130.031,10,4.1,mb,12,134.7,,0.87,us,usp000djm4,2014-11-07T01:25:16.793Z,"25 km NW of Maebaru-ch??, Japan",earthquake,,,,3,reviewed,us,us
+2005-03-20T10:52:03.460Z,33.758,129.961,10,4.1,mb,18,134.8,,1.03,us,usp000djmm,2014-11-07T01:25:16.831Z,"31 km NW of Maebaru-ch??, Japan",earthquake,,,,4,reviewed,us,us
+2005-03-20T11:08:23.420Z,33.614,129.897,10,0,,7,141,,1.09,us,usp000djmn,2014-11-07T01:25:16.834Z,"20 km NNW of Karatsu, Japan",earthquake,,0,,,reviewed,us,us
+2005-03-20T11:38:17.530Z,33.843,130.066,10,3.9,mb,15,117.4,,1.42,us,usp000djmq,2014-11-07T01:25:16.839Z,"33 km NNW of Maebaru-ch??, Japan",earthquake,,,,2,reviewed,us,us
+2005-03-21T14:59:23.320Z,33.862,130.021,10,4.3,mb,30,95.5,,0.81,us,usp000djqq,2014-11-07T01:25:17.477Z,"37 km NNW of Maebaru-ch??, Japan",earthquake,,,,10,reviewed,us,us
+2005-03-22T06:55:35.140Z,33.718,130.208,10,4.9,mwr,64,97.2,,1.12,us,usp000djss,2014-11-07T01:25:17.695Z,"17 km N of Maebaru-ch??, Japan",earthquake,,,,,reviewed,us,nied
+2005-03-25T12:03:29.840Z,33.826,130.364,94.7,3.7,mb,9,128.3,,1.14,us,usp000dk12,2014-11-07T01:25:19.291Z,"12 km WNW of Nishifukuma, Japan",earthquake,,23.7,,2,reviewed,us,us
+2005-04-01T12:52:14.310Z,33.447,130.367,10,4.4,mb,7,113.2,,1.54,us,usp000dkwy,2014-11-07T01:25:26.424Z,"14 km SW of ?noj?, Japan",earthquake,,,,1,reviewed,us,us
+2005-04-10T11:34:41.360Z,33.655,130.226,23.9,4.7,mb,36,111.2,,1.32,us,usp000dmuh,2014-11-07T01:25:32.198Z,"10 km NNE of Maebaru-ch??, Japan",earthquake,,20,,18,reviewed,us,us
+2005-04-17T13:56:13.350Z,33.378,132.261,34.5,0,,9,135.6,,0.37,us,usp000dnkh,2014-11-07T01:25:37.194Z,"30 km WSW of ?zu, Japan",earthquake,,59,,,reviewed,us,us
+2005-04-19T21:11:28.420Z,33.637,130.179,18.7,5.5,mwb,242,78.9,,0.89,us,usp000dnsk,2022-05-02T17:55:47.089Z,"8 km NNW of Maebaru-ch??, Japan",earthquake,,,,,reviewed,us,us
+2005-04-19T21:22:50.620Z,33.7,130.45,10,4.4,mb,37,105.8,,1.41,us,usp000dnsn,2014-11-07T01:25:38.392Z,"2 km SE of Shing?, Japan",earthquake,,,,14,reviewed,us,us
+2005-04-19T21:44:52.140Z,33.536,130.25,10,4.3,mb,32,106.3,,1.13,us,usp000dnsp,2014-11-07T01:25:38.395Z,"5 km ESE of Maebaru-ch??, Japan",earthquake,,,,10,reviewed,us,us
+2005-04-20T00:09:46.860Z,33.646,130.275,39.3,4.7,mwr,55,79.1,,1.05,us,usp000dnsw,2014-11-07T01:25:38.409Z,"11 km NE of Maebaru-ch??, Japan",earthquake,,6.7,,,reviewed,us,nied
+2005-05-01T16:23:57.940Z,33.611,130.244,10,4.6,mwr,43,105.8,,0.96,us,usp000dpq1,2020-07-08T01:53:27.408Z,"6 km NE of Maebaru-ch??, Japan",earthquake,,,,,reviewed,us,nied
+2005-05-25T11:31:31.050Z,33.336,132.102,54.6,4.5,mwr,38,107.9,,1.06,us,usp000drj3,2014-11-07T01:25:58.065Z,"36 km NE of Tsukumiura, Japan",earthquake,,,,,reviewed,us,nied
+2005-06-29T14:18:04.780Z,34.352,129.227,14.6,4.5,mb,19,108,,1.38,us,usp000du5a,2014-11-07T01:26:18.387Z,"80 km SE of Kyosai, South Korea",earthquake,,32.9,,5,reviewed,us,us
+2005-07-04T20:10:02.000Z,33.742,130.124,14.5,3.9,mwr,8,140.3,,,us,usp000duhs,2014-11-07T01:26:25.693Z,"21 km NNW of Maebaru-ch??, Japan",earthquake,,,,,reviewed,jma,nied
+2005-09-04T10:06:24.810Z,33.516,131.966,61.1,4.2,mb,21,113.3,,0.7,us,usp000dyr9,2014-11-07T01:27:00.262Z,"34 km ENE of Kitsuki, Japan",earthquake,,,,4,reviewed,us,us
+2005-09-12T11:18:51.180Z,33.571,130.033,35,4.4,mb,12,79.5,,1.07,us,usp000dza9,2014-11-07T01:27:03.612Z,"15 km NNE of Karatsu, Japan",earthquake,,,,1,reviewed,us,us
+2005-10-14T06:03:07.740Z,42.339,132.85,484,4.1,mb,28,92.9,,0.71,us,usp000e1t5,2014-11-07T01:27:23.374Z,"47 km SSW of Vrangel’, Russia",earthquake,,6.4,,7,reviewed,us,us
+2006-02-01T03:15:04.290Z,33.453,132.204,49.9,4.3,mb,40,114.9,,0.94,us,usp000e983,2014-11-07T01:28:12.838Z,"32 km W of ?zu, Japan",earthquake,,,,14,reviewed,us,us
+2006-02-15T18:46:29.890Z,33.358,132.227,44.3,4,m,11,122.1,,,us,usp000ea3z,2014-11-07T01:28:18.635Z,"33 km WSW of ?zu, Japan",earthquake,,,,,reviewed,jma,jma
+2006-04-21T17:24:56.380Z,33.289,132.202,68.3,3.9,mb,22,108.8,,1.04,us,usp000ef6s,2014-11-07T01:28:53.557Z,"34 km WNW of Uwajima, Japan",earthquake,,7.8,,7,reviewed,us,us
+2006-05-13T10:14:31.000Z,34.045,129.137,20.3,4.3,m,5,176.9,,,us,usp000eh0k,2014-11-07T01:29:06.411Z,"84 km NNW of Hirado, Japan",earthquake,,,,,reviewed,jma,jma
+2006-05-28T11:36:32.640Z,33.246,131.698,82.4,4.2,mwr,22,87.4,,0.76,us,usp000ej5d,2014-11-07T01:29:12.207Z,"0 km E of Tsurusaki, Japan",earthquake,,,,,reviewed,us,nied
+2006-06-06T14:28:58.910Z,33.585,132.241,72.7,3.9,m,9,150.8,,0.24,us,usp000eju5,2014-11-07T01:29:19.918Z,"30 km WNW of ?zu, Japan",earthquake,,10.3,,,reviewed,us,jma
+2006-09-25T22:03:47.910Z,33.46,131.514,72.7,5.3,mwc,355,29.7,,0.89,us,usp000ettt,2016-11-10T01:28:37.429Z,"10 km N of Hiji, Japan",earthquake,,,,,reviewed,us,gcmt
+2006-09-26T22:51:18.520Z,33.577,131.806,91,4.3,mb,23,87.2,,0.83,us,usp000etw2,2014-11-07T01:30:16.983Z,"24 km NE of Kitsuki, Japan",earthquake,,7.2,,3,reviewed,us,us
+2006-10-09T01:35:28.020Z,41.294,129.094,0,4.3,mb,31,83.3,,0.86,us,usp000eurb,2014-11-07T01:30:31.423Z,"25 km ENE of S?ngjibaegam, North Korea",nuclear explosion,,,,11,reviewed,us,us
+2006-11-19T04:29:03.670Z,33.418,132.37,59.1,4.4,mb,23,122.3,,0.76,us,usp000ey7r,2014-11-07T01:30:54.000Z,"19 km WSW of ?zu, Japan",earthquake,,7,,4,reviewed,us,us
+2007-01-10T12:13:44.810Z,33.228,132.539,35.8,4,m,11,124.8,,,us,usp000f241,2014-11-07T01:31:20.602Z,"2 km WNW of Uwajima, Japan",earthquake,,,,,reviewed,jma,jma
+2007-01-20T11:56:53.660Z,37.594,128.475,10,4.7,mwc,30,73.5,,1.31,us,usp000f32a,2020-09-18T21:21:06.524Z,"25 km NNE of Pyeongchang, South Korea",earthquake,,,,,reviewed,us,gcmt
+2007-03-25T13:14:06.280Z,42.031,131.191,554.9,4.1,mb,41,56.8,,0.64,us,usp000f7cr,2014-11-07T01:31:55.658Z,"67 km S of Zarubino, Russia",earthquake,,6.5,,19,reviewed,us,us
+2007-05-12T23:13:54.790Z,35.01,132.792,9.5,4.3,mwr,39,75,,,us,usp000fbv6,2014-11-07T01:32:27.624Z,"23 km NNW of Miyoshi, Japan",earthquake,,,,,reviewed,jma,nied
+2007-05-19T05:12:21.590Z,33.257,131.507,133.2,3.1,m,7,198.4,,0.8,us,usp000fc9p,2014-11-07T01:32:29.802Z,"2 km SSE of Beppu, Japan",earthquake,,16.7,,,reviewed,us,jma
+2007-06-06T14:05:04.120Z,33.312,131.399,10,3.9,mb,13,117.9,,0.8,us,usp000fdg5,2014-11-07T01:32:39.761Z,"9 km WNW of Beppu, Japan",earthquake,,0,,2,reviewed,us,us
+2007-06-06T14:42:53.870Z,33.319,131.409,18.8,4.8,mwc,48,112.3,,1.39,us,usp000fdg7,2016-11-10T01:40:51.917Z,"9 km WNW of Beppu, Japan",earthquake,,26.8,,,reviewed,us,gcmt
+2007-06-06T15:18:35.860Z,33.334,131.273,10,4.2,m,11,127.8,,1.25,us,usp000fdga,2014-11-07T01:32:39.776Z,"12 km ENE of Tsukawaki, Japan",earthquake,,,,,reviewed,us,jma
+2007-06-07T11:50:42.110Z,33.342,131.686,10,4.6,mwr,28,122.8,,1,us,usp000fdjc,2014-11-07T01:32:40.044Z,"10 km SE of Kitsuki, Japan",earthquake,,,,,reviewed,us,nied
+2007-10-18T03:29:03.130Z,41.809,130.81,581.3,4.4,mb,29,81.5,,0.74,us,usp000fqta,2014-11-07T01:33:57.002Z,"66 km SE of Rajin, North Korea",earthquake,,12.8,,8,reviewed,us,us
+2007-11-09T16:47:26.920Z,35.267,131.919,18.5,4.4,mb,26,96.9,,,us,usp000fs94,2014-11-07T01:34:08.861Z,"40 km NW of G?tsuch?, Japan",earthquake,,,,5,reviewed,jma,us
+2007-12-16T08:23:35.310Z,41.237,131.409,549.3,4.5,mb,41,77.8,,0.83,us,usp000fujg,2014-11-07T01:34:25.947Z,"146 km SE of Rajin, North Korea",earthquake,,7,,13,reviewed,us,us
+2008-03-07T18:52:19.090Z,33.971,132.543,50.3,4.2,mb,25,112.1,,0.8,us,usp000g0xf,2014-11-07T01:35:12.457Z,"21 km W of H?j?, Japan",earthquake,,10.1,,5,reviewed,us,us
+2008-04-20T14:00:49.130Z,38.736,130.347,548,3.6,mb,16,81,,0.91,us,usp000g4e2,2014-11-07T01:35:41.064Z,"164 km ENE of Sokcho, South Korea",earthquake,,12.2,,3,reviewed,us,us
+2008-05-19T10:08:36.310Z,42.503,131.872,513.4,5.7,mwb,547,23.9,,0.72,us,usp000g783,2022-05-02T21:00:02.117Z,"52 km SSE of Popova, Russia",earthquake,,,,,reviewed,us,us
+2008-05-31T12:59:31.610Z,33.696,125.188,10,3.8,mb,9,147.2,,1.38,us,usp000g876,2014-11-07T01:36:08.424Z,"108 km WNW of Gaigeturi, South Korea",earthquake,,,,3,reviewed,us,us
+2008-09-03T14:32:06.830Z,33.435,131.029,4.8,4.1,mb,13,128.4,,1.07,us,usp000ggay,2014-11-07T01:37:07.357Z,"15 km NNE of Hita, Japan",earthquake,,18.9,,2,reviewed,us,us
+2008-09-18T22:23:32.290Z,33.817,132.211,59.3,4.1,mb,30,104.5,,0.84,us,usp000ghar,2014-11-07T01:37:13.316Z,"18 km SSE of Yanai, Japan",earthquake,,6.8,,9,reviewed,us,us
+2008-10-22T16:18:36.440Z,41.985,131.321,558.7,5,mwr,234,47.4,,0.8,us,usp000gktj,2014-11-07T01:37:31.450Z,"74 km SSE of Zarubino, Russia",earthquake,,3.7,,,reviewed,us,nied
+2008-10-29T22:59:25.980Z,33.573,131.783,84.2,3.8,mb,8,118.1,,,us,usp000gmch,2014-11-07T01:37:34.178Z,"22 km NE of Kitsuki, Japan",earthquake,,,,1,reviewed,jma,us
+2008-12-17T15:53:25.070Z,42.475,132.134,520.4,4,mb,9,88.1,,0.53,us,usp000gqt1,2014-11-07T01:37:58.915Z,"47 km SSW of Dunay, Russia",earthquake,,9,,1,reviewed,us,us
+2008-12-19T03:44:17.620Z,33.617,131.5,133.4,4.2,mb,36,107.5,,0.7,us,usp000gqwy,2014-11-07T01:37:59.703Z,"8 km NE of Bungo-Takada-shi, Japan",earthquake,,4.9,,9,reviewed,us,us
+2009-01-24T17:33:38.640Z,33.524,131.686,81.7,4.7,mwr,106,104.4,,0.76,us,usp000gt25,2015-03-24T02:06:31.134Z,"13 km NNE of Kitsuki, Japan",earthquake,,,,,reviewed,us,nied
+2009-04-06T05:09:34.140Z,42.934,131.669,522,4.5,mb,67,47.3,,0.79,us,usp000gvu3,2014-11-07T01:38:44.563Z,"5 km WSW of Popova, Russia",earthquake,,7.3,,43,reviewed,us,us
+2009-04-18T03:56:31.300Z,42.842,130.481,564.2,4.9,mb,337,43.6,,0.72,us,usp000gwag,2014-11-07T01:38:47.957Z,"10 km ESE of Hunchun, China",earthquake,,,,212,reviewed,us,us
+2009-05-25T00:54:43.120Z,41.303,129.037,0,4.7,mb,131,41.2,,0.65,us,usp000gxgc,2016-02-12T16:57:38.987Z,"21 km ENE of S?ngjibaegam, North Korea",nuclear explosion,,,,53,reviewed,us,us
+2009-06-25T14:03:56.270Z,33.276,130.754,14.4,4.5,mwr,61,86.1,,0.97,us,usp000gykg,2021-10-20T17:53:07.187Z,"10 km SE of Tanushimarumachi-toyoki, Japan",earthquake,,6.5,,,reviewed,us,nied
+2009-07-17T20:16:45.030Z,33.455,131.788,70.8,4.3,mwr,46,73.8,,1.15,us,usp000gzd0,2015-03-24T02:21:09.756Z,"16 km ENE of Kitsuki, Japan",earthquake,,,,,reviewed,us,nied
+2009-09-01T21:40:22.420Z,33.822,132.714,35,4,mb,8,224.3,,1.16,us,usp000h14k,2014-11-07T01:39:38.209Z,"3 km N of Masaki-ch?, Japan",earthquake,,,,5,reviewed,us,us
+2010-02-18T01:13:19.510Z,42.587,130.703,577.7,6.9,mwb,524,17,,1.35,us,usp000h7dn,2022-05-02T21:37:24.323Z,"15 km SSW of Kraskino, Russia",earthquake,,3.9,,,reviewed,us,us
+2010-02-21T02:49:44.850Z,33.813,132.182,10,4.1,mb,24,118.1,,1.11,us,usp000h7he,2014-11-07T01:40:43.968Z,"18 km SSE of Yanai, Japan",earthquake,,,,4,reviewed,us,us
+2010-02-21T07:29:09.110Z,42.526,130.684,569.9,4.5,mb,182,44.4,,0.8,us,usp000h7hk,2014-11-07T01:40:43.999Z,"22 km SSW of Kraskino, Russia",earthquake,,3.5,,73,reviewed,us,us
+2010-05-13T11:01:14.690Z,33.367,131.495,104,4.8,mwc,141,31.6,,0.79,us,usp000hcq1,2016-11-10T02:28:10.507Z,"3 km W of Hiji, Japan",earthquake,,3,,,reviewed,us,gcmt
+2010-07-23T05:25:46.360Z,34.001,132.83,15.7,4.3,mb,21,113.3,,1.14,us,usp000hgjf,2014-11-07T01:41:59.496Z,"5 km ENE of H?j?, Japan",earthquake,,26.1,,5,reviewed,us,us
+2010-09-09T01:12:49.500Z,42.487,130.848,577.9,4.3,mb,43,55.8,,0.89,us,usp000hkft,2014-11-07T01:42:25.719Z,"25 km SSE of Kraskino, Russia",earthquake,,5.8,,18,reviewed,us,us
+2010-12-26T11:25:06.000Z,33.974,131.261,10.1,4.4,mb,12,112.6,,1,us,usp000hs1d,2014-11-07T01:43:15.345Z,"3 km NNE of Ube, Japan",earthquake,,14.8,,1,reviewed,us,us
+2011-01-07T23:34:10.890Z,43.005,131.035,553.3,4.8,mb,238,44.9,,0.72,us,usp000hsqn,2014-11-07T01:43:23.272Z,"32 km WNW of Slavyanka, Russia",earthquake,,3.1,,113,reviewed,us,us
+2011-01-12T01:19:49.990Z,33.286,123.966,10,4.9,mb,83,59,,1.12,us,usp000hsy2,2014-11-07T01:43:25.549Z,"219 km W of Gaigeturi, South Korea",earthquake,,,,46,reviewed,us,us
+2011-05-10T15:26:04.610Z,43.292,130.938,544.6,5.7,mwc,542,17.2,,0.81,us,usp000j1c2,2022-04-08T21:47:51.434Z,"46 km WNW of Barabash, Russia",earthquake,,,,,reviewed,us,gcmt
+2011-06-03T16:57:31.560Z,35.027,132.325,10,5,mwc,151,72,,1.31,us,usp000j2ne,2022-04-08T21:50:09.827Z,"9 km ENE of G?tsuch?, Japan",earthquake,,,,,reviewed,us,gcmt
+2011-11-21T10:16:33.810Z,34.847,132.715,35,5.1,mwc,137,60.3,,0.86,us,usp000jb72,2021-10-20T17:59:09.929Z,"13 km WNW of Miyoshi, Japan",earthquake,,,,,reviewed,us,gcmt
+2011-11-24T19:35:30.920Z,34.947,132.745,34.1,4.5,mb,46,89.6,,0.95,us,usp000jbbq,2021-10-20T17:59:21.934Z,"18 km NNW of Miyoshi, Japan",earthquake,,12.4,,15,reviewed,us,us
+2012-09-08T01:41:25.180Z,33.773,132.206,52.8,4.6,mb,129,70.1,,0.88,us,usp000jrys,2015-03-24T02:15:04.869Z,"23 km SSE of Yanai, Japan",earthquake,,,,45,reviewed,us,us
+2012-12-22T06:15:31.180Z,33.472,132.123,54.9,4.6,mb,146,77.2,,0.88,us,usp000jx8q,2015-03-24T01:36:40.515Z,"39 km W of ?zu, Japan",earthquake,,4.5,,80,reviewed,us,us
+2013-02-12T02:57:51.490Z,41.299,129.004,0,5.1,mb,426,39.1,,0.82,us,usc000f5t0,2016-01-07T00:17:26.255Z,"18 km ENE of S?ngjibaegam, North Korea",nuclear explosion,,,,296,reviewed,us,us
+2013-04-05T13:00:02.130Z,42.736,131.003,563.3,6.3,mww,680,16.5,,0.86,us,usb000g0cq,2022-05-03T17:26:07.665Z,"13 km NNW of Zarubino, Russia",earthquake,,2.5,,,reviewed,us,us
+2013-04-06T00:29:55.090Z,42.726,130.976,562.8,5.8,mww,654,24.8,,0.78,us,usb000g128,2022-05-03T16:13:24.028Z,"13 km NW of Zarubino, Russia",earthquake,,2.1,,,reviewed,us,us
+2013-04-20T23:21:29.460Z,35.16,124.447,10,4.8,mb,135,55.3,,0.92,us,usb000gcwz,2015-01-30T10:27:24.642Z,"156 km WNW of Sinan, South Korea",earthquake,,,,97,reviewed,us,us
+2013-05-17T22:02:25.780Z,37.631,124.531,10,4.8,mb,100,35.6,,1.03,us,us2013qha6,2015-03-24T18:21:42.551Z,"80 km WSW of Ongjin, North Korea",earthquake,,,,54,reviewed,us,us
+2013-10-29T20:17:50.710Z,43.2375,130.8797,554.28,5.1,mb,,36,1.253,0.76,us,usc000kr0x,2014-01-10T10:03:35.000Z,"49 km W of Barabash, Russia",earthquake,,4.6,0.024,,reviewed,us,us
+2014-01-12T10:04:38.030Z,41.2351,131.9796,531.29,4.1,mb,,51,2.963,0.75,us,usc000m1iz,2014-03-15T03:39:15.000Z,"171 km SSE of Zarubino, Russia",earthquake,,7.5,0.054,97,reviewed,us,us
+2014-02-20T01:32:52.300Z,42.8743,132.1616,519.08,4.5,mb,,49,1.33,0.56,us,usc000mu3f,2014-05-07T00:03:04.000Z,"14 km W of Dunay, Russia",earthquake,,6.6,0.043,167,reviewed,us,us
+2014-03-13T17:06:50.770Z,33.6842,131.8249,79,6.3,mww,,12,0.969,1.28,us,usc000nabv,2022-05-03T16:45:00.850Z,"32 km SSW of Hikari, Japan",earthquake,,1.8,,,reviewed,us,us
+2014-03-22T11:05:39.270Z,33.6617,131.8645,85.66,4.6,mb,,52,0.984,1.05,us,usc000nkyw,2015-01-31T00:12:19.693Z,"33 km SSW of Hikari, Japan",earthquake,,6.4,0.063,81,reviewed,us,us
+2014-03-31T19:48:36.370Z,36.9367,124.4617,17.93,5,mb,,29,1.809,0.78,us,usc000nxva,2015-01-29T20:01:47.771Z,"136 km SW of Ongjin, North Korea",earthquake,,3.6,0.042,190,reviewed,us,us
+2014-05-21T01:11:23.340Z,33.5942,131.9293,88.85,4.3,mb,,62,0.997,0.89,us,usc000rc3s,2014-08-23T08:36:41.000Z,"34 km ENE of Kitsuki, Japan",earthquake,,7.8,0.168,10,reviewed,us,us
+2014-06-15T04:31:57.060Z,41.3879,131.9224,540.54,4,mb,,47,2.81,0.54,us,usc000rfq0,2014-09-12T15:47:34.000Z,"154 km SSE of Zarubino, Russia",earthquake,,8.5,0.116,29,reviewed,us,us
+2014-08-02T16:09:56.580Z,33.2997,131.6528,94.87,4.7,mb,,56,0.673,0.82,us,usb000s2qe,2014-10-29T19:52:54.000Z,"7 km NNW of Tsurusaki, Japan",earthquake,,6.2,0.134,17,reviewed,us,us
+2014-08-13T22:51:28.660Z,33.8501,131.888,81.85,4.5,mb,,77,1.112,0.48,us,usb000s2hh,2014-11-15T04:07:07.000Z,"12 km SSW of Hikari, Japan",earthquake,,6.4,0.096,34,reviewed,us,us
+2014-10-15T19:39:36.920Z,33.6742,132.6513,49.96,4.1,mb,,135,1.022,0.59,us,usb000smk3,2015-01-15T20:03:26.040Z,"9 km SSW of Iyo, Japan",earthquake,4,10.4,0.303,4,reviewed,us,us
+2014-11-01T10:36:27.680Z,33.6533,131.9462,73.97,4.5,mb,,79,1.038,0.82,us,usc000stbq,2015-01-20T09:03:08.040Z,"33 km S of Hikari, Japan",earthquake,4.4,5.7,0.135,22,reviewed,us,us
+2015-02-03T05:07:38.980Z,33.5045,132.7343,52.98,4.5,mb,,86,0.979,0.85,us,usc000tl6h,2015-05-02T14:07:08.040Z,"Shikoku, Japan",earthquake,6.2,9.7,0.382,6,reviewed,us,us
+2015-04-07T23:51:25.550Z,33.5968,132.5462,49.71,4.3,mb,,96,1.117,0.92,us,us200024wm,2015-06-16T01:00:32.040Z,"10 km N of ?zu, Japan",earthquake,5.7,7.8,0.153,12,reviewed,us,us
+2015-07-24T08:53:36.130Z,33.4073,132.3823,44.11,4.6,mwr,,46,1.288,0.87,us,us20002zsq,2015-10-22T20:04:55.040Z,"18 km WSW of ?zu, Japan",earthquake,5.2,4.7,0.071,19,reviewed,us,us
+2015-08-21T07:54:37.120Z,33.3163,132.1859,46.91,4.4,mwr,,52,1.113,0.83,us,us100033w5,2015-11-24T02:09:26.040Z,"36 km WNW of Uwajima, Japan",earthquake,5.8,6.2,0.078,16,reviewed,us,us
+2015-10-30T07:03:42.170Z,43.1964,131.0361,561.34,4.3,mb,,43,1.218,0.67,us,us200040nk,2016-01-30T02:10:56.040Z,"37 km W of Barabash, Russia",earthquake,11.6,3.4,0.097,30,reviewed,us,us
+2015-12-21T19:31:24.380Z,36.0495,126.9667,10,4.4,mb,,43,1.451,0.76,us,us100048nj,2016-03-12T02:29:20.040Z,"11 km N of Iksan, South Korea",earthquake,4.8,1.9,0.102,28,reviewed,us,us
+2016-01-06T01:30:01.480Z,41.2996,129.0467,0,5.1,mb,,21,3.34,0.83,us,us10004bnm,2017-09-03T04:20:01.133Z,"21 km ENE of S?ngjibaegam, North Korea",nuclear explosion,6,1.7,0.032,306,reviewed,us,us
+2016-04-15T22:11:40.270Z,33.2528,131.3738,10,5.1,mwr,,47,0.435,0.61,us,us20005iu4,2022-05-03T18:12:22.224Z,"11 km WSW of Beppu, Japan",earthquake,4.1,1.8,0.08,15,reviewed,us,us
+2016-04-20T05:27:45.400Z,33.2429,131.4164,14.16,4.4,mb,,101,0.467,0.84,us,us20005k22,2016-06-27T23:02:24.040Z,"8 km WSW of Beppu, Japan",earthquake,4.8,1.9,0.154,17,reviewed,us,us
+2016-04-20T20:16:52.830Z,33.2495,131.4328,8.02,4.5,mb,,130,0.482,0.56,us,us20005k9h,2016-06-27T23:02:29.040Z,"6 km WSW of Beppu, Japan",earthquake,4.8,6.3,0.156,12,reviewed,us,us
+2016-04-29T06:09:35.880Z,33.2523,131.2868,2.35,4.2,mb,,100,0.366,0.99,us,us10005cdp,2016-07-19T20:03:05.040Z,"12 km ESE of Tsukawaki, Japan",earthquake,4.3,1.9,0.147,13,reviewed,us,us
+2016-07-01T05:39:58.300Z,33.5263,131.7613,78.9,4.9,mb,,54,0.841,0.86,us,us10005z0q,2016-09-02T21:36:32.040Z,"17 km NE of Kitsuki, Japan",earthquake,6,6,0.065,73,reviewed,us,us
+2016-07-05T11:33:03.630Z,35.5358,129.8993,10,4.7,mwr,,23,0.703,0.86,us,us1000601a,2022-01-17T16:55:51.772Z,"52 km E of Ulsan, South Korea",earthquake,4.6,1.6,0.057,30,reviewed,us,us
+2016-07-18T21:22:43.800Z,33.6878,131.5413,123.4,4.3,mb,,84,0.79,0.83,us,us20006grd,2016-09-17T01:27:50.040Z,"17 km NNE of Bungo-Takada-shi, Japan",earthquake,5.2,5.1,0.218,6,reviewed,us,us
+2016-08-15T04:36:47.970Z,33.478,131.8948,71.68,4.9,mb,,80,0.922,1.06,us,us10006duj,2016-11-15T02:21:49.040Z,"26 km ENE of Kitsuki, Japan",earthquake,6.4,7.3,0.087,41,reviewed,us,us
+2016-09-09T00:30:01.440Z,41.2869,129.0783,0,5.3,mb,,,,0.68,us,us10006n8a,2016-12-07T02:56:06.040Z,"23 km ENE of S?ngjibaegam, North Korea",nuclear explosion,5.2,1.7,0.023,608,reviewed,spec,us
+2016-09-12T10:44:33.130Z,35.7428,129.1062,10,4.9,mb,,49,0.493,0.8,us,us10006p12,2022-05-03T17:59:05.347Z,"14km SW of Gyeongju, South Korea",earthquake,4.3,1.8,0.051,118,reviewed,us,us
+2016-09-12T11:32:55.770Z,35.7808,129.2162,13,5.4,mww,,29,0.537,0.85,us,us10006p1f,2022-05-26T05:25:56.079Z,"6km S of Gyeongju, South Korea",earthquake,5,1.7,,,reviewed,us,us
+2016-09-19T11:33:58.130Z,35.7615,129.1631,8.84,4.6,mwr,,73,0.513,0.63,us,us10006qtm,2021-01-05T18:50:22.140Z,"10 km SSW of Gyeongju, South Korea",earthquake,3.8,5.4,0.086,13,reviewed,us,us
+2016-09-21T02:53:53.480Z,35.7567,129.2398,10,3.5,ml,,119,1.233,0.57,us,us10006ra4,2021-01-05T18:53:10.903Z,"9km SSE of Gyeongju, South Korea",earthquake,4.3,1.7,0.256,2,reviewed,us,us
+2016-11-18T01:19:05.380Z,33.6533,130.1074,10,4.1,mb,,93,0.831,0.65,us,us100079rs,2017-02-15T23:21:26.040Z,"13 km NW of Maebaru-ch??, Japan",earthquake,3.8,2,0.261,4,reviewed,us,us
+2017-03-23T09:24:11.490Z,39.2695,130.2145,572.51,4,mb,,45,2.553,0.73,us,us10008daf,2017-06-12T19:46:54.040Z,"177 km SE of Iw?n-?p, North Korea",earthquake,11.7,7.2,0.065,62,reviewed,us,us
+2017-06-02T00:40:21.800Z,41.8111,132.095,512.42,4.2,mb,,33,2.388,0.56,us,us20009j4w,2017-08-15T02:26:50.040Z,"119 km SSW of Putyatin, Russia",earthquake,11.2,7.3,0.032,272,reviewed,us,us
+2017-07-12T19:48:07.810Z,40.8551,131.6637,545,5.9,mww,,25,3.35,1.02,us,us20009vsi,2022-05-03T18:33:31.530Z,"179 km ESE of Hoemul-li, North Korea",earthquake,8,1.9,0.045,48,reviewed,us,us
+2017-07-29T23:04:07.170Z,42.7214,131.2125,548.61,4,mb,,32,1.582,0.7,us,us2000a2l0,2017-10-14T00:19:46.040Z,"14 km NE of Zarubino, Russia",earthquake,9,7.1,0.073,50,reviewed,us,us
+2017-08-15T19:38:56.120Z,33.8658,132.0971,58.11,4.5,mb,,76,1.259,1.29,us,us2000a9fw,2017-11-14T01:42:09.040Z,"11 km S of Yanai, Japan",earthquake,3.3,9,0.181,9,reviewed,us,us
+2017-09-03T03:30:01.760Z,41.3324,129.0297,0,6.3,mb,,10,3.309,0.83,us,us2000aert,2021-07-21T03:13:08.341Z,"21 km ENE of S?ngjibaegam, North Korea",nuclear explosion,1.4,1.7,0.02,941,reviewed,us,us
+2017-09-03T03:38:31.810Z,41.334,129.031,0,4.1,ml,,,,0.53,us,us2000aetk,2017-12-07T20:00:06.040Z,"21 km ENE of S?ngjibaegam, North Korea",collapse,9.5,6.7,0.181,4,reviewed,spec,us
+2017-09-23T08:29:16.810Z,41.2958,129.0438,5,3.6,ml,,160,3.344,0.65,us,us2000ati7,2017-12-19T01:54:13.040Z,"21 km ENE of S?ngjibaegam, North Korea",earthquake,7.8,2,0.148,6,reviewed,us,us
+2017-10-12T16:41:08.670Z,41.3563,129.0251,5,2.9,mb_lg,,172,3.286,0.45,us,us1000aqsx,2018-01-09T02:14:57.040Z,"22 km ENE of S?ngjibaegam, North Korea",earthquake,11.9,1.9,0.295,3,reviewed,us,us
+2017-11-15T05:29:32.820Z,36.0735,129.28,10,5.5,mww,,26,1.545,0.71,us,us2000bnrs,2022-05-03T18:40:17.781Z,"7 km SW of Heunghae, South Korea",earthquake,4.5,0.8,0.069,20,reviewed,us,us
+2017-11-15T07:49:30.600Z,36.0394,129.318,10,4.7,mb,,101,1.509,0.51,us,us2000bnsz,2021-01-05T19:03:17.047Z,"4 km WNW of Pohang, South Korea",earthquake,5.6,1.8,0.062,80,reviewed,us,us
+2018-01-08T20:52:08.090Z,33.7236,132.1526,58.94,4.6,mb,,84,1.222,0.98,us,us1000c26y,2018-04-03T01:40:23.040Z,"27 km S of Yanai, Japan",earthquake,6.1,6.8,0.073,56,reviewed,us,us
+2018-02-10T20:03:03.910Z,36.0763,129.2983,5.4,4.7,mww,,22,1.547,0.57,us,us2000d0cy,2021-01-05T19:06:11.682Z,"5 km SW of Heunghae, South Korea",earthquake,3.3,3.8,0.078,16,reviewed,us,us
+2018-04-08T16:32:31.520Z,35.2588,132.5528,10.34,5.7,mww,,36,1.875,0.74,us,us2000dwh6,2022-05-03T20:04:09.031Z,"8 km NNE of ?dach?-?da, Japan",earthquake,5.6,3.3,0.062,25,reviewed,us,us
+2018-04-08T16:43:54.340Z,35.073,132.4912,9.59,4.4,mb,,36,1.761,0.79,us,us2000dwhl,2018-06-30T01:11:35.040Z,"13 km S of ?dach?-?da, Japan",earthquake,6.7,4.4,0.088,37,reviewed,us,us
+2018-04-08T16:56:46.890Z,35.1347,132.5019,8.6,4.7,mb,,43,1.802,0.78,us,us2000dwhj,2018-06-30T01:11:35.040Z,"6 km S of ?dach?-?da, Japan",earthquake,6,4.7,0.05,121,reviewed,us,us
+2018-04-08T17:10:56.840Z,35.1024,132.4956,10,4.6,mb,,34,1.781,1.28,us,us2000dwhr,2018-06-30T01:11:35.040Z,"9 km S of ?dach?-?da, Japan",earthquake,5.3,1.9,0.062,78,reviewed,us,us
+2018-04-08T20:05:43.380Z,35.0732,132.5707,10,4.5,mb,,47,1.719,1.1,us,us2000dwku,2018-06-30T01:11:35.040Z,"14 km SSE of ?dach?-?da, Japan",earthquake,4.9,1.4,0.077,50,reviewed,us,us
+2018-06-26T08:00:14.240Z,34.8713,132.816,35.34,4.6,mb,,63,1.436,0.79,us,us1000f1zq,2018-09-21T16:25:55.040Z,"8 km NNW of Miyoshi, Japan",earthquake,2.6,8.3,0.072,58,reviewed,us,us
+2018-09-02T21:47:50.490Z,34.5324,131.3736,21.28,4.5,mb,,86,1.463,0.66,us,us2000h6yi,2018-11-07T18:37:09.040Z,"15 km NNW of Hagi, Japan",earthquake,4.9,5.6,0.156,12,reviewed,us,us
+2018-09-11T13:20:52.510Z,39.6445,132.1629,510.33,4.5,mb,,80,3.978,0.79,us,us2000hcln,2018-11-21T18:19:09.040Z,"282 km ESE of Kilju, North Korea",earthquake,5.8,5,0.045,144,reviewed,us,us
+2019-03-11T06:37:51.858Z,33.2135,132.7262,44.21,4.9,mb,,72,1.091,0.83,us,us1000jdg8,2019-05-24T21:21:30.040Z,"6 km SE of Kihoku-ch?, Japan",earthquake,5.9,6.7,0.058,93,reviewed,us,us
+2019-04-19T02:16:43.083Z,37.8585,129.5212,10,4.4,mb,,49,1.331,0.99,us,us70003cje,2019-06-26T20:54:53.040Z,"50 km NE of Tonghae, South Korea",earthquake,5.9,1.9,0.13,17,reviewed,us,us
+2019-06-27T06:19:51.787Z,38.8562,125.6782,10,3.6,mb_lg,,131,1.565,0.44,us,us700045sm,2019-09-14T16:08:13.040Z,"10 km W of Chunghwa, North Korea",earthquake,6.3,2,0.228,5,reviewed,us,us
+2019-07-15T22:05:37.342Z,42.0169,130.9379,567,4.2,mb,,77,2.313,0.76,us,us60004uut,2019-09-28T20:00:43.040Z,"54 km SE of Ungsang-nodongjagu, North Korea",earthquake,12.8,9.1,0.047,123,reviewed,us,us
+2019-10-06T23:02:31.426Z,33.8149,132.269,50.17,4.6,mb,,64,1.341,0.63,us,us70005rfp,2019-12-27T15:51:00.040Z,"21 km SE of Yanai, Japan",earthquake,5.8,6.6,0.047,136,reviewed,us,us
+2019-11-13T04:24:23.116Z,42.1737,131.5449,545.67,4.5,mb,,45,2.051,0.76,us,us70006aiz,2020-02-07T20:20:31.040Z,"63 km SE of Zarubino, Russia",earthquake,11.2,9.5,0.094,33,reviewed,us,us
+2020-01-29T15:52:53.047Z,36.6882,127.9929,10,3.5,ml,,244,0.594,0.44,us,us60007jla,2020-04-18T22:09:54.040Z,"21 km WNW of Mungyeong, South Korea",earthquake,3.8,2,0.181,4,reviewed,us,us
+2020-03-08T19:28:44.689Z,33.3291,131.9925,57.64,4.9,mb,,96,1.623,1.34,us,us60008c4z,2020-05-23T22:03:16.040Z,"28 km NE of Usuki, Japan",earthquake,6.4,5.6,0.036,250,reviewed,us,us
+2020-03-16T11:42:20.797Z,33.3266,130.8069,10,3.8,ml,,132,1.836,0.51,us,us60008gsp,2020-05-30T22:17:16.040Z,"11 km ESE of Tanushimarumachi-toyoki, Japan",earthquake,5.8,2,0.128,8,reviewed,us,us
+2020-05-11T10:45:05.924Z,38.7468,127.036,10,3.8,mb_lg,,113,1.308,0.38,us,us70009eep,2021-01-05T19:08:57.302Z,"32 km E of Koksan, North Korea",earthquake,5.4,2,0.228,5,reviewed,us,us
+2020-07-14T08:46:00.468Z,42.5342,131.3239,562.94,4.1,mb,,79,1.734,0.86,us,us7000an9d,2020-09-19T20:58:21.040Z,"22 km ESE of Zarubino, Russia",earthquake,10.9,4,0.059,79,reviewed,us,us
