@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>(review) Graph Neural Network-Based Anomaly Detection in Multivariate Time Series | Seoyeon</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="(review) Graph Neural Network-Based Anomaly Detection in Multivariate Time Series" />
+<meta name="author" content="최서연" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="논문" />
+<meta property="og:description" content="논문" />
+<link rel="canonical" href="https://seoyeonc.github.io/ms/gnn/2022/06/28/review-GNN-anomaly-detection.html" />
+<meta property="og:url" content="https://seoyeonc.github.io/ms/gnn/2022/06/28/review-GNN-anomaly-detection.html" />
+<meta property="og:site_name" content="Seoyeon" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-06-28T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="(review) Graph Neural Network-Based Anomaly Detection in Multivariate Time Series" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"최서연"},"dateModified":"2022-06-28T00:00:00-05:00","datePublished":"2022-06-28T00:00:00-05:00","description":"논문","headline":"(review) Graph Neural Network-Based Anomaly Detection in Multivariate Time Series","mainEntityOfPage":{"@type":"WebPage","@id":"https://seoyeonc.github.io/ms/gnn/2022/06/28/review-GNN-anomaly-detection.html"},"url":"https://seoyeonc.github.io/ms/gnn/2022/06/28/review-GNN-anomaly-detection.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ms/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://seoyeonc.github.io/ms/feed.xml" title="Seoyeon" /><link rel="shortcut icon" type="image/x-icon" href="/ms/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ms/">Seoyeon</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ms/about/">About Me</a><a class="page-link" href="/ms/search/">Search</a><a class="page-link" href="/ms/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">(review) Graph Neural Network-Based Anomaly Detection in Multivariate Time Series</h1><p class="page-description">논문</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-06-28T00:00:00-05:00" itemprop="datePublished">
+        Jun 28, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">최서연</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/ms/categories/#GNN">GNN</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/seoyeonc/ms/tree/master/_notebooks/2022-06-28-review-GNN-anomaly detection.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/ms/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/seoyeonc/ms/master?filepath=_notebooks%2F2022-06-28-review-GNN-anomaly+detection.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ms/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/seoyeonc/ms/blob/master/_notebooks/2022-06-28-review-GNN-anomaly detection.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ms/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fseoyeonc%2Fms%2Fblob%2Fmaster%2F_notebooks%2F2022-06-28-review-GNN-anomaly+detection.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/ms/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#3.1-Problem-Statement">3.1 Problem Statement </a></li>
+<li class="toc-entry toc-h3"><a href="#3.3-Sensor-Embedding">3.3 Sensor Embedding </a></li>
+<li class="toc-entry toc-h3"><a href="#3.4-Graph-Structure-Learning">3.4 Graph Structure Learning </a></li>
+<li class="toc-entry toc-h3"><a href="#3.5-Graph-Attention-Based-Forecasting">3.5 Graph Attention-Based Forecasting </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-06-28-review-GNN-anomaly detection.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>github: <a href="https://github.com/d-ailin/GDN">https://github.com/d-ailin/GDN</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://arxiv.org/pdf/2106.06947.pdf">https://arxiv.org/pdf/2106.06947.pdf</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.1-Problem-Statement">
+<a class="anchor" href="#3.1-Problem-Statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 Problem Statement<a class="anchor-link" href="#3.1-Problem-Statement"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>$N$ 개 sensors</li>
+<li>$T_{min}$ 개 time stick</li>
+<li>$S_{train} = [ s^{(1)}_{train} \dots s^{(T_{min}}_{train} ]$</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Strain</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"서울</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">366</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+           <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"경기</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">366</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"부산</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">366</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Strain</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>355</th>
+      <th>356</th>
+      <th>357</th>
+      <th>358</th>
+      <th>359</th>
+      <th>360</th>
+      <th>361</th>
+      <th>362</th>
+      <th>363</th>
+      <th>364</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울1</td>
+      <td>서울2</td>
+      <td>서울3</td>
+      <td>서울4</td>
+      <td>서울5</td>
+      <td>서울6</td>
+      <td>서울7</td>
+      <td>서울8</td>
+      <td>서울9</td>
+      <td>서울10</td>
+      <td>...</td>
+      <td>서울356</td>
+      <td>서울357</td>
+      <td>서울358</td>
+      <td>서울359</td>
+      <td>서울360</td>
+      <td>서울361</td>
+      <td>서울362</td>
+      <td>서울363</td>
+      <td>서울364</td>
+      <td>서울365</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>경기1</td>
+      <td>경기2</td>
+      <td>경기3</td>
+      <td>경기4</td>
+      <td>경기5</td>
+      <td>경기6</td>
+      <td>경기7</td>
+      <td>경기8</td>
+      <td>경기9</td>
+      <td>경기10</td>
+      <td>...</td>
+      <td>경기356</td>
+      <td>경기357</td>
+      <td>경기358</td>
+      <td>경기359</td>
+      <td>경기360</td>
+      <td>경기361</td>
+      <td>경기362</td>
+      <td>경기363</td>
+      <td>경기364</td>
+      <td>경기365</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>부산1</td>
+      <td>부산2</td>
+      <td>부산3</td>
+      <td>부산4</td>
+      <td>부산5</td>
+      <td>부산6</td>
+      <td>부산7</td>
+      <td>부산8</td>
+      <td>부산9</td>
+      <td>부산10</td>
+      <td>...</td>
+      <td>부산356</td>
+      <td>부산357</td>
+      <td>부산358</td>
+      <td>부산359</td>
+      <td>부산360</td>
+      <td>부산361</td>
+      <td>부산362</td>
+      <td>부산363</td>
+      <td>부산364</td>
+      <td>부산365</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 365 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Strain_1</span> <span class="o">=</span> <span class="n">Strain</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Strain_1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울1
+0    경기1
+0    부산1
+Name: 0, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Strain_365</span> <span class="o">=</span> <span class="n">Strain</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">364</span><span class="p">]</span>
+<span class="n">Strain_365</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울365
+0    경기365
+0    부산365
+Name: 364, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$S_{train}^{(t)} \in \mathbb{R}^{N}$</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Stest</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"서울</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">366</span><span class="p">,</span><span class="mi">731</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+           <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"경기</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">366</span><span class="p">,</span><span class="mi">731</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+          <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"부산</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">366</span><span class="p">,</span><span class="mi">731</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Stest</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>...</th>
+      <th>355</th>
+      <th>356</th>
+      <th>357</th>
+      <th>358</th>
+      <th>359</th>
+      <th>360</th>
+      <th>361</th>
+      <th>362</th>
+      <th>363</th>
+      <th>364</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울366</td>
+      <td>서울367</td>
+      <td>서울368</td>
+      <td>서울369</td>
+      <td>서울370</td>
+      <td>서울371</td>
+      <td>서울372</td>
+      <td>서울373</td>
+      <td>서울374</td>
+      <td>서울375</td>
+      <td>...</td>
+      <td>서울721</td>
+      <td>서울722</td>
+      <td>서울723</td>
+      <td>서울724</td>
+      <td>서울725</td>
+      <td>서울726</td>
+      <td>서울727</td>
+      <td>서울728</td>
+      <td>서울729</td>
+      <td>서울730</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>경기366</td>
+      <td>경기367</td>
+      <td>경기368</td>
+      <td>경기369</td>
+      <td>경기370</td>
+      <td>경기371</td>
+      <td>경기372</td>
+      <td>경기373</td>
+      <td>경기374</td>
+      <td>경기375</td>
+      <td>...</td>
+      <td>경기721</td>
+      <td>경기722</td>
+      <td>경기723</td>
+      <td>경기724</td>
+      <td>경기725</td>
+      <td>경기726</td>
+      <td>경기727</td>
+      <td>경기728</td>
+      <td>경기729</td>
+      <td>경기730</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>부산366</td>
+      <td>부산367</td>
+      <td>부산368</td>
+      <td>부산369</td>
+      <td>부산370</td>
+      <td>부산371</td>
+      <td>부산372</td>
+      <td>부산373</td>
+      <td>부산374</td>
+      <td>부산375</td>
+      <td>...</td>
+      <td>부산721</td>
+      <td>부산722</td>
+      <td>부산723</td>
+      <td>부산724</td>
+      <td>부산725</td>
+      <td>부산726</td>
+      <td>부산727</td>
+      <td>부산728</td>
+      <td>부산729</td>
+      <td>부산730</td>
+    </tr>
+  </tbody>
+</table>
+<p>3 rows × 365 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Steat_1</span> <span class="o">=</span> <span class="n">Stest</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">Steat_1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울366
+0    경기366
+0    부산366
+Name: 0, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Stest_365</span> <span class="o">=</span> <span class="n">Stest</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">364</span><span class="p">]</span>
+<span class="n">Stest_365</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울730
+0    경기730
+0    부산730
+Name: 364, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$a(t) \in \{ 0,1 \}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$a(t) = 1$  indicates that time t is anomalous.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f34be1de5e0&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>여기서 $a(6) = 1$, 나머지는 0</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.3-Sensor-Embedding">
+<a class="anchor" href="#3.3-Sensor-Embedding" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Sensor Embedding<a class="anchor-link" href="#3.3-Sensor-Embedding"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>we do this by introducing an embedding vector for each sensor, representing its characteristics:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$v_i \in \mathbb{R}^{d} , \text{for  } i \in \{ 1,2, \dots , N \}$</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="s1">'V_서울'</span><span class="p">,</span><span class="s1">'V_부산'</span><span class="p">,</span> <span class="s1">'V_경기'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['V_서울', 'V_부산', 'V_경기']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v_서울</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="sa">f</span><span class="s2">"서울</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span>
+<span class="n">v_서울</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울1</td>
+      <td>서울2</td>
+      <td>서울3</td>
+      <td>서울4</td>
+      <td>서울5</td>
+      <td>서울6</td>
+      <td>서울7</td>
+      <td>서울8</td>
+      <td>서울9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$v_i$의 $d$ 는 임의로 정하는 것이며, 이는 $S_{traIn}$의 행을 의미한다.</p>
+<ul>
+<li>v_서울은 1행에서 10개를 뽑은 것</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.4-Graph-Structure-Learning">
+<a class="anchor" href="#3.4-Graph-Structure-Learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.4 Graph Structure Learning<a class="anchor-link" href="#3.4-Graph-Structure-Learning"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This prior information can be flexibly represented as a set of candidate relations $\mathcal{C}_i$ for each sensor $i$, i.e. the sensors it could be dependent on:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\mathcal{C}_i \subseteq \{ 1,2, \dots , N \} \ \{ i \}$</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">C_서울</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'경기'</span><span class="p">,</span><span class="s1">'인천'</span><span class="p">]</span>
+<span class="n">C_서울</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['경기', '인천']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>위와 같이 인접 구역을 의미하며, 인접 거리에 대한 정의는 임의로</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$e_{ji} = \cfrac{v_i^{\top} v_j}{||v_i||\cdot||v_j||} \text{for  } j \in \mathcal{C}_i$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>위는 distance 개념</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$A_{ji} = \mathbb{1} \{ j \in \text{TopK } (\{e_{ki} : k \in \mathcal(C)_i \} ) \}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>연결 되면 1이 되고, 연결되어 있지 않으면 0이 된다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$e_{ji}$와 $A_{ji}$는 모두 $\mathcal{C}_i$의 연장선이다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\mathcal{C}_i$에서 아무리 길게 정해도 $A_{ji}$에서 정한 top을 넘으면 잘림!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>TopK denotes the indices of top-k values among its input (i.e. the normalized dot products).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.5-Graph-Attention-Based-Forecasting">
+<a class="anchor" href="#3.5-Graph-Attention-Based-Forecasting" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.5 Graph Attention-Based Forecasting<a class="anchor-link" href="#3.5-Graph-Attention-Based-Forecasting"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$x^{(t)} \in \mathbb{R}^{N \times w}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$x^{(t)} := [s^{(t-w)},s^{(t-w+1)},\dots, s^{(t-1)}]$</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_t</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">'서울1'</span><span class="p">,</span><span class="s1">'서울2'</span><span class="p">,</span><span class="s1">'서울t-w'</span><span class="p">,</span><span class="s1">'서울t-2'</span><span class="p">,</span><span class="s1">'서울t-1'</span><span class="p">],[</span><span class="s1">'경기1'</span><span class="p">,</span><span class="s1">'경기2'</span><span class="p">,</span><span class="s1">'경기t-w'</span><span class="p">,</span><span class="s1">'경기t-2'</span><span class="p">,</span><span class="s1">'경기t-1'</span><span class="p">],[</span><span class="s1">'인천1'</span><span class="p">,</span><span class="s1">'인천2'</span><span class="p">,</span><span class="s1">'인천t-w'</span><span class="p">,</span><span class="s1">'인천t-2'</span><span class="p">,</span><span class="s1">'인천t-1'</span><span class="p">]])</span>
+<span class="n">x_t</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>서울1</td>
+      <td>서울2</td>
+      <td>서울t-w</td>
+      <td>서울t-2</td>
+      <td>서울t-1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>경기1</td>
+      <td>경기2</td>
+      <td>경기t-w</td>
+      <td>경기t-2</td>
+      <td>경기t-1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>인천1</td>
+      <td>인천2</td>
+      <td>인천t-w</td>
+      <td>인천t-2</td>
+      <td>인천t-1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>이 $x_t$는 $S_{train}$에서 추출된 w 열 만큼의 데이터이다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s_t_1</span> <span class="o">=</span> <span class="n">x_t</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span> <span class="c1"># S(t-1)</span>
+<span class="n">s_t_1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울t-1
+1    경기t-1
+2    인천t-1
+Name: 4, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s_t_w</span> <span class="o">=</span> <span class="n">x_t</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># S(t-w)</span>
+<span class="n">s_t_w</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    서울t-w
+1    경기t-w
+2    인천t-w
+Name: 2, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$z_i^{(t)} = \text{ReLU} \big( \alpha_{i,i} W x_{i}^{(t)} + \sum_{j \in \mathbb{N}(i)} \alpha_{i,j} W x_{j}^{(t)} \big)$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>여기서 $z_{i}^{(t)}$는 $d \times 1$ 행렬</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$x_{i}^{(t)} \in \mathbb{R}^{w}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\mathcal{N}(i) = \{ j | A_{ji} &gt; 0 \}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$W \in \mathbb{R}^{d \times w}$</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/ms/gnn/2022/06/28/review-GNN-anomaly-detection.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ms/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ms/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ms/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/seoyeonc" target="_blank" title="seoyeonc"><svg class="svg-icon grey"><use xlink:href="/ms/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
