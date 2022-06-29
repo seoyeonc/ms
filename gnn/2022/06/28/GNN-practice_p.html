@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      54 min read
+      56 min read
     
 </span></p>
 
@@ -262,7 +262,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#p-=-0.3,-0.4-vs-0.6">p = 0.3, 0.4 vs 0.6 </a></li>
 <li class="toc-entry toc-h3"><a href="#Train-the-GNN-model">Train the GNN model </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#p-=-0.3,-0.5-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%">p = 0.3, 0.5 vs 0.6 Test accuracy: 1) 97.55% 2) 82.93% 3) 97.62% 4) 90.73% 5) 92.91% </a></li>
+<li class="toc-entry toc-h4"><a href="#p-=-0.3,-0.4-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%">p = 0.3, 0.4 vs 0.6 Test accuracy: 1) 97.55% 2) 82.93% 3) 97.62% 4) 90.73% 5) 92.91% </a></li>
 </ul>
 </li>
 </ul>
@@ -383,6 +383,351 @@ window.onload = wrap_img;
 <ul>
 <li>할목별 문항을 이진화, class는 설문조사 결과</li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">X의 p = 0.1</th>
+<th style="text-align:center">시도1</th>
+<th style="text-align:center">시도2</th>
+<th style="text-align:center">시도3</th>
+<th style="text-align:center">시도4</th>
+<th style="text-align:center">시도5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">baseline</td>
+<td style="text-align:center">98.37%</td>
+<td style="text-align:center">99.19%</td>
+<td style="text-align:center">98.66%</td>
+<td style="text-align:center">99.8%</td>
+<td style="text-align:center">97.87%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.1 vs 0.9</td>
+<td style="text-align:center">98.37%</td>
+<td style="text-align:center">98.39%</td>
+<td style="text-align:center">99.81%</td>
+<td style="text-align:center">98.43%</td>
+<td style="text-align:center">98.84%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.2 vs 0.8</td>
+<td style="text-align:center">98.17%</td>
+<td style="text-align:center">97.98%</td>
+<td style="text-align:center">97.52%</td>
+<td style="text-align:center">98.62%</td>
+<td style="text-align:center">99.42%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.3 vs 0.7</td>
+<td style="text-align:center">96.95%</td>
+<td style="text-align:center">99.4%</td>
+<td style="text-align:center">98.85%</td>
+<td style="text-align:center">98.43%</td>
+<td style="text-align:center">97.87%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.4 vs 0.6</td>
+<td style="text-align:center">97.76%</td>
+<td style="text-align:center">99.4%</td>
+<td style="text-align:center">98.47%</td>
+<td style="text-align:center">99.8%</td>
+<td style="text-align:center">98.65%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.5 vs 0.5</td>
+<td style="text-align:center">96.75%</td>
+<td style="text-align:center">99.8%</td>
+<td style="text-align:center">99.81%</td>
+<td style="text-align:center">99.8%</td>
+<td style="text-align:center">99.42%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">X의 p = 0.2</th>
+<th style="text-align:center">시도1</th>
+<th style="text-align:center">시도2</th>
+<th style="text-align:center">시도3</th>
+<th style="text-align:center">시도4</th>
+<th style="text-align:center">시도5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">baseline</td>
+<td style="text-align:center">94.8%</td>
+<td style="text-align:center">94.16%</td>
+<td style="text-align:center">94.88%</td>
+<td style="text-align:center">93.75%</td>
+<td style="text-align:center">89.74%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.1 vs 0.9</td>
+<td style="text-align:center">98.6%</td>
+<td style="text-align:center">94.16%</td>
+<td style="text-align:center">98.16%</td>
+<td style="text-align:center">97.78%</td>
+<td style="text-align:center">98.42%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.2 vs 0.8</td>
+<td style="text-align:center">98.2%</td>
+<td style="text-align:center">98.25%</td>
+<td style="text-align:center">92.01%</td>
+<td style="text-align:center">98.39%</td>
+<td style="text-align:center">93.1%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.3 vs 0.7</td>
+<td style="text-align:center">93.2%</td>
+<td style="text-align:center">98.64%</td>
+<td style="text-align:center">97.34%</td>
+<td style="text-align:center">96.57%</td>
+<td style="text-align:center">99.41%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.4 vs 0.6</td>
+<td style="text-align:center">96.6%</td>
+<td style="text-align:center">96.11%</td>
+<td style="text-align:center">96.11%</td>
+<td style="text-align:center">93.95%</td>
+<td style="text-align:center">97.44%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.5 vs 0.5</td>
+<td style="text-align:center">97.0%</td>
+<td style="text-align:center">96.89%</td>
+<td style="text-align:center">97.54%</td>
+<td style="text-align:center">96.98%</td>
+<td style="text-align:center">97.04%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">X의 p = 0.3</th>
+<th style="text-align:center">시도1</th>
+<th style="text-align:center">시도2</th>
+<th style="text-align:center">시도3</th>
+<th style="text-align:center">시도4</th>
+<th style="text-align:center">시도5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">baseline</td>
+<td style="text-align:center">82.41%</td>
+<td style="text-align:center">83.13%</td>
+<td style="text-align:center">85.28%</td>
+<td style="text-align:center">81.66%</td>
+<td style="text-align:center">83.66%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.1 vs 0.9</td>
+<td style="text-align:center">92.02%</td>
+<td style="text-align:center">95.93%</td>
+<td style="text-align:center">86.8%</td>
+<td style="text-align:center">91.7%</td>
+<td style="text-align:center">87.8%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.2 vs 0.8</td>
+<td style="text-align:center">97.34%</td>
+<td style="text-align:center">96.54%</td>
+<td style="text-align:center">87.01%</td>
+<td style="text-align:center">96.91%</td>
+<td style="text-align:center">99.02%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.3 vs 0.7</td>
+<td style="text-align:center">96.73%</td>
+<td style="text-align:center">85.57%</td>
+<td style="text-align:center">97.84%</td>
+<td style="text-align:center">97.1%</td>
+<td style="text-align:center">97.24%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.4 vs 0.6</td>
+<td style="text-align:center">97.55%</td>
+<td style="text-align:center">82.93%</td>
+<td style="text-align:center">97.62%</td>
+<td style="text-align:center">90.73%</td>
+<td style="text-align:center">92.91%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.5 vs 0.5</td>
+<td style="text-align:center">87.12%</td>
+<td style="text-align:center">83.54%</td>
+<td style="text-align:center">97.19%</td>
+<td style="text-align:center">88.61%</td>
+<td style="text-align:center">83.27%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">X의 p = 0.4</th>
+<th style="text-align:center">시도1</th>
+<th style="text-align:center">시도2</th>
+<th style="text-align:center">시도3</th>
+<th style="text-align:center">시도4</th>
+<th style="text-align:center">시도5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">baseline</td>
+<td style="text-align:center">65.56%</td>
+<td style="text-align:center">72.73%</td>
+<td style="text-align:center">69.67%</td>
+<td style="text-align:center">67.7%</td>
+<td style="text-align:center">66.6%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.1 vs 0.9</td>
+<td style="text-align:center">87.08%</td>
+<td style="text-align:center">92.23%</td>
+<td style="text-align:center">87.28%</td>
+<td style="text-align:center">90.53%</td>
+<td style="text-align:center">78.51%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.2 vs 0.8</td>
+<td style="text-align:center">76.13%</td>
+<td style="text-align:center">92.99%</td>
+<td style="text-align:center">61.06%</td>
+<td style="text-align:center">62.55%</td>
+<td style="text-align:center">67.02%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.3 vs 0.7</td>
+<td style="text-align:center">87.87%</td>
+<td style="text-align:center">68.37%</td>
+<td style="text-align:center">66.93%</td>
+<td style="text-align:center">58.02%</td>
+<td style="text-align:center">80.21%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.4 vs 0.6</td>
+<td style="text-align:center">86.5%</td>
+<td style="text-align:center">88.45%</td>
+<td style="text-align:center">85.71%</td>
+<td style="text-align:center">60.08%</td>
+<td style="text-align:center">83.19%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.5 vs 0.5</td>
+<td style="text-align:center">85.91%</td>
+<td style="text-align:center">71.02%</td>
+<td style="text-align:center">82.0%</td>
+<td style="text-align:center">91.36%</td>
+<td style="text-align:center">88.51%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">X의 p = 0.5</th>
+<th style="text-align:center">시도1</th>
+<th style="text-align:center">시도2</th>
+<th style="text-align:center">시도3</th>
+<th style="text-align:center">시도4</th>
+<th style="text-align:center">시도5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">baseline</td>
+<td style="text-align:center">52.76%</td>
+<td style="text-align:center">49.9%</td>
+<td style="text-align:center">47.43%</td>
+<td style="text-align:center">52.92%</td>
+<td style="text-align:center">51.13%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.1 vs 0.9</td>
+<td style="text-align:center">43.5%</td>
+<td style="text-align:center">46.97%</td>
+<td style="text-align:center">46.84%</td>
+<td style="text-align:center">49.81%</td>
+<td style="text-align:center">49.28%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.2 vs 0.8</td>
+<td style="text-align:center">49.8%</td>
+<td style="text-align:center">49.9%</td>
+<td style="text-align:center">46.84%</td>
+<td style="text-align:center">51.17%</td>
+<td style="text-align:center">48.67%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.3 vs 0.7</td>
+<td style="text-align:center">52.36%</td>
+<td style="text-align:center">45.21%</td>
+<td style="text-align:center">46.05%</td>
+<td style="text-align:center">49.22%</td>
+<td style="text-align:center">49.49%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.4 vs 0.6</td>
+<td style="text-align:center">45.87%</td>
+<td style="text-align:center">47.36%</td>
+<td style="text-align:center">46.84%</td>
+<td style="text-align:center">50.97%</td>
+<td style="text-align:center">49.28%</td>
+</tr>
+<tr>
+<td style="text-align:center">p of citation 0.5 vs 0.5</td>
+<td style="text-align:center">51.38%</td>
+<td style="text-align:center">48.53%</td>
+<td style="text-align:center">46.84%</td>
+<td style="text-align:center">48.83%</td>
+<td style="text-align:center">51.33%</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -6750,8 +7095,8 @@ Instance 2:
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="p-=-0.3,-0.5-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%">
-<a class="anchor" href="#p-=-0.3,-0.5-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%" aria-hidden="true"><span class="octicon octicon-link"></span></a>p = 0.3, 0.5 vs 0.6 Test accuracy: 1) 97.55% 2) 82.93% 3) 97.62% 4) 90.73% 5) 92.91%<a class="anchor-link" href="#p-=-0.3,-0.5-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%"> </a>
+<h4 id="p-=-0.3,-0.4-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%">
+<a class="anchor" href="#p-=-0.3,-0.4-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%" aria-hidden="true"><span class="octicon octicon-link"></span></a>p = 0.3, 0.4 vs 0.6 Test accuracy: 1) 97.55% 2) 82.93% 3) 97.62% 4) 90.73% 5) 92.91%<a class="anchor-link" href="#p-=-0.3,-0.4-vs-0.6-Test-accuracy:-1)-97.55%-2)-82.93%-3)-97.62%-4)-90.73%-5)-92.91%"> </a>
 </h4>
 </div>
 </div>
