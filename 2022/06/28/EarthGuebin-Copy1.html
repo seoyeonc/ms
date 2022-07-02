@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      9 min read
     
 </span></p>
 
@@ -2919,108 +2919,10 @@ Name: Date, dtype: object</pre>
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">/tmp/ipykernel_2141725/1837600852.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'load_ext'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'rpy2.ipython'</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2349</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'local_ns'</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>get_local_scope<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2350</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 2351</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2352</span>             <span class="ansi-green-fg">return</span> result
-<span class="ansi-green-intense-fg ansi-bold">   2353</span> 
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/decorator.py</span> in <span class="ansi-cyan-fg">fun</span><span class="ansi-blue-fg">(*args, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    230</span>             <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> kwsyntax<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    231</span>                 args<span class="ansi-blue-fg">,</span> kw <span class="ansi-blue-fg">=</span> fix<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">,</span> kw<span class="ansi-blue-fg">,</span> sig<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 232</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> caller<span class="ansi-blue-fg">(</span>func<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span><span class="ansi-blue-fg">(</span>extras <span class="ansi-blue-fg">+</span> args<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    233</span>     fun<span class="ansi-blue-fg">.</span>__name__ <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">.</span>__name__
-<span class="ansi-green-intense-fg ansi-bold">    234</span>     fun<span class="ansi-blue-fg">.</span>__doc__ <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">.</span>__doc__
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it's overkill for just that one bit of state.</span>
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    188</span> 
-<span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/IPython/core/magics/extension.py</span> in <span class="ansi-cyan-fg">load_ext</span><span class="ansi-blue-fg">(self, module_str)</span>
-<span class="ansi-green-intense-fg ansi-bold">     31</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> module_str<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span>             <span class="ansi-green-fg">raise</span> UsageError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'Missing module name.'</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">---&gt; 33</span><span class="ansi-red-fg">         </span>res <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>extension_manager<span class="ansi-blue-fg">.</span>load_extension<span class="ansi-blue-fg">(</span>module_str<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     34</span> 
-<span class="ansi-green-intense-fg ansi-bold">     35</span>         <span class="ansi-green-fg">if</span> res <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">'already loaded'</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/IPython/core/extensions.py</span> in <span class="ansi-cyan-fg">load_extension</span><span class="ansi-blue-fg">(self, module_str)</span>
-<span class="ansi-green-intense-fg ansi-bold">     78</span>             <span class="ansi-green-fg">if</span> module_str <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">in</span> sys<span class="ansi-blue-fg">.</span>modules<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     79</span>                 <span class="ansi-green-fg">with</span> prepended_to_syspath<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>ipython_extension_dir<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 80</span><span class="ansi-red-fg">                     </span>mod <span class="ansi-blue-fg">=</span> import_module<span class="ansi-blue-fg">(</span>module_str<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     81</span>                     <span class="ansi-green-fg">if</span> mod<span class="ansi-blue-fg">.</span>__file__<span class="ansi-blue-fg">.</span>startswith<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>ipython_extension_dir<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     82</span>                         print(("Loading extensions from {dir} is deprecated. "
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/__init__.py</span> in <span class="ansi-cyan-fg">import_module</span><span class="ansi-blue-fg">(name, package)</span>
-<span class="ansi-green-intense-fg ansi-bold">    125</span>                 <span class="ansi-green-fg">break</span>
-<span class="ansi-green-intense-fg ansi-bold">    126</span>             level <span class="ansi-blue-fg">+=</span> <span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-fg">--&gt; 127</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> _bootstrap<span class="ansi-blue-fg">.</span>_gcd_import<span class="ansi-blue-fg">(</span>name<span class="ansi-blue-fg">[</span>level<span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> package<span class="ansi-blue-fg">,</span> level<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    128</span> 
-<span class="ansi-green-intense-fg ansi-bold">    129</span> 
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_gcd_import</span><span class="ansi-blue-fg">(name, package, level)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_find_and_load</span><span class="ansi-blue-fg">(name, import_)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_find_and_load_unlocked</span><span class="ansi-blue-fg">(name, import_)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_load_unlocked</span><span class="ansi-blue-fg">(spec)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/_bootstrap_external.py</span> in <span class="ansi-cyan-fg">exec_module</span><span class="ansi-blue-fg">(self, module)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/importlib/_bootstrap.py</span> in <span class="ansi-cyan-fg">_call_with_frames_removed</span><span class="ansi-blue-fg">(f, *args, **kwds)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/rpy2/ipython/__init__.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> <span class="ansi-blue-fg">.</span> <span class="ansi-green-fg">import</span> rmagic
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> load_ipython_extension <span class="ansi-blue-fg">=</span> rmagic<span class="ansi-blue-fg">.</span>load_ipython_extension
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/rpy2/ipython/rmagic.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     55</span> <span class="ansi-green-fg">import</span> rpy2<span class="ansi-blue-fg">.</span>rinterface <span class="ansi-green-fg">as</span> ri
-<span class="ansi-green-intense-fg ansi-bold">     56</span> <span class="ansi-green-fg">import</span> rpy2<span class="ansi-blue-fg">.</span>rinterface_lib<span class="ansi-blue-fg">.</span>callbacks
-<span class="ansi-green-fg">---&gt; 57</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> rpy2<span class="ansi-blue-fg">.</span>robjects <span class="ansi-green-fg">as</span> ro
-<span class="ansi-green-intense-fg ansi-bold">     58</span> <span class="ansi-green-fg">import</span> rpy2<span class="ansi-blue-fg">.</span>robjects<span class="ansi-blue-fg">.</span>packages <span class="ansi-green-fg">as</span> rpacks
-<span class="ansi-green-intense-fg ansi-bold">     59</span> <span class="ansi-green-fg">from</span> rpy2<span class="ansi-blue-fg">.</span>robjects<span class="ansi-blue-fg">.</span>lib <span class="ansi-green-fg">import</span> grdevices
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/rpy2/robjects/__init__.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-green-fg">import</span> rpy2<span class="ansi-blue-fg">.</span>rlike<span class="ansi-blue-fg">.</span>container <span class="ansi-green-fg">as</span> rlc
-<span class="ansi-green-intense-fg ansi-bold">     18</span> 
-<span class="ansi-green-fg">---&gt; 19</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> rpy2<span class="ansi-blue-fg">.</span>robjects<span class="ansi-blue-fg">.</span>robject <span class="ansi-green-fg">import</span> RObjectMixin<span class="ansi-blue-fg">,</span> RObject
-<span class="ansi-green-intense-fg ansi-bold">     20</span> <span class="ansi-green-fg">import</span> rpy2<span class="ansi-blue-fg">.</span>robjects<span class="ansi-blue-fg">.</span>functions
-<span class="ansi-green-intense-fg ansi-bold">     21</span> from rpy2.robjects.environments import (Environment,
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/rpy2/robjects/robject.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span class="ansi-green-fg">from</span> rpy2<span class="ansi-blue-fg">.</span>robjects <span class="ansi-green-fg">import</span> conversion
-<span class="ansi-green-intense-fg ansi-bold">      9</span> 
-<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg"> </span>rpy2<span class="ansi-blue-fg">.</span>rinterface<span class="ansi-blue-fg">.</span>initr_simple<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> 
-<span class="ansi-green-intense-fg ansi-bold">     12</span> 
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/rpy2/rinterface.py</span> in <span class="ansi-cyan-fg">initr_simple</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">    857</span>     <span class="ansi-blue-fg">"""Initialize R's embedded C library."""</span>
-<span class="ansi-green-intense-fg ansi-bold">    858</span>     <span class="ansi-green-fg">with</span> openrlib<span class="ansi-blue-fg">.</span>rlock<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 859</span><span class="ansi-red-fg">         </span>status <span class="ansi-blue-fg">=</span> embedded<span class="ansi-blue-fg">.</span>_initr<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    860</span>         atexit<span class="ansi-blue-fg">.</span>register<span class="ansi-blue-fg">(</span>endr<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    861</span>         _rinterface<span class="ansi-blue-fg">.</span>_register_external_symbols<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/envs/csy/lib/python3.8/site-packages/rpy2/rinterface_lib/embedded.py</span> in <span class="ansi-cyan-fg">_initr</span><span class="ansi-blue-fg">(interactive, _want_setcallbacks, _c_stack_limit)</span>
-<span class="ansi-green-intense-fg ansi-bold">    130</span>             <span class="ansi-green-fg">return</span> <span class="ansi-green-fg">None</span>
-<span class="ansi-green-intense-fg ansi-bold">    131</span>         <span class="ansi-green-fg">elif</span> openrlib<span class="ansi-blue-fg">.</span>R_HOME <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 132</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'openrlib.R_HOME cannot be None.'</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    133</span>         <span class="ansi-green-fg">elif</span> openrlib<span class="ansi-blue-fg">.</span>rlib<span class="ansi-blue-fg">.</span>R_NilValue <span class="ansi-blue-fg">!=</span> ffi<span class="ansi-blue-fg">.</span>NULL<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    134</span>             warnings.warn(
-
-<span class="ansi-red-fg">ValueError</span>: openrlib.R_HOME cannot be None.</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The rpy2.ipython extension is already loaded. To reload it, use:
+  %reload_ext rpy2.ipython
+</pre>
 </div>
 </div>
 
@@ -3050,7 +2952,7 @@ Name: Date, dtype: object</pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>UsageError: Cell magic `%%R` not found.
+<pre>UsageError: %%R is a cell magic, but the cell body is empty. Did you mean the line magic %R (single %)?
 </pre>
 </div>
 </div>
