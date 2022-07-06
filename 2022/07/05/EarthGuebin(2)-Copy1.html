@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -3171,7 +3171,7 @@ Name: Date, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">'https://en.wikipedia.org/wiki/Lists_of_21st-century_earthquakes'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude&lt;=7'</span><span class="p">)</span><span class="c1"># List of deadliest earthquakes,a,how=left,on=Magnitude</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s1">'https://en.wikipedia.org/wiki/Lists_of_21st-century_earthquakes'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="n">a</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">)</span><span class="c1">#.query('Magnitude&lt;=7')# List of deadliest earthquakes</span>
 </pre></div>
 
     </div>
@@ -3209,9 +3209,28 @@ Name: Date, dtype: object</pre>
       <th>Location</th>
       <th>Event</th>
       <th>Date</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Year</th>
+      <th>MagnitudeHat</th>
+      <th>Residual</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>227898</td>
+      <td>9.1</td>
+      <td>Indonesia, Indian Ocean</td>
+      <td>2004 Indian Ocean earthquake and tsunami</td>
+      <td>December 26, 2004</td>
+      <td>38.297</td>
+      <td>142.373</td>
+      <td>2011.0</td>
+      <td>8.053442</td>
+      <td>1.046558</td>
+    </tr>
     <tr>
       <th>1</th>
       <td>2</td>
@@ -3220,51 +3239,123 @@ Name: Date, dtype: object</pre>
       <td>Haiti</td>
       <td>2010 Haiti earthquake</td>
       <td>January 12, 2010</td>
+      <td>18.443</td>
+      <td>-72.571</td>
+      <td>2010.0</td>
+      <td>6.284525</td>
+      <td>0.715475</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>87587</td>
+      <td>7.9</td>
+      <td>China</td>
+      <td>2008 Sichuan earthquake</td>
+      <td>May 12, 2008</td>
+      <td>36.281</td>
+      <td>141.111</td>
+      <td>2011.0</td>
+      <td>7.029732</td>
+      <td>0.870268</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7</td>
+      <td>20085</td>
+      <td>7.7</td>
+      <td>India</td>
+      <td>2001 Gujarat earthquake</td>
+      <td>January 26, 2001</td>
+      <td>38.058</td>
+      <td>144.590</td>
+      <td>2011.0</td>
+      <td>6.601755</td>
+      <td>1.098245</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5</td>
-      <td>26271</td>
-      <td>6.6</td>
-      <td>Iran</td>
-      <td>2003 Bam earthquake</td>
-      <td>December 26, 2003</td>
+      <td>7</td>
+      <td>20085</td>
+      <td>7.7</td>
+      <td>India</td>
+      <td>2001 Gujarat earthquake</td>
+      <td>January 26, 2001</td>
+      <td>-0.414</td>
+      <td>132.885</td>
+      <td>2009.0</td>
+      <td>6.881539</td>
+      <td>0.818461</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>8</td>
+      <td>8964</td>
+      <td>7.8</td>
+      <td>Nepal</td>
+      <td>2015 Nepal earthquake</td>
+      <td>April 25, 2015</td>
+      <td>2.383</td>
+      <td>97.048</td>
+      <td>2010.0</td>
+      <td>7.002219</td>
+      <td>0.797781</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8</td>
+      <td>8964</td>
+      <td>7.8</td>
+      <td>Nepal</td>
+      <td>2015 Nepal earthquake</td>
+      <td>April 25, 2015</td>
+      <td>-45.762</td>
+      <td>166.562</td>
+      <td>2009.0</td>
+      <td>7.016742</td>
+      <td>0.783258</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>8964</td>
+      <td>7.8</td>
+      <td>Nepal</td>
+      <td>2015 Nepal earthquake</td>
+      <td>April 25, 2015</td>
+      <td>-3.487</td>
+      <td>100.082</td>
+      <td>2010.0</td>
+      <td>7.037799</td>
+      <td>0.762201</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>9</td>
-      <td>5782</td>
-      <td>6.4</td>
+      <td>10</td>
+      <td>4340</td>
+      <td>7.5</td>
       <td>Indonesia</td>
-      <td>2006 Yogyakarta earthquake</td>
-      <td>May 26, 2006</td>
+      <td>2018 Sulawesi earthquake and tsunami</td>
+      <td>September 28, 2018</td>
+      <td>7.881</td>
+      <td>91.936</td>
+      <td>2010.0</td>
+      <td>6.497636</td>
+      <td>1.002364</td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>9</th>
       <td>11</td>
       <td>2968</td>
       <td>6.9</td>
       <td>China</td>
       <td>2010 Yushu earthquake</td>
       <td>April 13, 2010</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>12</td>
-      <td>2266</td>
-      <td>6.8</td>
-      <td>Algeria</td>
-      <td>2003 Boumerdès earthquake</td>
-      <td>May 21, 2003</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>15</td>
-      <td>1143</td>
-      <td>5.9</td>
-      <td>Afghanistan</td>
-      <td>June 2022 Afghanistan earthquake</td>
-      <td>June 21, 2022</td>
+      <td>36.164</td>
+      <td>141.526</td>
+      <td>2008.0</td>
+      <td>6.206013</td>
+      <td>0.693987</td>
     </tr>
   </tbody>
 </table>
