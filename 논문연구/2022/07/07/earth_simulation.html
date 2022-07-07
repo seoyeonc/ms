@@ -593,7 +593,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_simul</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span><span class="n">_y</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span><span class="s1">'x'</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">'y'</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_simul</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span><span class="n">_y</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'index'</span><span class="p">:</span><span class="s1">'x'</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">'y'</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">_simul</span>
 </pre></div>
 
@@ -626,6 +626,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>index</th>
       <th>x</th>
       <th>y</th>
     </tr>
@@ -633,26 +634,31 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
       <td>12.364947</td>
       <td>2.598280</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
       <td>9.005409</td>
       <td>1.764353</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>2</td>
       <td>6.231555</td>
       <td>1.413437</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>3</td>
       <td>19.408667</td>
       <td>3.562677</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>4</td>
       <td>12.562160</td>
       <td>2.446531</td>
     </tr>
@@ -660,40 +666,138 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
       <th>...</th>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>995</th>
+      <td>995</td>
       <td>23.177070</td>
       <td>4.698073</td>
     </tr>
     <tr>
       <th>996</th>
+      <td>996</td>
       <td>6.342679</td>
       <td>1.444670</td>
     </tr>
     <tr>
       <th>997</th>
+      <td>997</td>
       <td>3.207652</td>
       <td>0.725388</td>
     </tr>
     <tr>
       <th>998</th>
+      <td>998</td>
       <td>7.145368</td>
       <td>1.725624</td>
     </tr>
     <tr>
       <th>999</th>
+      <td>999</td>
       <td>2.340772</td>
       <td>0.607618</td>
     </tr>
   </tbody>
 </table>
-<p>1000 rows × 2 columns</p>
+<p>1000 rows × 3 columns</p>
 </div>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">_simul</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">_simul</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_matrix</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.],
+       ...,
+       [0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.],
+       [0., 0., 0., ..., 0., 0., 0.]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">weigh_simul</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_matrix2</span> <span class="o">=</span> <span class="n">_matrix</span> <span class="o">+</span>  <span class="p">[[</span><span class="n">weigh_simul</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">_simul</span><span class="p">))]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">_simul</span><span class="p">))]</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
