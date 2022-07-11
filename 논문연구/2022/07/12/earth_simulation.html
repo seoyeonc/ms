@@ -216,11 +216,14 @@ $$g_{\theta} \star x = U g_{\theta}(\Lambda) U^{\top}x$$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>$W$가 $n \times n$  대칭 행렬</p>
-<p>$L = I_N - D^{-\frac{1}{2}}AD^{-\frac{1}{2}} = U\Lambda U^{\top}$</p>
+<p>$L = I_N - D^{-\frac{1}{2}}WD^{-\frac{1}{2}}$</p>
+<p>$D_{ij} = \sum_{ij}W_{ij}$</p>
 <p>$U = (u_1, \dots, u_N)$</p>
+<p>$X = \mathbb{R}^N$</p>
 <p>$x *_Gg = U^{\top} (U_x \odot U)g)$</p>
 <p>$\odot$: a point-wise product</p>
 <p>$w_g = (w_1, \dots, w_N)$</p>
+<p>$x *_Gg := U^{\top} (diag(w_g)U_x)$</p>
 
 </div>
 </div>
