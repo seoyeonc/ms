@@ -493,7 +493,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda0d1d9220&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03b2c6d280&gt;]</pre>
 </div>
 
 </div>
@@ -598,7 +598,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda0a607ca0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03b00c7fd0&gt;]</pre>
 </div>
 
 </div>
@@ -732,8 +732,6 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
         <span class="bp">self</span><span class="o">.</span><span class="n">yhat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Psi</span><span class="nd">@self</span><span class="o">.</span><span class="n">ybar_threshed</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">yHat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Residual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">yHat</span><span class="p">)</span>
-        <span class="c1">#self.differ=np.where(np.abs(self.y- self.yhat)&gt;1.19382344,'g',np.where(np.abs(self.y- self.yhat)&gt;0.32205743,'y','b')) # percentile of [25,75]</span>
-        <span class="c1">#self.differ2=np.where(np.abs(self.y- self.yhat)&gt;1.19382344,0.8,np.where(np.abs(self.y- self.yhat)&gt;0.32205743,0.5,0.2)) </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">differ3</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">yhat</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">yhat</span><span class="p">))</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">yhat</span><span class="p">)))</span> <span class="c1">#표준화</span>
         <span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">context</span><span class="p">(</span><span class="s1">'seaborn-white'</span><span class="p">):</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -821,7 +819,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09d15430&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a37cc3a0&gt;]</pre>
 </div>
 
 </div>
@@ -865,7 +863,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09c7bb20&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a372eb80&gt;]</pre>
 </div>
 
 </div>
@@ -909,7 +907,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09d4f2b0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a37f5940&gt;]</pre>
 </div>
 
 </div>
@@ -1089,7 +1087,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09bec730&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a36a0670&gt;]</pre>
 </div>
 
 </div>
@@ -1227,7 +1225,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09b61250&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3615280&gt;]</pre>
 </div>
 
 </div>
@@ -1271,7 +1269,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09ac2340&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3577310&gt;]</pre>
 </div>
 
 </div>
@@ -1315,7 +1313,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09a9fe20&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3557e20&gt;]</pre>
 </div>
 
 </div>
@@ -1495,7 +1493,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09a04d90&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a34b7e80&gt;]</pre>
 </div>
 
 </div>
@@ -1633,7 +1631,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09963520&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3417520&gt;]</pre>
 </div>
 
 </div>
@@ -1677,7 +1675,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda098c3bb0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3377bb0&gt;]</pre>
 </div>
 
 </div>
@@ -1721,7 +1719,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda098a8730&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a335b6a0&gt;]</pre>
 </div>
 
 </div>
@@ -1901,7 +1899,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda0980dc70&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a32c0c40&gt;]</pre>
 </div>
 
 </div>
@@ -2039,7 +2037,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09b96310&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a364a2e0&gt;]</pre>
 </div>
 
 </div>
@@ -2083,7 +2081,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09bd6f10&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3683ee0&gt;]</pre>
 </div>
 
 </div>
@@ -2127,7 +2125,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda0975d640&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a32125b0&gt;]</pre>
 </div>
 
 </div>
@@ -2307,7 +2305,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda096beac0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a3173b20&gt;]</pre>
 </div>
 
 </div>
@@ -2445,7 +2443,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda09628490&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a30db460&gt;]</pre>
 </div>
 
 </div>
@@ -2489,7 +2487,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda0958b490&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a303d460&gt;]</pre>
 </div>
 
 </div>
@@ -2533,7 +2531,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda094ed3d0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a2fa03a0&gt;]</pre>
 </div>
 
 </div>
@@ -2713,7 +2711,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fda094d7580&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f03a2f8c430&gt;]</pre>
 </div>
 
 </div>
