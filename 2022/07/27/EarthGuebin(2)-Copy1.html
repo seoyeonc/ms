@@ -1000,7 +1000,7 @@ Name: Date, dtype: object</pre>
                         <span class="n">center</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">37</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">160</span><span class="p">),</span> 
                         <span class="n">zoom</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
                         <span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
-                        <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
+                        <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
                         <span class="n">mapbox_style</span><span class="o">=</span><span class="s2">"stamen-terrain"</span><span class="p">)</span>
         <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"t"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
         <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
@@ -2406,7 +2406,7 @@ Name: Date, dtype: object</pre>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 15616/15616 [05:13&lt;00:00, 49.76it/s]  
+<pre>100%|██████████| 15616/15616 [05:15&lt;00:00, 49.47it/s] 
 </pre>
 </div>
 </div>
@@ -3026,7 +3026,7 @@ Name: Date, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f65b44138e0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f65b3843df0&gt;]</pre>
 </div>
 
 </div>
