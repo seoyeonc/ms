@@ -435,7 +435,10 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 </ul>
 </li>
 <li>Eigen Decomposition of Laplacian Matrix<ul>
-<li>$L \psi = \lambda \psi$</li>
+<li>$L \psi = \lambda \psi$<ul>
+<li>단, $L = D - W$</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Graph Fourier Transform <ul>
@@ -448,7 +451,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 </li>
 <li>Ebayesthresh<ul>
 <li>Standard Deviation : 5(In Simulation)</li>
-<li>$\bar{f}_{Ebayes thredhed}max(0,\bar{f})$<ul>
+<li>$\bar{f}_{Ebayes thredhed} = max(0,\bar{f})$<ul>
 <li>$\bar{f}$ is graph Fureier Transform of f</li>
 <li>autopower spectrum? 찾아보기</li>
 </ul>
@@ -1941,7 +1944,7 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 1000/1000 [00:02&lt;00:00, 450.23it/s]
+<pre>100%|██████████| 1000/1000 [00:02&lt;00:00, 446.54it/s]
 </pre>
 </div>
 </div>
