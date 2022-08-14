@@ -146,6 +146,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h4"><a href="#면담">면담 </a></li>
 <li class="toc-entry toc-h4"><a href="#5.1.1-SPECTRAL-NETWORK">5.1.1 SPECTRAL NETWORK </a></li>
 <li class="toc-entry toc-h4"><a href="#5.1.2-CHEBNET">5.1.2 CHEBNET </a></li>
+<li class="toc-entry toc-h2"><a href="#Algorithm">Algorithm </a></li>
 <li class="toc-entry toc-h2"><a href="#imports">imports </a></li>
 <li class="toc-entry toc-h2"><a href="#EbayesThresh">EbayesThresh </a>
 <ul>
@@ -395,6 +396,95 @@ $$g_{\theta} \star x \approx  \sum^{K}_{k=0}\theta_k T_k (\tilde{L})x$$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>$T_0 (x) = 1$, $T_1(x) = x$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Algorithm">
+<a class="anchor" href="#Algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithm<a class="anchor-link" href="#Algorithm"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>x,y,z,w가 존재</li>
+<li>w는 node간의 distance matrix,<ul>
+<li>simulation 에서는 각 node들 간의 거리가 같다고 가정하였으나,</li>
+<li>real data 에서는 haversine 정리를 이용하여 distance 구함</li>
+</ul>
+</li>
+<li>Graph Laplacian<ul>
+<li>$D^{-\frac{1}{2}}(D-W)D^{-\frac{1}{2}}$<ul>
+<li>단, $D = \sum_{ij}W_{ij}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Eigen Decomposition of Laplacian Matrix<ul>
+<li>$L \psi = \lambda \psi$</li>
+</ul>
+</li>
+<li>Graph Fourier Transform <ul>
+<li>$\bar{f} = \Psi^\top f$</li>
+</ul>
+</li>
+<li>Fourier Power <ul>
+<li>Fourier Power Spectrum : Squared value of the signal</li>
+</ul>
+</li>
+<li>Ebayesthresh<ul>
+<li>Standard Deviation : 5(In Simulation)</li>
+<li>$\bar{f}_{Ebayes thredhed}max(0,\bar{f})$<ul>
+<li>$\bar{f}$ is graph Fureier Transform of f</li>
+<li>autopower spectrum? 찾아보기</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Principal Component Analysis<ul>
+<li>$\hat{f} = \Psi \bar{f}_{Ebayes threshed}$</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_eigen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">d</span><span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">D</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span> <span class="o">@</span> <span class="p">(</span><span class="n">D</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">)</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lamb</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Psi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Lamb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lamb</span><span class="p">)</span>      
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sd</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># fit with ebayesthresh</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_eigen</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ybar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Psi</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="c1"># fbar := graph fourier transform of f</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ybar</span><span class="o">**</span><span class="mi">2</span> 
+        <span class="n">ebayesthresh</span> <span class="o">=</span> <span class="n">importr</span><span class="p">(</span><span class="s1">'EbayesThresh'</span><span class="p">)</span><span class="o">.</span><span class="n">ebayesthresh</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">power_threshed</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ebayesthresh</span><span class="p">(</span><span class="n">FloatVector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ybar</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span><span class="n">sd</span><span class="o">=</span><span class="n">sd</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ybar_threshed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">power_threshed</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">ybar</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">yhat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Psi</span><span class="nd">@self</span><span class="o">.</span><span class="n">ybar_threshed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">yHat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">yhat</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Residual</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">y</span><span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">yHat</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
