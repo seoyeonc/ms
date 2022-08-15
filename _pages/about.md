@@ -1,7 +1,9 @@
 ---
 layout: page
-title: About Me
+title: About Page
 permalink: /about/
 ---
 
-이 페이지는 연구를 위한 페이지입니다.
+This page is for paper study.
+
+
