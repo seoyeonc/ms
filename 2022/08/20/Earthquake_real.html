@@ -1766,35 +1766,32 @@ Name: Date, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">motivated</span><span class="p">(</span><span class="n">MooYaHo2</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">vis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">MagThresh</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">density_mapbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> 
-                        <span class="n">lat</span><span class="o">=</span><span class="s1">'Latitude'</span><span class="p">,</span> 
-                        <span class="n">lon</span><span class="o">=</span><span class="s1">'Longitude'</span><span class="p">,</span> 
-                        <span class="n">z</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">,</span> 
-                        <span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
-                        <span class="n">center</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">37</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">160</span><span class="p">),</span> 
-                        <span class="n">zoom</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
-                        <span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
-                        <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span>
-                        <span class="n">mapbox_style</span><span class="o">=</span><span class="s2">"stamen-terrain"</span><span class="p">,</span>
-                        <span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"t"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
-                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
-                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
-                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
-                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'red'</span><span class="p">,</span>
-                      <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.6</span>
-                      <span class="p">)</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
-                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
-                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
-                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
-                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'blue'</span><span class="p">,</span>
-                      <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.5</span>
-                      <span class="p">)</span>
-        <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">include_mathjax</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="nb">dict</span><span class="p">({</span><span class="s1">'scrollZoom'</span><span class="p">:</span><span class="kc">False</span><span class="p">})))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#                         lat=moo_global.df.Latitude, </span>
+<span class="c1">#                         lon=moo_global.df.Longitude, </span>
+<span class="c1">#                         z=moo_global.df.Magnitude, </span>
+<span class="c1">#                         radius=5,</span>
+<span class="c1">#                         center=dict(lat=18.4430, lon=-72.5710), </span>
+<span class="c1">#                         zoom=8,</span>
+<span class="c1">#                         height=900,</span>
+<span class="c1">#                         opacity = 0.4,</span>
+<span class="c1">#                         mapbox_style="stamen-terrain",</span>
+<span class="c1">#                         range_color=[-7,7])</span>
+<span class="c1"># fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})</span>
+<span class="c1"># fig.add_scattermapbox(lat = moo_global.df.query('Magnitude &gt; 6.9')['Latitude'],</span>
+<span class="c1">#                       lon = moo_global.df.query('Magnitude &gt; 6.9')['Longitude'],</span>
+<span class="c1">#                       text = moo_global.df.query('Magnitude &gt; 6.9')['Magnitude'],</span>
+<span class="c1">#                       marker_size= 8,</span>
+<span class="c1">#                       marker_color= 'red',</span>
+<span class="c1">#                       opacity = 0.6</span>
+<span class="c1">#                       )</span>
+<span class="c1"># fig.add_scattermapbox(lat = moo_global.df.query('Residual**2 &gt; 0.5')['Latitude'],</span>
+<span class="c1">#                       lon = moo_global.df.query('Residual**2 &gt; 0.5')['Longitude'],</span>
+<span class="c1">#                       text = moo_global.df.query('Residual**2 &gt; 0.5')['Magnitude'],</span>
+<span class="c1">#                       marker_size= 8,</span>
+<span class="c1">#                       marker_color= 'blue',</span>
+<span class="c1">#                       opacity = 0.5</span>
+<span class="c1">#                       )</span>
+<span class="c1"># HTML(fig.to_html(include_mathjax=False, config=dict({'scrollZoom':False})))</span>
 </pre></div>
 
     </div>
