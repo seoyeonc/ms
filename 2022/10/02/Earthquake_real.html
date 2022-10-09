@@ -98,7 +98,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      11 min read
     
 </span></p>
 
@@ -2733,6 +2733,353 @@ Name: Date, dtype: object</pre>
 
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">eachlocation</span><span class="p">(</span><span class="n">MooYaHo3</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">haiti</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">MagThresh</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">density_mapbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> 
+                        <span class="n">lat</span><span class="o">=</span><span class="s1">'Latitude'</span><span class="p">,</span> 
+                        <span class="n">lon</span><span class="o">=</span><span class="s1">'Longitude'</span><span class="p">,</span> 
+                        <span class="n">z</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">,</span> 
+                        <span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                        <span class="n">center</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">18.4430</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">72.5710</span><span class="p">),</span> 
+                        <span class="n">zoom</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+                        <span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
+                        <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">,</span>
+                        <span class="n">mapbox_style</span><span class="o">=</span><span class="s2">"stamen-terrain"</span><span class="p">,</span>
+                        <span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"t"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
+                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
+                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'red'</span><span class="p">,</span>
+                      <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.1</span>
+                      <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
+                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
+                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'blue'</span><span class="p">,</span>
+                      <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span>
+                      <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">lquique</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">MagThresh</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">density_mapbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> 
+                        <span class="n">lat</span><span class="o">=</span><span class="s1">'Latitude'</span><span class="p">,</span> 
+                        <span class="n">lon</span><span class="o">=</span><span class="s1">'Longitude'</span><span class="p">,</span> 
+                        <span class="n">z</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">,</span> 
+                        <span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                        <span class="n">center</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=-</span><span class="mf">32.6953</span><span class="p">,</span> <span class="n">lon</span><span class="o">=-</span><span class="mf">71.4416</span><span class="p">),</span> 
+                        <span class="n">zoom</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+                        <span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
+                        <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">,</span>
+                        <span class="n">mapbox_style</span><span class="o">=</span><span class="s2">"stamen-terrain"</span><span class="p">,</span>
+                        <span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"t"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
+                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
+                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'red'</span><span class="p">,</span>
+                      <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.1</span>
+                      <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
+                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
+                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'blue'</span><span class="p">,</span>
+                      <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span>
+                      <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>        
+    <span class="k">def</span> <span class="nf">sichuan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">MagThresh</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">density_mapbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> 
+                        <span class="n">lat</span><span class="o">=</span><span class="s1">'Latitude'</span><span class="p">,</span> 
+                        <span class="n">lon</span><span class="o">=</span><span class="s1">'Longitude'</span><span class="p">,</span> 
+                        <span class="n">z</span><span class="o">=</span><span class="s1">'Magnitude'</span><span class="p">,</span> 
+                        <span class="n">radius</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                        <span class="n">center</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mf">30.3080</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mf">102.8880</span><span class="p">),</span> 
+                        <span class="n">zoom</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+                        <span class="n">height</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
+                        <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">,</span>
+                        <span class="n">mapbox_style</span><span class="o">=</span><span class="s2">"stamen-terrain"</span><span class="p">,</span>
+                        <span class="n">range_color</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">"r"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"t"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
+                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @MagThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
+                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'red'</span><span class="p">,</span>
+                      <span class="n">opacity</span> <span class="o">=</span> <span class="mf">0.1</span>
+                      <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_scattermapbox</span><span class="p">(</span><span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Latitude'</span><span class="p">],</span>
+                      <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Residual**2 &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Longitude'</span><span class="p">],</span>
+                      <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'Magnitude &gt; @ResThresh'</span><span class="p">)[</span><span class="s1">'Magnitude'</span><span class="p">],</span>
+                      <span class="n">marker_size</span><span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+                      <span class="n">marker_color</span><span class="o">=</span> <span class="s1">'blue'</span><span class="p">,</span>
+                      <span class="n">opacity</span> <span class="o">=</span> <span class="mi">1</span>
+                      <span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">=</span><span class="n">eachlocation</span><span class="p">(</span><span class="n">df_global</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"2010 &lt;= Year &lt; 2015"</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> get distance</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">get_distance</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 12498/12498 [03:17&lt;00:00, 63.35it/s]  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="n">each_location</span><span class="o">.</span><span class="n">D</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8810.865423093777</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">each_location</span><span class="o">.</span><span class="n">D</span><span class="p">[</span><span class="n">each_location</span><span class="o">.</span><span class="n">D</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([14176290., 16005894., 21186674., 22331128., 19394182., 17548252.,
+        16668048., 13316436., 12973260.,  2582550.]),
+ array([8.97930163e-02, 2.00141141e+03, 4.00273303e+03, 6.00405465e+03,
+        8.00537626e+03, 1.00066979e+04, 1.20080195e+04, 1.40093411e+04,
+        1.60106627e+04, 1.80119844e+04, 2.00133060e+04]),
+ &lt;BarContainer object of 10 artists&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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%0A">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> weight matrix</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">get_weightmatrix</span><span class="p">(</span><span class="n">theta</span><span class="o">=</span><span class="p">(</span><span class="mf">8810.865423093777</span><span class="p">),</span><span class="n">kappa</span><span class="o">=</span><span class="mi">2500</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>-</code> fit</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">fit2</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">haiti</span><span class="p">(</span><span class="n">MagThresh</span><span class="o">=</span><span class="mf">6.9</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">lquique</span><span class="p">(</span><span class="n">MagThresh</span><span class="o">=</span><span class="mf">6.4</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">each_location</span><span class="o">.</span><span class="n">sichuan</span><span class="p">(</span><span class="n">MagThresh</span><span class="o">=</span><span class="mf">6.5</span><span class="p">,</span><span class="n">ResThresh</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
